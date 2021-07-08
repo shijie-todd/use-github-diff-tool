@@ -4,7 +4,7 @@
 
 ___ Exported on _____________________________
 
-     on                                            : 2021年7月8日 星期四 上午10时57分24秒 CST
+     on                                            : 2021年7月8日 星期四 上午11时08分04秒 CST
      by                                            : admin ( 417138306@qq.com )
 
 ___ Environment ____________________________
@@ -14,16 +14,16 @@ ___ Environment ____________________________
      JIRA Installation Type                        : Standalone
      Java Version                                  : 1.8.0_291 - Oracle Corporation
      Current Working Directory                     : /Users/shijie/atlassian-jira-software-7.10.0-standalone/bin
-     Maximum Allowable Memory                      : 748MB
-     Total Memory                                  : 748MB
-     Free Memory                                   : 59MB
-     Used Memory                                   : 689MB
-     Memory Pool: Code Cache                       : Code Cache: init = 2555904(2496K) used = 122577664(119704K) committed = 123469824(120576K) max = 251658240(245760K)
-     Memory Pool: Metaspace                        : Metaspace: init = 0(0K) used = 248496728(242672K) committed = 270180352(263848K) max = -1(-1K)
-     Memory Pool: Compressed Class Space           : Compressed Class Space: init = 0(0K) used = 32119184(31366K) committed = 37699584(36816K) max = 1073741824(1048576K)
-     Memory Pool: PS Eden Space                    : PS Eden Space: init = 100663296(98304K) used = 179572336(175363K) committed = 228065280(222720K) max = 229113856(223744K)
-     Memory Pool: PS Survivor Space                : PS Survivor Space: init = 16777216(16384K) used = 12239464(11952K) committed = 19398656(18944K) max = 19398656(18944K)
-     Memory Pool: PS Old Gen                       : PS Old Gen: init = 268435456(262144K) used = 529750760(517334K) committed = 536870912(524288K) max = 536870912(524288K)
+     Maximum Allowable Memory                      : 746MB
+     Total Memory                                  : 746MB
+     Free Memory                                   : 247MB
+     Used Memory                                   : 499MB
+     Memory Pool: Code Cache                       : Code Cache: init = 2555904(2496K) used = 124159744(121249K) committed = 124977152(122048K) max = 251658240(245760K)
+     Memory Pool: Metaspace                        : Metaspace: init = 0(0K) used = 248109056(242294K) committed = 270704640(264360K) max = -1(-1K)
+     Memory Pool: Compressed Class Space           : Compressed Class Space: init = 0(0K) used = 32027496(31276K) committed = 37699584(36816K) max = 1073741824(1048576K)
+     Memory Pool: PS Eden Space                    : PS Eden Space: init = 100663296(98304K) used = 71401616(69728K) committed = 222822400(217600K) max = 223870976(218624K)
+     Memory Pool: PS Survivor Space                : PS Survivor Space: init = 16777216(16384K) used = 3575104(3491K) committed = 22544384(22016K) max = 22544384(22016K)
+     Memory Pool: PS Old Gen                       : PS Old Gen: init = 268435456(262144K) used = 447271440(436788K) committed = 536870912(524288K) max = 536870912(524288K)
      JVM Input Arguments                           : -Djava.util.logging.config.file=/Users/shijie/atlassian-jira-software-7.10.0-standalone/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms384m -Xmx768m -Djava.awt.headless=true -Datlassian.standalone=JIRA -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true -Dmail.mime.decodeparameters=true -Dorg.dom4j.factory=com.atlassian.core.xml.InterningDocumentFactory -XX:-OmitStackTraceInFastThrow -Datlassian.plugins.startup.options= -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Xloggc:/Users/shijie/atlassian-jira-software-7.10.0-standalone/logs/atlassian-jira-gc-%t.log -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=20M -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+PrintGCCause -Dcatalina.base=/Users/shijie/atlassian-jira-software-7.10.0-standalone -Dcatalina.home=/Users/shijie/atlassian-jira-software-7.10.0-standalone -Djava.io.tmpdir=/Users/shijie/atlassian-jira-software-7.10.0-standalone/temp
      Java Compatibility Information                : JIRA version = 7.10.0, Java Version = 1.8.0_291
 
@@ -246,11 +246,11 @@ ___ Application Properties _________________
      jira.lf.text.activelinkcolour                 : #0065ff
      jira.lf.text.headingcolour                    : #172b4d
      jira.lf.text.linkcolour                       : #0052cc
-     jira.lf.top.bgcolour                          : #0747a6
-     jira.lf.top.hilightcolour                     : #033681
+     jira.lf.top.bgcolour                          : #a60832
+     jira.lf.top.hilightcolour                     : #428004
      jira.lf.top.separator.bgcolor                 : #2E3D54
-     jira.lf.top.textcolour                        : #ffffff
-     jira.lf.top.texthilightcolour                 : #deebff
+     jira.lf.top.textcolour                        : #ab60ab
+     jira.lf.top.texthilightcolour                 : #0e68f0
      jira.luceneUserSearcher                       : true
      jira.mail.fetch.disabled                      : false
      jira.mail.send.disabled                       : false
@@ -349,7 +349,7 @@ ___ Application Properties _________________
      jira.view.issue.links.sort.order              : type, status, priority
      jira.view.issue.show.quicksubtask.when.no.subtasks : false
      jira.viewcvs.root.type                        : cvsroot
-     jira.webresource.flushcounter                 : 75e65367690ac553d207206292c2b417
+     jira.webresource.flushcounter                 : 727a68beac8e00f200c7817d89f2ac3f
      jira.webresource.superbatch.flushcounter      : 2
      jira.websudo.is.disabled                      : false
      jira.websudo.timeout                          : 10
@@ -1820,7 +1820,7 @@ ___ Services _______________________________
      Last Run                                      : 21-7-8 上午8:41
      Mail Queue Service                            : com.atlassian.jira.service.services.mail.MailQueueService
           Service Schedule                              : 0 * * * * ?
-     Last Run                                      : 21-7-8 上午10:57
+     Last Run                                      : 21-7-8 上午11:08
 
 ___ Trusted Applications ___________________
 
@@ -1828,7 +1828,7 @@ ___ Trusted Applications ___________________
 
 
  -->
-<entity-engine-xml date="1625713044170">
+<entity-engine-xml date="1625713684383">
     <Action id="10000" issue="10006" author="admin" type="comment" body="Hello" created="2021-06-21 17:27:53.639" updateauthor="admin" updated="2021-06-21 17:27:53.639"/>
     <Action id="10001" issue="10009" author="admin" type="comment" body="Joined Sample Sprint 2 7 days 9 hours 10 minutes ago" created="2021-06-14 08:17:52.959" updateauthor="admin" updated="2021-06-14 08:17:52.959"/>
     <Action id="10002" issue="10010" author="admin" type="comment" body="To Do to In Progress 3 days 21 hours 8 minutes ago" created="2021-06-17 20:19:52.959" updateauthor="admin" updated="2021-06-17 20:19:52.959"/>
@@ -2818,32 +2818,32 @@ AAQAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2YWx1ZXhyABBqYXZhLmxhbmcu
 TnVtYmVyhqyVHQuU4IsCAAB4cAAAAAAAACcS
 ]]></parameters>
     </ClusteredJob>
-    <ClusteredJob id="10104" jobId="CompatibilityPluginScheduler.JobId.LEXO_RANK_SCHEDULER_JOB" jobRunnerKey="CompatibilityPluginScheduler.JobRunnerKey.com.atlassian.greenhopper.service.lexorank.balance.LexoRankBalancePluginJob" schedType="I" intervalMillis="60000" firstRun="1624267480316" nextRun="1625713092576" version="5542"/>
+    <ClusteredJob id="10104" jobId="CompatibilityPluginScheduler.JobId.LEXO_RANK_SCHEDULER_JOB" jobRunnerKey="CompatibilityPluginScheduler.JobRunnerKey.com.atlassian.greenhopper.service.lexorank.balance.LexoRankBalancePluginJob" schedType="I" intervalMillis="60000" firstRun="1624267480316" nextRun="1625713692612" version="5552"/>
     <ClusteredJob id="10106" jobId="LocalPluginLicenseNotificationJob-job" jobRunnerKey="LocalPluginLicenseNotificationJob-runner" schedType="I" intervalMillis="86400000" firstRun="1624267481421" nextRun="1625797933042" version="18"/>
     <ClusteredJob id="10107" jobId="PluginRequestCheckJob-job" jobRunnerKey="PluginRequestCheckJob-runner" schedType="I" intervalMillis="3600000" firstRun="1624267481423" nextRun="1625714412485" version="239"/>
     <ClusteredJob id="10108" jobId="PluginUpdateCheckJob-job" jobRunnerKey="PluginUpdateCheckJob-runner" schedType="I" intervalMillis="86400000" firstRun="1624302341749" nextRun="1625799198901" version="18"/>
     <ClusteredJob id="10109" jobId="InstanceTopologyJob-job" jobRunnerKey="InstanceTopologyJob-runner" schedType="I" intervalMillis="86400000" firstRun="1624291967297" nextRun="1625799198901" version="18"/>
     <ClusteredJob id="10113" jobId="com.atlassian.jira.plugins.dvcs.scheduler.DvcsScheduler:job" jobRunnerKey="com.atlassian.jira.plugins.dvcs.scheduler.DvcsScheduler" schedType="I" intervalMillis="3600000" firstRun="1624269535191" nextRun="1625714412486" version="238"/>
-    <ClusteredJob id="10114" jobId="8400c8a7-0a65-418b-bdec-f6ed16edb60c" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1624267483205" nextRun="1625713092574" version="5542"/>
-    <ClusteredJob id="10206" jobId="5fc69ebf-8ecf-48ca-931b-d0a6385be361" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1624433700567" nextRun="1625713092574" version="5034"/>
-    <ClusteredJob id="10308" jobId="a1e5c1c4-c338-48ec-84db-57009bf29409" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1624525487990" nextRun="1625713092746" version="4523"/>
-    <ClusteredJob id="10406" jobId="a621a255-240c-455d-b5d4-bd5f63d0df04" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625023108386" nextRun="1625713093485" version="2866"/>
-    <ClusteredJob id="10510" jobId="f82cabf5-ad89-407b-bd14-9cb727c82535" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625023743610" nextRun="1625713093485" version="2856"/>
-    <ClusteredJob id="10613" jobId="a5c1f388-320d-4dcc-92b7-cb50c9533581" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625025706501" nextRun="1625713092746" version="2848"/>
-    <ClusteredJob id="10713" jobId="d87d3249-8cc7-46f6-91f5-66193d040aa2" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625026402844" nextRun="1625713093485" version="2840"/>
+    <ClusteredJob id="10114" jobId="8400c8a7-0a65-418b-bdec-f6ed16edb60c" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1624267483205" nextRun="1625713692612" version="5552"/>
+    <ClusteredJob id="10206" jobId="5fc69ebf-8ecf-48ca-931b-d0a6385be361" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1624433700567" nextRun="1625713692612" version="5044"/>
+    <ClusteredJob id="10308" jobId="a1e5c1c4-c338-48ec-84db-57009bf29409" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1624525487990" nextRun="1625713692771" version="4533"/>
+    <ClusteredJob id="10406" jobId="a621a255-240c-455d-b5d4-bd5f63d0df04" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625023108386" nextRun="1625713693515" version="2876"/>
+    <ClusteredJob id="10510" jobId="f82cabf5-ad89-407b-bd14-9cb727c82535" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625023743610" nextRun="1625713693515" version="2866"/>
+    <ClusteredJob id="10613" jobId="a5c1f388-320d-4dcc-92b7-cb50c9533581" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625025706501" nextRun="1625713692771" version="2858"/>
+    <ClusteredJob id="10713" jobId="d87d3249-8cc7-46f6-91f5-66193d040aa2" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625026402844" nextRun="1625713693515" version="2850"/>
     <ClusteredJob id="10800" jobId="analytics-collection" jobRunnerKey="com.atlassian.plugins.authentication.impl.analytics.StatisticsCollectionService" schedType="C" cronExpression="0 0 23 * * ?" nextRun="1625756400000" version="3"/>
     <ClusteredJob id="10801" jobId="assertionId-cleanup" jobRunnerKey="com.atlassian.plugins.authentication.impl.web.saml.AssertionValidationService" schedType="I" intervalMillis="3600000" firstRun="1625544236007" nextRun="1625714412486" version="34"/>
-    <ClusteredJob id="10802" jobId="data-provider-poll" jobRunnerKey="com.atlassian.jira.plugin.devstatus.provider.DevSummaryUpdateJob" schedType="I" intervalMillis="300000" firstRun="1625540638326" nextRun="1625713212500" version="196"/>
+    <ClusteredJob id="10802" jobId="data-provider-poll" jobRunnerKey="com.atlassian.jira.plugin.devstatus.provider.DevSummaryUpdateJob" schedType="I" intervalMillis="300000" firstRun="1625540638326" nextRun="1625713812507" version="198"/>
     <ClusteredJob id="10803" jobId="data-provider-cleanup" jobRunnerKey="com.atlassian.jira.plugin.devstatus.provider.DataProviderCleanupJob" schedType="I" intervalMillis="1800000" firstRun="1625540638603" nextRun="1625714412483" version="52"/>
     <ClusteredJob id="10804" jobId="com.atlassian.jira.web.action.issue.DefaultTemporaryWebAttachmentsMonitor" jobRunnerKey="com.atlassian.jira.web.action.issue.DefaultTemporaryWebAttachmentsMonitor" schedType="I" intervalMillis="3600000" firstRun="1625544245980" nextRun="1625714412487" version="34"/>
     <ClusteredJob id="10806" jobId="com.atlassian.whisper.plugin.fetch.FetchJob" jobRunnerKey="com.atlassian.whisper.plugin.fetch.FetchJob" schedType="I" intervalMillis="21600000" firstRun="1625544247221" nextRun="1625726511413" version="9"/>
     <ClusteredJob id="10807" jobId="com.atlassian.jira.analytics.scheduler.AnalyticsScheduler" jobRunnerKey="com.atlassian.jira.analytics.scheduler.AnalyticsScheduler" schedType="I" intervalMillis="604800000" firstRun="1625627047225" nextRun="1626231847229" version="2"/>
     <ClusteredJob id="10808" jobId="CompatibilityPluginScheduler.JobId.Service Provider Session Remover" jobRunnerKey="CompatibilityPluginScheduler.JobRunnerKey.Service Provider Session Remover" schedType="I" intervalMillis="28800000" firstRun="1625569447320" nextRun="1625726452745" version="6"/>
-    <ClusteredJob id="10809" jobId="applink-status-analytics-job" jobRunnerKey="com.atlassian.applinks.analytics.ApplinkStatusJob" schedType="I" intervalMillis="86400000" nextRun="1625713450916" version="3"/>
+    <ClusteredJob id="10809" jobId="applink-status-analytics-job" jobRunnerKey="com.atlassian.applinks.analytics.ApplinkStatusJob" schedType="I" intervalMillis="86400000" nextRun="1625799850919" version="4"/>
     <ClusteredJob id="10811" jobId="CompatibilityPluginScheduler.JobId.hipchatRefreshConnectionStatusJob" jobRunnerKey="CompatibilityPluginScheduler.JobRunnerKey.com.atlassian.jira.plugins.hipchat.service.ping.RefreshConnectionStatusJobHandler" schedType="I" intervalMillis="3600000" firstRun="1625540664910" nextRun="1625714412486" version="35"/>
-    <ClusteredJob id="10812" jobId="CompatibilityPluginScheduler.JobId.hipchatUpdateGlancesDataJob" jobRunnerKey="CompatibilityPluginScheduler.JobRunnerKey.com.atlassian.jira.plugins.hipchat.service.connect.UpdateGlancesDataJobHandler" schedType="I" intervalMillis="60000" firstRun="1625540670634" nextRun="1625713092746" version="883"/>
+    <ClusteredJob id="10812" jobId="CompatibilityPluginScheduler.JobId.hipchatUpdateGlancesDataJob" jobRunnerKey="CompatibilityPluginScheduler.JobRunnerKey.com.atlassian.jira.plugins.hipchat.service.connect.UpdateGlancesDataJobHandler" schedType="I" intervalMillis="60000" firstRun="1625540670634" nextRun="1625713692770" version="893"/>
     <ClusteredJob id="10813" jobId="CompatibilityPluginScheduler.JobId.hipchatInstallGlancesJob" jobRunnerKey="CompatibilityPluginScheduler.JobRunnerKey.com.atlassian.jira.plugins.hipchat.service.connect.InstallGlancesJobHandler" schedType="I" intervalMillis="3600000" firstRun="1625540664008" nextRun="1625714412484" version="35"/>
-    <ClusteredJob id="10814" jobId="14524c4e-f32c-4386-89ce-fc653c1c967e" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625540647456" nextRun="1625713092574" version="883"/>
+    <ClusteredJob id="10814" jobId="14524c4e-f32c-4386-89ce-fc653c1c967e" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625540647456" nextRun="1625713692612" version="893"/>
     <ColumnLayout id="10000"/>
     <ColumnLayoutItem id="10000" columnlayout="10000" fieldidentifier="issuetype" horizontalposition="0"/>
     <ColumnLayoutItem id="10001" columnlayout="10000" fieldidentifier="issuekey" horizontalposition="1"/>
@@ -4239,6 +4239,10 @@ You can add your own Quick Filters in the board configuration (select *Board > C
     <OSPropertyEntry id="10816" entityName="Project" entityId="10200" propertyKey="firstIssueCreated" type="1"/>
     <OSPropertyEntry id="10817" entityName="ApplicationUser" entityId="10000" propertyKey="jira.user.suppressedTips.permission-helper-helptip" type="1"/>
     <OSPropertyEntry id="10900" entityName="jira.properties" entityId="1" propertyKey="com.atlassian.whisper.plugin:ETag:messages" type="5"/>
+    <OSPropertyEntry id="10901" entityName="jira.properties" entityId="1" propertyKey="jira.lf.top.bgcolour" type="5"/>
+    <OSPropertyEntry id="10902" entityName="jira.properties" entityId="1" propertyKey="jira.lf.top.hilightcolour" type="5"/>
+    <OSPropertyEntry id="10903" entityName="jira.properties" entityId="1" propertyKey="jira.lf.top.textcolour" type="5"/>
+    <OSPropertyEntry id="10904" entityName="jira.properties" entityId="1" propertyKey="jira.lf.top.texthilightcolour" type="5"/>
     <OSPropertyNumber id="9" value="0"/>
     <OSPropertyNumber id="11" value="1"/>
     <OSPropertyNumber id="12" value="0"/>
@@ -4312,7 +4316,7 @@ You can add your own Quick Filters in the board configuration (select *Board > C
     <OSPropertyString id="10106" value="https://bitbucket.org"/>
     <OSPropertyString id="10107" value="https://github.com"/>
     <OSPropertyString id="10108" value="10100"/>
-    <OSPropertyString id="10200" value="75e65367690ac553d207206292c2b417"/>
+    <OSPropertyString id="10200" value="727a68beac8e00f200c7817d89f2ac3f"/>
     <OSPropertyString id="10202" value=""/>
     <OSPropertyString id="10203" value="1624267476195"/>
     <OSPropertyString id="10205" value="JIRA"/>
@@ -4467,6 +4471,10 @@ admin]]></value>
     <OSPropertyString id="10811" value="1"/>
     <OSPropertyString id="10814" value="com.atlassian.jira.jira-projects-issue-navigator:sidebar-issue-navigator"/>
     <OSPropertyString id="10900" value="W/&quot;da39a3ee5e6b4b0d3255bfef95601890afd80709&quot;"/>
+    <OSPropertyString id="10901" value="#a60832"/>
+    <OSPropertyString id="10902" value="#428004"/>
+    <OSPropertyString id="10903" value="#ab60ab"/>
+    <OSPropertyString id="10904" value="#0e68f0"/>
     <OSPropertyText id="10">
         <value><![CDATA[http://www.atlassian.com/*
 ]]></value>
@@ -5971,8 +5979,6 @@ admin]]></value>
     <RunDetails id="53300" jobId="com.atlassian.jira.upgrade.UpgradeService" startTime="2021-07-06 11:05:06.997" runDuration="372" runOutcome="S" infoMessage=""/>
     <RunDetails id="53336" jobId="3de34f1e-5b84-4974-b2a3-117f92f01b6a" startTime="2021-07-06 11:07:10.888" runDuration="392" runOutcome="S" infoMessage=""/>
     <RunDetails id="57776" jobId="com.atlassian.jira.analytics.scheduler.AnalyticsScheduler" startTime="2021-07-07 11:04:07.229" runDuration="1017" runOutcome="S" infoMessage=""/>
-    <RunDetails id="57777" jobId="com.atlassian.jira.user.UserHistoryDatabaseCompactor" startTime="2021-07-07 11:04:10.88" runDuration="10" runOutcome="S" infoMessage=""/>
-    <RunDetails id="57778" jobId="applink-status-analytics-job" startTime="2021-07-07 11:04:10.916" runDuration="25" runOutcome="S" infoMessage=""/>
     <RunDetails id="59847" jobId="com.atlassian.jira.cache.monitor.CacheStatisticsMonitor" startTime="2021-07-07 14:32:08.632" runDuration="31" runOutcome="S" infoMessage=""/>
     <RunDetails id="63863" jobId="analytics-collection" startTime="2021-07-08 00:37:57.657" runDuration="85" runOutcome="S" infoMessage=""/>
     <RunDetails id="63866" jobId="JiraPluginScheduler:com.atlassian.analytics.client.upload.RemoteFilterRead:job" startTime="2021-07-08 00:37:57.695" runDuration="4539" runOutcome="S" infoMessage=""/>
@@ -5993,19 +5999,21 @@ admin]]></value>
     <RunDetails id="64342" jobId="data-provider-cleanup" startTime="2021-07-08 10:50:12.483" runDuration="15" runOutcome="S" infoMessage=""/>
     <RunDetails id="64391" jobId="InstanceTopologyJob-job" startTime="2021-07-08 10:53:18.901" runDuration="1550" runOutcome="S" infoMessage=""/>
     <RunDetails id="64392" jobId="PluginUpdateCheckJob-job" startTime="2021-07-08 10:53:18.901" runDuration="13297" runOutcome="S" infoMessage=""/>
-    <RunDetails id="64406" jobId="data-provider-poll" startTime="2021-07-08 10:55:12.5" runDuration="1" runOutcome="S" infoMessage=""/>
-    <RunDetails id="64430" jobId="com.atlassian.jira.service.JiraService:10000" startTime="2021-07-08 10:57:00.004" runDuration="1" runOutcome="S" infoMessage=""/>
-    <RunDetails id="64431" jobId="5fc69ebf-8ecf-48ca-931b-d0a6385be361" startTime="2021-07-08 10:57:12.574" runDuration="7" runOutcome="S" infoMessage=""/>
-    <RunDetails id="64432" jobId="8400c8a7-0a65-418b-bdec-f6ed16edb60c" startTime="2021-07-08 10:57:12.574" runDuration="4" runOutcome="S" infoMessage=""/>
-    <RunDetails id="64433" jobId="14524c4e-f32c-4386-89ce-fc653c1c967e" startTime="2021-07-08 10:57:12.574" runDuration="8" runOutcome="S" infoMessage=""/>
-    <RunDetails id="64434" jobId="CompatibilityPluginScheduler.JobId.LEXO_RANK_SCHEDULER_JOB" startTime="2021-07-08 10:57:12.576" runDuration="7" runOutcome="S" infoMessage=""/>
-    <RunDetails id="64435" jobId="JiraPluginScheduler:LEXO_RANK_STATS_COLLECTOR_JOB" startTime="2021-07-08 10:57:12.746" runDuration="1" runOutcome="S" infoMessage=""/>
-    <RunDetails id="64436" jobId="a1e5c1c4-c338-48ec-84db-57009bf29409" startTime="2021-07-08 10:57:12.746" runDuration="3" runOutcome="S" infoMessage=""/>
-    <RunDetails id="64437" jobId="a5c1f388-320d-4dcc-92b7-cb50c9533581" startTime="2021-07-08 10:57:12.746" runDuration="3" runOutcome="S" infoMessage=""/>
-    <RunDetails id="64438" jobId="CompatibilityPluginScheduler.JobId.hipchatUpdateGlancesDataJob" startTime="2021-07-08 10:57:12.746" runDuration="4" runOutcome="S" infoMessage=""/>
-    <RunDetails id="64439" jobId="a621a255-240c-455d-b5d4-bd5f63d0df04" startTime="2021-07-08 10:57:13.485" runDuration="0" runOutcome="S" infoMessage=""/>
-    <RunDetails id="64440" jobId="f82cabf5-ad89-407b-bd14-9cb727c82535" startTime="2021-07-08 10:57:13.485" runDuration="0" runOutcome="S" infoMessage=""/>
-    <RunDetails id="64441" jobId="d87d3249-8cc7-46f6-91f5-66193d040aa2" startTime="2021-07-08 10:57:13.485" runDuration="1" runOutcome="S" infoMessage=""/>
+    <RunDetails id="64516" jobId="com.atlassian.jira.user.UserHistoryDatabaseCompactor" startTime="2021-07-08 11:04:10.885" runDuration="1" runOutcome="S" infoMessage=""/>
+    <RunDetails id="64517" jobId="applink-status-analytics-job" startTime="2021-07-08 11:04:10.919" runDuration="8" runOutcome="S" infoMessage=""/>
+    <RunDetails id="64530" jobId="data-provider-poll" startTime="2021-07-08 11:05:12.507" runDuration="1" runOutcome="S" infoMessage=""/>
+    <RunDetails id="64555" jobId="5fc69ebf-8ecf-48ca-931b-d0a6385be361" startTime="2021-07-08 11:07:12.612" runDuration="3" runOutcome="S" infoMessage=""/>
+    <RunDetails id="64556" jobId="8400c8a7-0a65-418b-bdec-f6ed16edb60c" startTime="2021-07-08 11:07:12.612" runDuration="4" runOutcome="S" infoMessage=""/>
+    <RunDetails id="64557" jobId="14524c4e-f32c-4386-89ce-fc653c1c967e" startTime="2021-07-08 11:07:12.612" runDuration="4" runOutcome="S" infoMessage=""/>
+    <RunDetails id="64558" jobId="CompatibilityPluginScheduler.JobId.LEXO_RANK_SCHEDULER_JOB" startTime="2021-07-08 11:07:12.612" runDuration="4" runOutcome="S" infoMessage=""/>
+    <RunDetails id="64559" jobId="JiraPluginScheduler:LEXO_RANK_STATS_COLLECTOR_JOB" startTime="2021-07-08 11:07:12.771" runDuration="0" runOutcome="S" infoMessage=""/>
+    <RunDetails id="64560" jobId="CompatibilityPluginScheduler.JobId.hipchatUpdateGlancesDataJob" startTime="2021-07-08 11:07:12.77" runDuration="2" runOutcome="S" infoMessage=""/>
+    <RunDetails id="64561" jobId="a1e5c1c4-c338-48ec-84db-57009bf29409" startTime="2021-07-08 11:07:12.771" runDuration="2" runOutcome="S" infoMessage=""/>
+    <RunDetails id="64562" jobId="a5c1f388-320d-4dcc-92b7-cb50c9533581" startTime="2021-07-08 11:07:12.771" runDuration="2" runOutcome="S" infoMessage=""/>
+    <RunDetails id="64563" jobId="f82cabf5-ad89-407b-bd14-9cb727c82535" startTime="2021-07-08 11:07:13.515" runDuration="1" runOutcome="S" infoMessage=""/>
+    <RunDetails id="64564" jobId="a621a255-240c-455d-b5d4-bd5f63d0df04" startTime="2021-07-08 11:07:13.515" runDuration="1" runOutcome="S" infoMessage=""/>
+    <RunDetails id="64565" jobId="d87d3249-8cc7-46f6-91f5-66193d040aa2" startTime="2021-07-08 11:07:13.515" runDuration="1" runOutcome="S" infoMessage=""/>
+    <RunDetails id="64566" jobId="com.atlassian.jira.service.JiraService:10000" startTime="2021-07-08 11:08:00.001" runDuration="1" runOutcome="S" infoMessage=""/>
     <SchemePermissions id="10000" permission="0" type="group" parameter="jira-administrators"/>
     <SchemePermissions id="10004" scheme="0" permission="23" type="projectrole" parameter="10002" permissionKey="ADMINISTER_PROJECTS"/>
     <SchemePermissions id="10005" scheme="0" permission="10" type="applicationRole" parameter="" permissionKey="BROWSE_PROJECTS"/>
@@ -6165,7 +6173,7 @@ admin]]></value>
     <SequenceValueItem seqName="SchemePermissions" seqId="10600"/>
     <SequenceValueItem seqName="ClusteredJob" seqId="10900"/>
     <SequenceValueItem seqName="OSPropertyEntry" seqId="11000"/>
-    <SequenceValueItem seqName="RunDetails" seqId="64500"/>
+    <SequenceValueItem seqName="RunDetails" seqId="64600"/>
     <ServiceConfig id="10000" time="60000" clazz="com.atlassian.jira.service.services.mail.MailQueueService" name="Mail Queue Service" cronExpression="0 * * * * ?"/>
     <ServiceConfig id="10001" time="43200000" clazz="com.atlassian.jira.service.services.export.ExportService" name="Backup Service" cronExpression="0 0 8/12 * * ?"/>
     <ServiceConfig id="10002" time="86400000" clazz="com.atlassian.jira.service.services.auditing.AuditLogCleaningService" name="Audit log cleaning service" cronExpression="0 0 8 * * ?"/>
@@ -8064,7 +8072,7 @@ admin]]></value>
 
 ___ Entities ________________________________
 
-     Total                                         : 3312
+     Total                                         : 3320
 
      Action                                        : 20
      Application                                   : 1
@@ -8125,9 +8133,9 @@ ___ Entities ________________________________
      OSCurrentStepPrev                             : 35
      OSHistoryStep                                 : 35
      OSHistoryStepPrev                             : 21
-     OSPropertyEntry                               : 213
+     OSPropertyEntry                               : 217
      OSPropertyNumber                              : 54
-     OSPropertyString                              : 129
+     OSPropertyString                              : 133
      OSPropertyText                                : 30
      OSWorkflowEntry                               : 45
      OptionConfiguration                           : 45
