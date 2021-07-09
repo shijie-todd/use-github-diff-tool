@@ -441,6 +441,12 @@
     <column name="WEDNESDAY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
     <foreignKey fromTable="AO_60DB71_WORKINGDAYS" fromColumn="RAPID_VIEW_ID" toTable="AO_60DB71_RAPIDVIEW" toColumn="ID"/>
   </table>
+  <table name="AO_7C2234_PROJECT_NVP">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
   <table name="AO_7DEABF_AGENT_INFO">
     <column name="AGENT_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
     <column name="AGENT_URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
@@ -3687,6 +3693,12 @@
       <boolean>true</boolean>
     </row>
   </data>
+  <data tableName="AO_7C2234_PROJECT_NVP">
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="PROJECT_ID"/>
+    <column name="VALUE"/>
+  </data>
   <data tableName="AO_7DEABF_AGENT_INFO">
     <column name="AGENT_NAME"/>
     <column name="AGENT_URL"/>
@@ -4699,6 +4711,13 @@
       <string>manhour-apply-current</string>
       <integer>1</integer>
     </row>
+    <row>
+      <boolean>false</boolean>
+      <integer>21</integer>
+      <string>533654c5619a96695b8d3acef0deeeecfa7f3fb5</string>
+      <string>git-integration-for-jira</string>
+      <integer>1</integer>
+    </row>
   </data>
   <data tableName="AO_8BA09E_PROJECT_MAPPING">
     <column name="ID"/>
@@ -4803,6 +4822,11 @@
     <column name="COMMIT"/>
     <column name="COMMIT_TIME"/>
     <column name="ID"/>
+    <row>
+      <string>533654c5619a96695b8d3acef0deeeecfa7f3fb5</string>
+      <integer>1625814214</integer>
+      <integer>1</integer>
+    </row>
   </data>
   <data tableName="AO_8BA09E_USERS_PATS">
     <column name="EMPTY"/>
