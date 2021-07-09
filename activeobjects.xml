@@ -82,6 +82,39 @@
     <column name="REGISTRATION_METHOD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
     <column name="URL" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
   </table>
+  <table name="AO_4B00E6_ADAPTA_ANALYTIC">
+    <column name="ANALYTIC_ENABLED_FLAG" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="APP_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_4B00E6_SCRIPT_RUN_RESULT">
+    <column name="CPU_TIME" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="EXCEPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LOG" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="MILLISECONDS_TAKEN" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PAYLOAD" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+  </table>
+  <table name="AO_4B00E6_SR_USER_PROP">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROPERTY_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="450"/>
+    <column name="PROPERTY_VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_4B00E6_STASH_SETTINGS">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SETTING" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+  </table>
+  <table name="AO_4B00E6_UPGRADE_BACKUP">
+    <column name="DATA" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ERROR" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="RECORD_TIME" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
   <table name="AO_550953_SHORTCUT">
     <column name="ICON" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
     <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
@@ -1101,6 +1134,19 @@
     <column name="RESOLVED_DATE"/>
     <column name="SEVERITY"/>
     <column name="STATUS_NAME"/>
+    <row>
+      <string>JIRA</string>
+      <string>com.atlassian.troubleshooting.plugin-jira:gadgetFeedUrlHealthCheck</string>
+      <string>检查Jira是否能够通过小工具源URL访问自身，以确保仪表盘小工具正常工作。</string>
+      <timestamp>2021-07-09T04:30:48.458Z</timestamp>
+      <string>Jira不能通过小工具源URL访问自身。这是必要的，以便可以成功生成仪表板小工具。请核准当前的基本URL，如果有必要，检查您的网络配置，以便解决问题。</string>
+      <integer>1</integer>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <timestamp>2021-07-09T06:02:20.259Z</timestamp>
+      <string>WARNING</string>
+      <string>小工具源URL</string>
+    </row>
   </data>
   <data tableName="AO_2F1435_PROPERTIES">
     <column name="ID"/>
@@ -1109,7 +1155,7 @@
     <row>
       <integer>1</integer>
       <string>last-run</string>
-      <string>1625800354170</string>
+      <string>1625810540267</string>
     </row>
   </data>
   <data tableName="AO_2F1435_READ_NOTIFICATIONS">
@@ -1146,6 +1192,39 @@
     <column name="URL"/>
     <column name="PARAMETERS"/>
     <column name="EXCLUDE_ISSUE_DETAILS"/>
+  </data>
+  <data tableName="AO_4B00E6_ADAPTA_ANALYTIC">
+    <column name="ANALYTIC_ENABLED_FLAG"/>
+    <column name="APP_NAME"/>
+    <column name="ID"/>
+  </data>
+  <data tableName="AO_4B00E6_SCRIPT_RUN_RESULT">
+    <column name="CPU_TIME"/>
+    <column name="CREATED"/>
+    <column name="EXCEPTION"/>
+    <column name="ID"/>
+    <column name="KEY"/>
+    <column name="LOG"/>
+    <column name="MILLISECONDS_TAKEN"/>
+    <column name="PAYLOAD"/>
+  </data>
+  <data tableName="AO_4B00E6_SR_USER_PROP">
+    <column name="ID"/>
+    <column name="PROPERTY_KEY"/>
+    <column name="PROPERTY_VALUE"/>
+    <column name="USERNAME"/>
+  </data>
+  <data tableName="AO_4B00E6_STASH_SETTINGS">
+    <column name="ID"/>
+    <column name="KEY"/>
+    <column name="SETTING"/>
+  </data>
+  <data tableName="AO_4B00E6_UPGRADE_BACKUP">
+    <column name="DATA"/>
+    <column name="DESCRIPTION"/>
+    <column name="ERROR"/>
+    <column name="ID"/>
+    <column name="RECORD_TIME"/>
   </data>
   <data tableName="AO_550953_SHORTCUT">
     <column name="ID"/>
