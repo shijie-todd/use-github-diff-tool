@@ -1358,7 +1358,7 @@
     <row>
       <integer>1</integer>
       <string>last-run</string>
-      <string>1625814139847</string>
+      <string>1626056591899</string>
     </row>
   </data>
   <data tableName="AO_2F1435_READ_NOTIFICATIONS">
@@ -4718,6 +4718,13 @@
       <string>git-integration-for-jira</string>
       <integer>1</integer>
     </row>
+    <row>
+      <boolean>false</boolean>
+      <integer>22</integer>
+      <string>88bdfd1e7d100cd4c4eff51a15cb06e6cb6f2671</string>
+      <string>jsu-automation-suite-for-jira-workflows</string>
+      <integer>1</integer>
+    </row>
   </data>
   <data tableName="AO_8BA09E_PROJECT_MAPPING">
     <column name="ID"/>
@@ -4730,13 +4737,6 @@
     <column name="SHOW_CODE_REVIEW_ISSUE_TAB"/>
     <column name="SHOW_COMMITS_ISSUE_TAB"/>
     <column name="SHOW_ROLL_UP_ISSUE_TAB"/>
-    <row>
-      <integer>1</integer>
-      <integer>10300</integer>
-      <boolean>false</boolean>
-      <boolean>false</boolean>
-      <boolean xsi:nil="true"/>
-    </row>
   </data>
   <data tableName="AO_8BA09E_PULL_REQUEST">
     <column name="AUTHOR"/>
@@ -4826,6 +4826,11 @@
       <string>533654c5619a96695b8d3acef0deeeecfa7f3fb5</string>
       <integer>1625814214</integer>
       <integer>1</integer>
+    </row>
+    <row>
+      <string>88bdfd1e7d100cd4c4eff51a15cb06e6cb6f2671</string>
+      <integer>1625817044</integer>
+      <integer>2</integer>
     </row>
   </data>
   <data tableName="AO_8BA09E_USERS_PATS">
