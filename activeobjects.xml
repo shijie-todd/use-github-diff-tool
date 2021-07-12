@@ -4755,6 +4755,13 @@
       <string>jira-misc-workflow-extensions</string>
       <integer>1</integer>
     </row>
+    <row>
+      <boolean>false</boolean>
+      <integer>25</integer>
+      <string>29f92abee4916f6db0b0bceb097e4a7c49e2f283</string>
+      <string>capture-for-JIRA</string>
+      <integer>1</integer>
+    </row>
   </data>
   <data tableName="AO_8BA09E_PROJECT_MAPPING">
     <column name="ID"/>
@@ -4878,6 +4885,11 @@
       <string>acd9a8737d0c4bc1ad216dc5199eef3c97af9e4e</string>
       <integer>1626059495</integer>
       <integer>4</integer>
+    </row>
+    <row>
+      <string>29f92abee4916f6db0b0bceb097e4a7c49e2f283</string>
+      <integer>1626060451</integer>
+      <integer>5</integer>
     </row>
   </data>
   <data tableName="AO_8BA09E_USERS_PATS">

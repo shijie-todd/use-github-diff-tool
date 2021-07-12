@@ -4,7 +4,7 @@
 
 ___ Exported on _____________________________
 
-     on                                            : 2021年7月12日 星期一 上午11时26分15秒 CST
+     on                                            : 2021年7月12日 星期一 上午11时36分49秒 CST
      by                                            : admin ( 417138306@qq.com )
 
 ___ Environment ____________________________
@@ -14,16 +14,16 @@ ___ Environment ____________________________
      JIRA Installation Type                        : Standalone
      Java Version                                  : 1.8.0_291 - Oracle Corporation
      Current Working Directory                     : /Users/shijie/atlassian-jira-software-7.10.0-standalone/bin
-     Maximum Allowable Memory                      : 733MB
-     Total Memory                                  : 733MB
-     Free Memory                                   : 115MB
-     Used Memory                                   : 618MB
-     Memory Pool: Code Cache                       : Code Cache: init = 2555904(2496K) used = 184615552(180288K) committed = 186449920(182080K) max = 251658240(245760K)
-     Memory Pool: Metaspace                        : Metaspace: init = 0(0K) used = 367768056(359148K) committed = 407801856(398244K) max = -1(-1K)
-     Memory Pool: Compressed Class Space           : Compressed Class Space: init = 0(0K) used = 48654304(47513K) committed = 58376192(57008K) max = 1073741824(1048576K)
-     Memory Pool: PS Eden Space                    : PS Eden Space: init = 100663296(98304K) used = 110984872(108383K) committed = 195035136(190464K) max = 195035136(190464K)
-     Memory Pool: PS Survivor Space                : PS Survivor Space: init = 16777216(16384K) used = 0(0K) committed = 36700160(35840K) max = 36700160(35840K)
-     Memory Pool: PS Old Gen                       : PS Old Gen: init = 268435456(262144K) used = 536861216(524278K) committed = 536870912(524288K) max = 536870912(524288K)
+     Maximum Allowable Memory                      : 731MB
+     Total Memory                                  : 731MB
+     Free Memory                                   : 66MB
+     Used Memory                                   : 665MB
+     Memory Pool: Code Cache                       : Code Cache: init = 2555904(2496K) used = 185577792(181228K) committed = 187957248(183552K) max = 251658240(245760K)
+     Memory Pool: Metaspace                        : Metaspace: init = 0(0K) used = 371852328(363137K) committed = 411996160(402340K) max = -1(-1K)
+     Memory Pool: Compressed Class Space           : Compressed Class Space: init = 0(0K) used = 49173120(48020K) committed = 58900480(57520K) max = 1073741824(1048576K)
+     Memory Pool: PS Eden Space                    : PS Eden Space: init = 100663296(98304K) used = 159851856(156105K) committed = 194510848(189952K) max = 198705152(194048K)
+     Memory Pool: PS Survivor Space                : PS Survivor Space: init = 16777216(16384K) used = 0(0K) committed = 35127296(34304K) max = 35127296(34304K)
+     Memory Pool: PS Old Gen                       : PS Old Gen: init = 268435456(262144K) used = 536445592(523872K) committed = 536870912(524288K) max = 536870912(524288K)
      JVM Input Arguments                           : -Djava.util.logging.config.file=/Users/shijie/atlassian-jira-software-7.10.0-standalone/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xms384m -Xmx768m -Djava.awt.headless=true -Datlassian.standalone=JIRA -Dorg.apache.jasper.runtime.BodyContentImpl.LIMIT_BUFFER=true -Dmail.mime.decodeparameters=true -Dorg.dom4j.factory=com.atlassian.core.xml.InterningDocumentFactory -XX:-OmitStackTraceInFastThrow -Datlassian.plugins.startup.options= -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Xloggc:/Users/shijie/atlassian-jira-software-7.10.0-standalone/logs/atlassian-jira-gc-%t.log -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=5 -XX:GCLogFileSize=20M -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+PrintGCCause -Dcatalina.base=/Users/shijie/atlassian-jira-software-7.10.0-standalone -Dcatalina.home=/Users/shijie/atlassian-jira-software-7.10.0-standalone -Djava.io.tmpdir=/Users/shijie/atlassian-jira-software-7.10.0-standalone/temp
      Java Compatibility Information                : JIRA version = 7.10.0, Java Version = 1.8.0_291
 
@@ -62,6 +62,7 @@ ___ Application Properties _________________
      com.atlassian.analytics.client.configuration.serverid : BPJM-KACJ-FBDT-KOCK
      com.atlassian.analytics.client.configuration.uuid : b3cd24e8-026c-4388-82b3-7700e90e5cab
      com.atlassian.analytics.client.upload.last_date : 21-7-11 上午3:46
+     com.atlassian.bonfire.plugin:build            : 13
      com.atlassian.crowd.embedded.admin:build      : 3
      com.atlassian.jira.gadgets:build              : 1
      com.atlassian.jira.jira-mail-plugin:build     : 2
@@ -99,12 +100,14 @@ ___ Application Properties _________________
      com.atlassian.upm.impl.PluginManagerPluginAsynchronousTaskStatusStora893aa5c168ece4cf019d6a8651e3a25 : {"id":"53f121a5-31bc-4095-9f4f-8776fe2b9ae7","type":"INSTALL","userKey":"admin","timestamp":1625811710782,"status":{"done":true,"error":null,"description":null,"stage":null,"resourceName":null,"resourceVersion":null,"itemsDone":null,"itemsTotal":null,"progress":1.0,"successes":null,"failures":null,"nextStepPostUri":null,"resultUri":"/rest/plugins/1.0/com.onresolve.jira.groovy.groovyrunner-key","pollDelay":100},"cancellable":false}
      com.atlassian.upm.impl.PluginManagerPluginAsynchronousTaskStatusStorc1c41c06a97abfc2ed57fe356498b725 : {"id":"5cc0ab15-aaf1-4f4b-a76a-e889d7fc0996","type":"INSTALL","userKey":"admin","timestamp":1626057757236,"status":{"done":true,"error":null,"description":null,"stage":null,"resourceName":null,"resourceVersion":null,"itemsDone":null,"itemsTotal":null,"progress":1.0,"successes":null,"failures":null,"nextStepPostUri":null,"resultUri":"/rest/plugins/1.0/com.eazybi.jira.plugins.eazybi-jira-key","pollDelay":100},"cancellable":false}
      com.atlassian.upm.impl.PluginManagerPluginAsynchronousTaskStatusStorc5b1a940049348b94f3012646bbb7ddf : {"id":"d6220fd7-fdf3-41e1-9c16-16864ab985aa","type":"INSTALL","userKey":"admin","timestamp":1625816614730,"status":{"done":true,"error":null,"description":null,"stage":null,"resourceName":null,"resourceVersion":null,"itemsDone":null,"itemsTotal":null,"progress":1.0,"successes":null,"failures":null,"nextStepPostUri":null,"resultUri":"/rest/plugins/1.0/com.googlecode.jira-suite-utilities-key","pollDelay":100},"cancellable":false}
+     com.atlassian.upm.impl.PluginManagerPluginAsynchronousTaskStatusStorc78c5566e3aac9e8e6335f554c271c2d : {"id":"9a15a760-9ab5-4b3c-aef0-bb7701ac1d9b","type":"INSTALL","userKey":"admin","timestamp":1626060536959,"status":{"done":true,"error":null,"description":null,"stage":null,"resourceName":null,"resourceVersion":null,"itemsDone":null,"itemsTotal":null,"progress":1.0,"successes":null,"failures":null,"nextStepPostUri":null,"resultUri":"/rest/plugins/1.0/com.atlassian.bonfire.plugin-key","pollDelay":100},"cancellable":false}
      com.atlassian.upm.impl.PluginManagerPluginAsynchronousTaskStatusStoreImpl:completed-tasks: : #java.util.List
                                                      53f121a5-31bc-4095-9f4f-8776fe2b9ae7
                                                      b86a589e-e3a0-4586-b258-d9bb7f5c6abd
                                                      d6220fd7-fdf3-41e1-9c16-16864ab985aa
                                                      5cc0ab15-aaf1-4f4b-a76a-e889d7fc0996
                                                      4d395b25-95e1-4915-a30f-44d4b7eb5974
+                                                     9a15a760-9ab5-4b3c-aef0-bb7701ac1d9b
      com.atlassian.upm.impl.PluginManagerPluginAsynchronousTaskStatusStoreImpl:ongoing-tasks: : #java.util.List
      com.atlassian.upm.impl.PluginSettingsPluginUpdateRequestStoreplugin-update-requests : #java.util.List
      com.atlassian.upm.license.internal.impl.PluginSettingsPluginLicenseR41ec4715595d3dba6e16cbe6e446f2e6 : AAABdw0ODAoPeNqNkV1LwzAUhu/zKwJeSmvayb4g4Oiqc66drvWD4c1ZPbOZXVqTtHP79dbOoYiCk
@@ -115,6 +118,13 @@ ___ Application Properties _________________
                                                      WvKuiJBJn/EifyQ19uaOJ3WKWOnbTJVzyCFBvMxkx8BPYVN/ednfuY6TNIlQ9SJEkWjMW/oaPRaw
                                                      hO1aIza0AAkPOO6xqXLXNGxUPDYp34FWdkYkK/jPsg70yXEEzAtAhRXAdtomu3lGgEaMQF9FVEga
                                                      kjOuQIVAJGA+AQ3Zve9jlF2KIBMTXhCR871X02ia
+     com.atlassian.upm.license.internal.impl.PluginSettingsPluginLicenseR4a77050ad94c4ee97a6558fc7e00b304 : AAABWg0ODAoPeNp1kdFPwjAQxt/7Vyzx0UzXDRyQNJGUGSUbIKAPhpcybq4yu3ltJ/vvnVPUkHhJH
+                                                     66X77tfvjtbWeVMbeFQ6vj+KPBHtOfwydrxPZ+SPTSPgFqWitErzwu9QRBQsi1VJhEuQBnACqUGZ
+                                                     tACmdnXLeA8e9CthrmU8FIZkZqZeAWmc/ki4bpUoC+EJAuLaS40TIQB9rnL9UKX+iSWKSgN66aCT
+                                                     sbnSRIt+d04Po6iQyWx+aMbuPSXaWUEtlQsE4WGI0CUCFmcEhRfdrdC5yzh7/wmauuQ2939MD9/a
+                                                     p7ekjjO5HAxpUsc50sN+559Cy6Hpg594E29LrBAu4ur+w3bMNKuaONQQqX/EK6iGWufG9Mw6PWDf
+                                                     p/M8VkoqYX5zPeEjiN0/6f5fFMfr+KTCegUZdV5cFEZi+BkJTpTiWIzcqJaFLZz+omoDUTW3yf7H
+                                                     X/1HzvKsN0wLAIUImGDb6wytYSo96rZ+41VISF0oiACFGcA9i8IwG9H9CFV4ZOIVbiptj9qX02h1
      com.atlassian.upm.license.internal.impl.PluginSettingsPluginLicenseR853c13464c051d6a25fc22dbdbd4ab7b : AAABbA0ODAoPeNqNUl1rwjAUfc+vKOzZktr5CYVJbZnO6mZ1jrGXGK42WpP2phW7X79aLRvCQEjIJ
                                                      Zdzz8k5efBRGOM8NmjPoFa/afdty3CHC6NJmxbh6mAqiaBVfARzJ5CZW1TqWFwPzKUENEFmgAkKD
                                                      U6GOZA9FO+AWijpWG1KO7Rr2xaZ5oc14Gyz1GXPaVjEVTJjPJuyAzg6EjsBT0qCNpkgrznyiGkYs
@@ -162,7 +172,10 @@ ___ Application Properties _________________
                                                      com.googlecode.jira-suite-utilities
                                                      com.eazybi.jira.plugins.eazybi-jira
                                                      com.innovalog.jmwe.jira-misc-workflow-extensions
+                                                     com.atlassian.bonfire.plugin
      com.atlassian.upm.log.PluginSettingsAuditLogService:log:upm_audit_log_v3 : #java.util.List
+                                                     {"userKey":"admin","date":1626060761862,"i18nKey":"upm.auditLog.plugin.license.add","entryType":"LICENSE_ADD","params":["Capture for JIRA","com.atlassian.bonfire.plugin"]}
+                                                     {"userKey":"admin","date":1626060662362,"i18nKey":"upm.auditLog.install.plugin.success","entryType":"PLUGIN_INSTALL","params":["Capture for JIRA","com.atlassian.bonfire.plugin","2.9.21.292100089"]}
                                                      {"userKey":"admin","date":1626059049534,"i18nKey":"upm.auditLog.plugin.license.add","entryType":"LICENSE_ADD","params":["Jira Misc Workflow Extensions","com.innovalog.jmwe.jira-misc-workflow-extensions"]}
                                                      {"userKey":"admin","date":1626058998911,"i18nKey":"upm.auditLog.install.plugin.success","entryType":"PLUGIN_INSTALL","params":["Jira Misc Workflow Extensions","com.innovalog.jmwe.jira-misc-workflow-extensions","6.6.1"]}
                                                      {"userKey":"admin","date":1626057968611,"i18nKey":"upm.auditLog.plugin.license.add","entryType":"LICENSE_ADD","params":["eazyBI Reports and Charts for Jira","com.eazybi.jira.plugins.eazybi-jira"]}
@@ -485,7 +498,7 @@ ___ Database Statistics ____________________
 
      Issues                                        : 48
      Projects                                      : 7
-     Custom Fields                                 : 32
+     Custom Fields                                 : 42
      Workflows                                     : 11
      Users                                         : 2
      Groups                                        : 2
@@ -509,7 +522,7 @@ ___ File Paths _____________________________
 
 ___ User Plugins ____________________________
 
-     Number                                        : 37
+     Number                                        : 38
 
      Adaptavist ScriptRunner for JIRA              : com.onresolve.jira.groovy.groovyrunner
           Version                                       : 6.3.0
@@ -528,6 +541,12 @@ ___ User Plugins ____________________________
           Status                                        : enabled
           Vendor                                        : Atlassian
           Description                                   : Allows defining transition triggers
+
+     Capture for JIRA                              : com.atlassian.bonfire.plugin
+          Version                                       : 2.9.21.292100089
+          Status                                        : enabled
+          Vendor                                        : D Software Inc.
+          Description                                   : Capture for JIRA - Agile Testing
 
      FishEye Plugin                                : com.atlassian.jirafisheyeplugin
           Version                                       : 7.1.10
@@ -1954,7 +1973,7 @@ ___ Services _______________________________
      Last Run                                      : 21-7-12 上午10:23
      Mail Queue Service                            : com.atlassian.jira.service.services.mail.MailQueueService
           Service Schedule                              : 0 * * * * ?
-     Last Run                                      : 21-7-12 上午11:26
+     Last Run                                      : 21-7-12 上午11:36
 
 ___ Trusted Applications ___________________
 
@@ -1962,7 +1981,7 @@ ___ Trusted Applications ___________________
 
 
  -->
-<entity-engine-xml date="1626060375251">
+<entity-engine-xml date="1626061009990">
     <Action id="10000" issue="10006" author="admin" type="comment" body="Hello" created="2021-06-21 17:27:53.639" updateauthor="admin" updated="2021-06-21 17:27:53.639"/>
     <Action id="10001" issue="10009" author="admin" type="comment" body="Joined Sample Sprint 2 7 days 9 hours 10 minutes ago" created="2021-06-14 08:17:52.959" updateauthor="admin" updated="2021-06-14 08:17:52.959"/>
     <Action id="10002" issue="10010" author="admin" type="comment" body="To Do to In Progress 3 days 21 hours 8 minutes ago" created="2021-06-17 20:19:52.959" updateauthor="admin" updated="2021-06-17 20:19:52.959"/>
@@ -2422,6 +2441,50 @@ To Do to Done 9 days 1 hours 45 minutes ago]]></body>
     <AuditChangedValue id="10708" logId="10504" name="Name" deltaTo="gitCommitsReferenced"/>
     <AuditChangedValue id="10709" logId="10504" name="Description" deltaTo="Git Commits Referenced"/>
     <AuditChangedValue id="10710" logId="10504" name="Type" deltaTo="Git提交引用"/>
+    <AuditChangedValue id="10711" logId="10505" name="Name" deltaTo="Test sessions"/>
+    <AuditChangedValue id="10712" logId="10505" name="Description" deltaTo="This custom field is created programmatically by Capture for JIRA."/>
+    <AuditChangedValue id="10713" logId="10505" name="Type" deltaTo="Capture for JIRA test sessions"/>
+    <AuditChangedValue id="10714" logId="10506" name="Name" deltaTo="Raised during"/>
+    <AuditChangedValue id="10715" logId="10506" name="Description" deltaTo="This custom field is created programmatically by Capture for JIRA."/>
+    <AuditChangedValue id="10716" logId="10506" name="Type" deltaTo="Capture for JIRA test session"/>
+    <AuditChangedValue id="10717" logId="10507" name="Name" deltaTo="Bonfire User Agent"/>
+    <AuditChangedValue id="10718" logId="10507" name="Description" deltaTo="This Custom Field is created programatically by Bonfire."/>
+    <AuditChangedValue id="10719" logId="10507" name="Type" deltaTo="Capture for JIRA text"/>
+    <AuditChangedValue id="10720" logId="10508" name="Name" deltaTo="Bonfire Browser"/>
+    <AuditChangedValue id="10721" logId="10508" name="Description" deltaTo="This Custom Field is created programatically by Bonfire."/>
+    <AuditChangedValue id="10722" logId="10508" name="Type" deltaTo="Capture for JIRA text"/>
+    <AuditChangedValue id="10723" logId="10509" name="Name" deltaTo="Bonfire Operating System"/>
+    <AuditChangedValue id="10724" logId="10509" name="Description" deltaTo="This Custom Field is created programatically by Bonfire."/>
+    <AuditChangedValue id="10725" logId="10509" name="Type" deltaTo="Capture for JIRA text"/>
+    <AuditChangedValue id="10726" logId="10510" name="Name" deltaTo="Bonfire URL"/>
+    <AuditChangedValue id="10727" logId="10510" name="Description" deltaTo="This Custom Field is created programatically by Bonfire."/>
+    <AuditChangedValue id="10728" logId="10510" name="Type" deltaTo="Capture for JIRA text"/>
+    <AuditChangedValue id="10729" logId="10511" name="Name" deltaTo="Bonfire Screen Resolution"/>
+    <AuditChangedValue id="10730" logId="10511" name="Description" deltaTo="This Custom Field is created programatically by Bonfire."/>
+    <AuditChangedValue id="10731" logId="10511" name="Type" deltaTo="Capture for JIRA text"/>
+    <AuditChangedValue id="10732" logId="10512" name="Name" deltaTo="Bonfire jQuery Version"/>
+    <AuditChangedValue id="10733" logId="10512" name="Description" deltaTo="This Custom Field is created programatically by Bonfire."/>
+    <AuditChangedValue id="10734" logId="10512" name="Type" deltaTo="Capture for JIRA text"/>
+    <AuditChangedValue id="10735" logId="10513" name="Name" deltaTo="Bonfire Document Mode"/>
+    <AuditChangedValue id="10736" logId="10513" name="Description" deltaTo="This Custom Field is created programatically by Bonfire."/>
+    <AuditChangedValue id="10737" logId="10513" name="Type" deltaTo="Capture for JIRA text"/>
+    <AuditChangedValue id="10738" logId="10514" name="Name" deltaTo="Testing status"/>
+    <AuditChangedValue id="10739" logId="10514" name="Description" deltaTo="This custom field is created programmatically by Capture for JIRA."/>
+    <AuditChangedValue id="10740" logId="10514" name="Type" deltaTo="Capture for JIRA testing status"/>
+    <AuditChangedValue id="10741" logId="10515" name="Name" deltaFrom="Bonfire User Agent" deltaTo="Capture for JIRA User Agent"/>
+    <AuditChangedValue id="10742" logId="10515" name="Description" deltaFrom="This Custom Field is created programatically by Bonfire." deltaTo="This Custom Field is created programatically by Capture for JIRA."/>
+    <AuditChangedValue id="10743" logId="10516" name="Name" deltaFrom="Bonfire Browser" deltaTo="Capture for JIRA Browser"/>
+    <AuditChangedValue id="10744" logId="10516" name="Description" deltaFrom="This Custom Field is created programatically by Bonfire." deltaTo="This Custom Field is created programatically by Capture for JIRA."/>
+    <AuditChangedValue id="10745" logId="10517" name="Name" deltaFrom="Bonfire Operating System" deltaTo="Capture for JIRA Operating System"/>
+    <AuditChangedValue id="10746" logId="10517" name="Description" deltaFrom="This Custom Field is created programatically by Bonfire." deltaTo="This Custom Field is created programatically by Capture for JIRA."/>
+    <AuditChangedValue id="10747" logId="10518" name="Name" deltaFrom="Bonfire URL" deltaTo="Capture for JIRA URL"/>
+    <AuditChangedValue id="10748" logId="10518" name="Description" deltaFrom="This Custom Field is created programatically by Bonfire." deltaTo="This Custom Field is created programatically by Capture for JIRA."/>
+    <AuditChangedValue id="10749" logId="10519" name="Name" deltaFrom="Bonfire Screen Resolution" deltaTo="Capture for JIRA Screen Resolution"/>
+    <AuditChangedValue id="10750" logId="10519" name="Description" deltaFrom="This Custom Field is created programatically by Bonfire." deltaTo="This Custom Field is created programatically by Capture for JIRA."/>
+    <AuditChangedValue id="10751" logId="10520" name="Name" deltaFrom="Bonfire jQuery Version" deltaTo="Capture for JIRA jQuery Version"/>
+    <AuditChangedValue id="10752" logId="10520" name="Description" deltaFrom="This Custom Field is created programatically by Bonfire." deltaTo="This Custom Field is created programatically by Capture for JIRA."/>
+    <AuditChangedValue id="10753" logId="10521" name="Name" deltaFrom="Bonfire Document Mode" deltaTo="Capture for JIRA Document Mode"/>
+    <AuditChangedValue id="10754" logId="10521" name="Description" deltaFrom="This Custom Field is created programatically by Bonfire." deltaTo="This Custom Field is created programatically by Capture for JIRA."/>
     <AuditItem id="10000" logId="10113" objectType="USER" objectId="admin" objectName="admin" objectParentId="1" objectParentName="JIRA Internal Directory"/>
     <AuditItem id="10001" logId="10123" objectType="USER" objectId="admin" objectName="admin" objectParentId="1" objectParentName="JIRA Internal Directory"/>
     <AuditItem id="10002" logId="10126" objectType="SCHEME" objectId="10100" objectName="SAMPLE: Software Simplified Workflow Scheme"/>
@@ -2700,6 +2763,23 @@ To Do to Done 9 days 1 hours 45 minutes ago]]></body>
     <AuditLog id="10502" remoteAddress="0:0:0:0:0:0:0:1" created="2021-07-09 14:25:03.322" authorKey="admin" summary="ScriptRunner: &apos;Script Console&apos;: executed" category="system" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com 0:0:0:0:0:0:0:1 scriptrunner: &apos;script console&apos;: executed system console.log(&apos;1&apos;)"/>
     <AuditLog id="10503" created="2021-07-09 14:50:28.635" authorKey="admin" summary="Custom field created" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10401" objectName="gitBranch" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field created fields gitbranch git branch 分支(多值）"/>
     <AuditLog id="10504" created="2021-07-09 14:50:28.639" authorKey="admin" summary="Custom field created" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10402" objectName="gitCommitsReferenced" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field created fields gitcommitsreferenced git commits referenced git提交引用"/>
+    <AuditLog id="10505" created="2021-07-12 11:31:02.221" authorKey="admin" summary="Custom field created" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10403" objectName="Test sessions" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field created fields test sessions this is programmatically by capture for jira. jira"/>
+    <AuditLog id="10506" created="2021-07-12 11:31:02.283" authorKey="admin" summary="Custom field created" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10404" objectName="Raised during" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field created fields raised during this is programmatically by capture for jira. jira test session"/>
+    <AuditLog id="10507" created="2021-07-12 11:31:02.293" authorKey="admin" summary="Custom field created" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10405" objectName="Bonfire User Agent" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field created fields bonfire user agent this is programatically by bonfire. capture for jira text"/>
+    <AuditLog id="10508" created="2021-07-12 11:31:02.296" authorKey="admin" summary="Custom field created" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10406" objectName="Bonfire Browser" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field created fields bonfire browser this is programatically by bonfire. capture for jira text"/>
+    <AuditLog id="10509" created="2021-07-12 11:31:02.298" authorKey="admin" summary="Custom field created" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10407" objectName="Bonfire Operating System" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field created fields bonfire operating system this is programatically by bonfire. capture for jira text"/>
+    <AuditLog id="10510" created="2021-07-12 11:31:02.301" authorKey="admin" summary="Custom field created" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10408" objectName="Bonfire URL" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field created fields bonfire url this is programatically by bonfire. capture for jira text"/>
+    <AuditLog id="10511" created="2021-07-12 11:31:02.305" authorKey="admin" summary="Custom field created" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10409" objectName="Bonfire Screen Resolution" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field created fields bonfire screen resolution this is programatically by bonfire. capture for jira text"/>
+    <AuditLog id="10512" created="2021-07-12 11:31:02.307" authorKey="admin" summary="Custom field created" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10410" objectName="Bonfire jQuery Version" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field created fields bonfire jquery version this is programatically by bonfire. capture for jira text"/>
+    <AuditLog id="10513" created="2021-07-12 11:31:02.31" authorKey="admin" summary="Custom field created" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10411" objectName="Bonfire Document Mode" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field created fields bonfire document mode this is programatically by bonfire. capture for jira text"/>
+    <AuditLog id="10514" created="2021-07-12 11:31:02.317" authorKey="admin" summary="Custom field created" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10412" objectName="Testing status" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field created fields testing status this is programmatically by capture for jira. jira"/>
+    <AuditLog id="10515" created="2021-07-12 11:31:02.323" authorKey="admin" summary="Custom field updated" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10405" objectName="Capture for JIRA User Agent" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field updated fields capture for jira user agent bonfire this is created programatically by bonfire. jira."/>
+    <AuditLog id="10516" created="2021-07-12 11:31:02.349" authorKey="admin" summary="Custom field updated" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10406" objectName="Capture for JIRA Browser" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field updated fields capture for jira browser bonfire this is created programatically by bonfire. jira."/>
+    <AuditLog id="10517" created="2021-07-12 11:31:02.351" authorKey="admin" summary="Custom field updated" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10407" objectName="Capture for JIRA Operating System" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field updated fields capture for jira operating system bonfire this is created programatically by bonfire. jira."/>
+    <AuditLog id="10518" created="2021-07-12 11:31:02.352" authorKey="admin" summary="Custom field updated" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10408" objectName="Capture for JIRA URL" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field updated fields capture for jira url bonfire this is created programatically by bonfire. jira."/>
+    <AuditLog id="10519" created="2021-07-12 11:31:02.354" authorKey="admin" summary="Custom field updated" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10409" objectName="Capture for JIRA Screen Resolution" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field updated fields capture for jira screen resolution bonfire this is created programatically by bonfire. jira."/>
+    <AuditLog id="10520" created="2021-07-12 11:31:02.356" authorKey="admin" summary="Custom field updated" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10410" objectName="Capture for JIRA jQuery Version" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field updated fields capture for jira jquery version bonfire this is created programatically by bonfire. jira."/>
+    <AuditLog id="10521" created="2021-07-12 11:31:02.358" authorKey="admin" summary="Custom field updated" category="fields" objectType="CUSTOM_FIELD" objectId="customfield_10411" objectName="Capture for JIRA Document Mode" authorType="1" eventSourceName="" longDescription="" searchField="admin 417138306@qq.com custom field updated fields capture for jira document mode bonfire this is created programatically by bonfire. jira."/>
     <Avatar id="10000" fileName="codegeist.png" contentType="image/png" avatarType="project" systemAvatar="1"/>
     <Avatar id="10001" fileName="bird.svg" contentType="image/svg+xml" avatarType="project" systemAvatar="1"/>
     <Avatar id="10002" fileName="jm_black.png" contentType="image/png" avatarType="project" systemAvatar="1"/>
@@ -3123,36 +3203,37 @@ AAQAAAABc3IADmphdmEubGFuZy5Mb25nO4vkkMyPI98CAAFKAAV2YWx1ZXhyABBqYXZhLmxhbmcu
 TnVtYmVyhqyVHQuU4IsCAAB4cAAAAAAAACcS
 ]]></parameters>
     </ClusteredJob>
-    <ClusteredJob id="10104" jobId="CompatibilityPluginScheduler.JobId.LEXO_RANK_SCHEDULER_JOB" jobRunnerKey="CompatibilityPluginScheduler.JobRunnerKey.com.atlassian.greenhopper.service.lexorank.balance.LexoRankBalancePluginJob" schedType="I" intervalMillis="60000" firstRun="1624267480316" nextRun="1626060432259" version="6614"/>
+    <ClusteredJob id="10104" jobId="CompatibilityPluginScheduler.JobId.LEXO_RANK_SCHEDULER_JOB" jobRunnerKey="CompatibilityPluginScheduler.JobRunnerKey.com.atlassian.greenhopper.service.lexorank.balance.LexoRankBalancePluginJob" schedType="I" intervalMillis="60000" firstRun="1624267480316" nextRun="1626061032858" version="6624"/>
     <ClusteredJob id="10106" jobId="LocalPluginLicenseNotificationJob-job" jobRunnerKey="LocalPluginLicenseNotificationJob-runner" schedType="I" intervalMillis="86400000" firstRun="1624267481421" nextRun="1626092967315" version="21"/>
     <ClusteredJob id="10107" jobId="PluginRequestCheckJob-job" jobRunnerKey="PluginRequestCheckJob-runner" schedType="I" intervalMillis="3600000" firstRun="1624267481423" nextRun="1626063791676" version="277"/>
     <ClusteredJob id="10108" jobId="PluginUpdateCheckJob-job" jobRunnerKey="PluginUpdateCheckJob-runner" schedType="I" intervalMillis="86400000" firstRun="1624302341749" nextRun="1626092967386" version="21"/>
     <ClusteredJob id="10109" jobId="InstanceTopologyJob-job" jobRunnerKey="InstanceTopologyJob-runner" schedType="I" intervalMillis="86400000" firstRun="1624291967297" nextRun="1626092967320" version="21"/>
     <ClusteredJob id="10113" jobId="com.atlassian.jira.plugins.dvcs.scheduler.DvcsScheduler:job" jobRunnerKey="com.atlassian.jira.plugins.dvcs.scheduler.DvcsScheduler" schedType="I" intervalMillis="3600000" firstRun="1624269535191" nextRun="1626063791676" version="276"/>
-    <ClusteredJob id="10114" jobId="8400c8a7-0a65-418b-bdec-f6ed16edb60c" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1624267483205" nextRun="1626060432259" version="6614"/>
-    <ClusteredJob id="10206" jobId="5fc69ebf-8ecf-48ca-931b-d0a6385be361" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1624433700567" nextRun="1626060432259" version="6106"/>
-    <ClusteredJob id="10308" jobId="a1e5c1c4-c338-48ec-84db-57009bf29409" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1624525487990" nextRun="1626060432266" version="5595"/>
-    <ClusteredJob id="10406" jobId="a621a255-240c-455d-b5d4-bd5f63d0df04" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625023108386" nextRun="1626060432267" version="3938"/>
-    <ClusteredJob id="10510" jobId="f82cabf5-ad89-407b-bd14-9cb727c82535" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625023743610" nextRun="1626060432268" version="3928"/>
-    <ClusteredJob id="10613" jobId="a5c1f388-320d-4dcc-92b7-cb50c9533581" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625025706501" nextRun="1626060432267" version="3920"/>
-    <ClusteredJob id="10713" jobId="d87d3249-8cc7-46f6-91f5-66193d040aa2" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625026402844" nextRun="1626060432267" version="3912"/>
-    <ClusteredJob id="10814" jobId="14524c4e-f32c-4386-89ce-fc653c1c967e" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625540647456" nextRun="1626060432259" version="1955"/>
+    <ClusteredJob id="10114" jobId="8400c8a7-0a65-418b-bdec-f6ed16edb60c" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1624267483205" nextRun="1626061032858" version="6624"/>
+    <ClusteredJob id="10206" jobId="5fc69ebf-8ecf-48ca-931b-d0a6385be361" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1624433700567" nextRun="1626061032857" version="6116"/>
+    <ClusteredJob id="10308" jobId="a1e5c1c4-c338-48ec-84db-57009bf29409" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1624525487990" nextRun="1626061032865" version="5605"/>
+    <ClusteredJob id="10406" jobId="a621a255-240c-455d-b5d4-bd5f63d0df04" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625023108386" nextRun="1626061032867" version="3948"/>
+    <ClusteredJob id="10510" jobId="f82cabf5-ad89-407b-bd14-9cb727c82535" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625023743610" nextRun="1626061032871" version="3938"/>
+    <ClusteredJob id="10613" jobId="a5c1f388-320d-4dcc-92b7-cb50c9533581" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625025706501" nextRun="1626061032865" version="3930"/>
+    <ClusteredJob id="10713" jobId="d87d3249-8cc7-46f6-91f5-66193d040aa2" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625026402844" nextRun="1626061032870" version="3922"/>
+    <ClusteredJob id="10814" jobId="14524c4e-f32c-4386-89ce-fc653c1c967e" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625540647456" nextRun="1626061032856" version="1965"/>
     <ClusteredJob id="11000" jobId="analytics-collection" jobRunnerKey="com.atlassian.plugins.authentication.impl.analytics.StatisticsCollectionService" schedType="C" cronExpression="0 0 23 * * ?" nextRun="1626102000000" version="4"/>
     <ClusteredJob id="11001" jobId="assertionId-cleanup" jobRunnerKey="com.atlassian.plugins.authentication.impl.web.saml.AssertionValidationService" schedType="I" intervalMillis="3600000" firstRun="1625808571297" nextRun="1626063791676" version="20"/>
-    <ClusteredJob id="11002" jobId="data-provider-poll" jobRunnerKey="com.atlassian.jira.plugin.devstatus.provider.DevSummaryUpdateJob" schedType="I" intervalMillis="300000" firstRun="1625804973418" nextRun="1626060491883" version="96"/>
+    <ClusteredJob id="11002" jobId="data-provider-poll" jobRunnerKey="com.atlassian.jira.plugin.devstatus.provider.DevSummaryUpdateJob" schedType="I" intervalMillis="300000" firstRun="1625804973418" nextRun="1626061091884" version="98"/>
     <ClusteredJob id="11003" jobId="data-provider-cleanup" jobRunnerKey="com.atlassian.jira.plugin.devstatus.provider.DataProviderCleanupJob" schedType="I" intervalMillis="1800000" firstRun="1625804973674" nextRun="1626061991675" version="29"/>
     <ClusteredJob id="11004" jobId="com.atlassian.jira.web.action.issue.DefaultTemporaryWebAttachmentsMonitor" jobRunnerKey="com.atlassian.jira.web.action.issue.DefaultTemporaryWebAttachmentsMonitor" schedType="I" intervalMillis="3600000" firstRun="1625808582338" nextRun="1626063791693" version="20"/>
     <ClusteredJob id="11006" jobId="com.atlassian.jira.analytics.scheduler.AnalyticsScheduler" jobRunnerKey="com.atlassian.jira.analytics.scheduler.AnalyticsScheduler" schedType="I" intervalMillis="604800000" firstRun="1625891383167" nextRun="1626514203388" version="2"/>
     <ClusteredJob id="11007" jobId="CompatibilityPluginScheduler.JobId.Service Provider Session Remover" jobRunnerKey="CompatibilityPluginScheduler.JobRunnerKey.Service Provider Session Remover" schedType="I" intervalMillis="28800000" firstRun="1625833783183" nextRun="1626072305653" version="8"/>
-    <ClusteredJob id="11008" jobId="d6d3a744-c505-4217-b94d-add49717e534" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625804985924" nextRun="1626060432267" version="419"/>
+    <ClusteredJob id="11008" jobId="d6d3a744-c505-4217-b94d-add49717e534" jobRunnerKey="com.atlassian.jira.plugin.ext.bamboo.service.PlanStatusUpdateJob" schedType="I" intervalMillis="60000" firstRun="1625804985924" nextRun="1626061032868" version="429"/>
     <ClusteredJob id="11009" jobId="com.atlassian.whisper.plugin.fetch.FetchJob" jobRunnerKey="com.atlassian.whisper.plugin.fetch.FetchJob" schedType="I" intervalMillis="21600000" firstRun="1625808585929" nextRun="1626065105645" version="9"/>
     <ClusteredJob id="11011" jobId="CompatibilityPluginScheduler.JobId.hipchatRefreshConnectionStatusJob" jobRunnerKey="CompatibilityPluginScheduler.JobRunnerKey.com.atlassian.jira.plugins.hipchat.service.ping.RefreshConnectionStatusJobHandler" schedType="I" intervalMillis="3600000" firstRun="1625805008937" nextRun="1626063791681" version="21"/>
     <ClusteredJob id="11012" jobId="CompatibilityPluginScheduler.JobId.hipchatInstallGlancesJob" jobRunnerKey="CompatibilityPluginScheduler.JobRunnerKey.com.atlassian.jira.plugins.hipchat.service.connect.InstallGlancesJobHandler" schedType="I" intervalMillis="3600000" firstRun="1625805009139" nextRun="1626063791691" version="21"/>
-    <ClusteredJob id="11013" jobId="CompatibilityPluginScheduler.JobId.hipchatUpdateGlancesDataJob" jobRunnerKey="CompatibilityPluginScheduler.JobRunnerKey.com.atlassian.jira.plugins.hipchat.service.connect.UpdateGlancesDataJobHandler" schedType="I" intervalMillis="60000" firstRun="1625805015720" nextRun="1626060432266" version="418"/>
+    <ClusteredJob id="11013" jobId="CompatibilityPluginScheduler.JobId.hipchatUpdateGlancesDataJob" jobRunnerKey="CompatibilityPluginScheduler.JobRunnerKey.com.atlassian.jira.plugins.hipchat.service.connect.UpdateGlancesDataJobHandler" schedType="I" intervalMillis="60000" firstRun="1625805015720" nextRun="1626061032864" version="428"/>
     <ClusteredJob id="11014" jobId="applink-status-analytics-job" jobRunnerKey="com.atlassian.applinks.analytics.ApplinkStatusJob" schedType="I" intervalMillis="86400000" nextRun="1626092967482" version="4"/>
     <ClusteredJob id="11015" jobId="CompatibilityPluginScheduler.JobId.Zephyr Squad background job" jobRunnerKey="CompatibilityPluginScheduler.JobRunnerKey.Zephyr Squad background job" schedType="I" intervalMillis="86400000" firstRun="1625804986036" nextRun="1626092967495" version="4"/>
-    <ClusteredJob id="11102" jobId="com.bigbrassband.jira.git.jiraservices.jobs.RevisionIndexJob" jobRunnerKey="com.bigbrassband.jira.git.jiraservices.jobs.RevisionIndexJob" schedType="I" intervalMillis="300000" firstRun="1625813734023" nextRun="1626060491883" version="80"/>
+    <ClusteredJob id="11102" jobId="com.bigbrassband.jira.git.jiraservices.jobs.RevisionIndexJob" jobRunnerKey="com.bigbrassband.jira.git.jiraservices.jobs.RevisionIndexJob" schedType="I" intervalMillis="300000" firstRun="1625813734023" nextRun="1626061091884" version="82"/>
     <ClusteredJob id="11103" jobId="com.bigbrassband.jira.git.jiraservices.jobs.GarbageCollectionJob" jobRunnerKey="com.bigbrassband.jira.git.jiraservices.jobs.GarbageCollectionJob" schedType="I" intervalMillis="86400000" firstRun="1625899835087" nextRun="1626092967516" version="3"/>
+    <ClusteredJob id="11105" jobId="CompatibilityPluginScheduler.JobId.Capture for JIRA background job" jobRunnerKey="CompatibilityPluginScheduler.JobRunnerKey.Capture for JIRA background job" schedType="I" intervalMillis="86400000" firstRun="1626060661410" nextRun="1626147061411" version="2"/>
     <ColumnLayout id="10000"/>
     <ColumnLayoutItem id="10000" columnlayout="10000" fieldidentifier="issuetype" horizontalposition="0"/>
     <ColumnLayoutItem id="10001" columnlayout="10000" fieldidentifier="issuekey" horizontalposition="1"/>
@@ -3208,6 +3289,16 @@ TnVtYmVyhqyVHQuU4IsCAAB4cAAAAAAAACcS
     <ConfigurationContext id="10700" key="customfield_10400" fieldconfigscheme="10700"/>
     <ConfigurationContext id="10701" key="customfield_10401" fieldconfigscheme="10701"/>
     <ConfigurationContext id="10702" key="customfield_10402" fieldconfigscheme="10702"/>
+    <ConfigurationContext id="10703" key="customfield_10403" fieldconfigscheme="10703"/>
+    <ConfigurationContext id="10704" key="customfield_10404" fieldconfigscheme="10704"/>
+    <ConfigurationContext id="10705" key="customfield_10405" fieldconfigscheme="10705"/>
+    <ConfigurationContext id="10706" key="customfield_10406" fieldconfigscheme="10706"/>
+    <ConfigurationContext id="10707" key="customfield_10407" fieldconfigscheme="10707"/>
+    <ConfigurationContext id="10708" key="customfield_10408" fieldconfigscheme="10708"/>
+    <ConfigurationContext id="10709" key="customfield_10409" fieldconfigscheme="10709"/>
+    <ConfigurationContext id="10710" key="customfield_10410" fieldconfigscheme="10710"/>
+    <ConfigurationContext id="10711" key="customfield_10411" fieldconfigscheme="10711"/>
+    <ConfigurationContext id="10712" key="customfield_10412" fieldconfigscheme="10712"/>
     <CustomField id="10000" customfieldtypekey="com.pyxis.greenhopper.jira:gh-lexo-rank" customfieldsearcherkey="com.pyxis.greenhopper.jira:gh-lexo-rank-searcher" name="等级" description="全局评级域仅供JIRA软件使用。"/>
     <CustomField id="10001" customfieldtypekey="com.pyxis.greenhopper.jira:gh-sprint" customfieldsearcherkey="com.pyxis.greenhopper.jira:gh-sprint-searcher" name="Sprint" description="JIRA软件sprint 域"/>
     <CustomField id="10002" customfieldtypekey="com.pyxis.greenhopper.jira:gh-epic-link" customfieldsearcherkey="com.pyxis.greenhopper.jira:gh-epic-link-searcher" name="史诗链接" description="选择与此问题关联的Epic。"/>
@@ -3240,6 +3331,16 @@ TnVtYmVyhqyVHQuU4IsCAAB4cAAAAAAAACcS
     <CustomField id="10400" customfieldtypekey="com.onresolve.jira.groovy.groovyrunner:jqlFunctionsCustomFieldType" customfieldsearcherkey="com.onresolve.jira.groovy.groovyrunner:jqlFunctionsSearcher" name="issueFunction" description="Field created by script runner plugin for advanced issue functions. Do not place on any screen."/>
     <CustomField id="10401" customfieldtypekey="com.xiplink.jira.git.jira_git_plugin:gitbranches" customfieldsearcherkey="com.xiplink.jira.git.jira_git_plugin:gitbranchessearcher" name="gitBranch" description="Git Branch"/>
     <CustomField id="10402" customfieldtypekey="com.xiplink.jira.git.jira_git_plugin:gitcommitsreferenced" customfieldsearcherkey="com.xiplink.jira.git.jira_git_plugin:gitcommitsreferencedsearcher" name="gitCommitsReferenced" description="Git Commits Referenced"/>
+    <CustomField id="10403" customfieldtypekey="com.atlassian.bonfire.plugin:bonfire-multi-session-cft" customfieldsearcherkey="com.atlassian.bonfire.plugin:bonfire-session-searcher" name="Test sessions" description="This custom field is created programmatically by Capture for JIRA."/>
+    <CustomField id="10404" customfieldtypekey="com.atlassian.bonfire.plugin:bonfire-session-cft" customfieldsearcherkey="com.atlassian.bonfire.plugin:bonfire-session-searcher" name="Raised during" description="This custom field is created programmatically by Capture for JIRA."/>
+    <CustomField id="10405" customfieldtypekey="com.atlassian.bonfire.plugin:bonfire-text" customfieldsearcherkey="com.atlassian.jira.plugin.system.customfieldtypes:textsearcher" name="Capture for JIRA User Agent" description="This Custom Field is created programatically by Capture for JIRA."/>
+    <CustomField id="10406" customfieldtypekey="com.atlassian.bonfire.plugin:bonfire-text" customfieldsearcherkey="com.atlassian.jira.plugin.system.customfieldtypes:textsearcher" name="Capture for JIRA Browser" description="This Custom Field is created programatically by Capture for JIRA."/>
+    <CustomField id="10407" customfieldtypekey="com.atlassian.bonfire.plugin:bonfire-text" customfieldsearcherkey="com.atlassian.jira.plugin.system.customfieldtypes:textsearcher" name="Capture for JIRA Operating System" description="This Custom Field is created programatically by Capture for JIRA."/>
+    <CustomField id="10408" customfieldtypekey="com.atlassian.bonfire.plugin:bonfire-text" customfieldsearcherkey="com.atlassian.jira.plugin.system.customfieldtypes:textsearcher" name="Capture for JIRA URL" description="This Custom Field is created programatically by Capture for JIRA."/>
+    <CustomField id="10409" customfieldtypekey="com.atlassian.bonfire.plugin:bonfire-text" customfieldsearcherkey="com.atlassian.jira.plugin.system.customfieldtypes:textsearcher" name="Capture for JIRA Screen Resolution" description="This Custom Field is created programatically by Capture for JIRA."/>
+    <CustomField id="10410" customfieldtypekey="com.atlassian.bonfire.plugin:bonfire-text" customfieldsearcherkey="com.atlassian.jira.plugin.system.customfieldtypes:textsearcher" name="Capture for JIRA jQuery Version" description="This Custom Field is created programatically by Capture for JIRA."/>
+    <CustomField id="10411" customfieldtypekey="com.atlassian.bonfire.plugin:bonfire-text" customfieldsearcherkey="com.atlassian.jira.plugin.system.customfieldtypes:textsearcher" name="Capture for JIRA Document Mode" description="This Custom Field is created programatically by Capture for JIRA."/>
+    <CustomField id="10412" customfieldtypekey="com.atlassian.bonfire.plugin:bonfire-testing-status-cft" customfieldsearcherkey="com.atlassian.bonfire.plugin:bonfire-testingstatus-searcher" name="Testing status" description="This custom field is created programmatically by Capture for JIRA."/>
     <CustomFieldOption id="10000" customfield="10003" customfieldconfig="10204" sequence="0" value="待办" disabled="N"/>
     <CustomFieldOption id="10001" customfield="10003" customfieldconfig="10204" sequence="1" value="处理中" disabled="N"/>
     <CustomFieldOption id="10002" customfield="10003" customfieldconfig="10204" sequence="2" value="完成" disabled="N"/>
@@ -3956,6 +4057,16 @@ TnVtYmVyhqyVHQuU4IsCAAB4cAAAAAAAACcS
     <FieldConfigScheme id="10700" name="issueFunction的默认配置方案" description="JIRA生成的默认配置方案" fieldid="customfield_10400"/>
     <FieldConfigScheme id="10701" name="gitBranch的默认配置方案" description="JIRA生成的默认配置方案" fieldid="customfield_10401"/>
     <FieldConfigScheme id="10702" name="gitCommitsReferenced的默认配置方案" description="JIRA生成的默认配置方案" fieldid="customfield_10402"/>
+    <FieldConfigScheme id="10703" name="Test sessions的默认配置方案" description="JIRA生成的默认配置方案" fieldid="customfield_10403"/>
+    <FieldConfigScheme id="10704" name="Raised during的默认配置方案" description="JIRA生成的默认配置方案" fieldid="customfield_10404"/>
+    <FieldConfigScheme id="10705" name="Bonfire User Agent的默认配置方案" description="JIRA生成的默认配置方案" fieldid="customfield_10405"/>
+    <FieldConfigScheme id="10706" name="Bonfire Browser的默认配置方案" description="JIRA生成的默认配置方案" fieldid="customfield_10406"/>
+    <FieldConfigScheme id="10707" name="Bonfire Operating System的默认配置方案" description="JIRA生成的默认配置方案" fieldid="customfield_10407"/>
+    <FieldConfigScheme id="10708" name="Bonfire URL的默认配置方案" description="JIRA生成的默认配置方案" fieldid="customfield_10408"/>
+    <FieldConfigScheme id="10709" name="Bonfire Screen Resolution的默认配置方案" description="JIRA生成的默认配置方案" fieldid="customfield_10409"/>
+    <FieldConfigScheme id="10710" name="Bonfire jQuery Version的默认配置方案" description="JIRA生成的默认配置方案" fieldid="customfield_10410"/>
+    <FieldConfigScheme id="10711" name="Bonfire Document Mode的默认配置方案" description="JIRA生成的默认配置方案" fieldid="customfield_10411"/>
+    <FieldConfigScheme id="10712" name="Testing status的默认配置方案" description="JIRA生成的默认配置方案" fieldid="customfield_10412"/>
     <FieldConfigSchemeIssueType id="10100" fieldconfigscheme="10000" fieldconfiguration="10000"/>
     <FieldConfigSchemeIssueType id="10200" fieldconfigscheme="10100" fieldconfiguration="10100"/>
     <FieldConfigSchemeIssueType id="10300" fieldconfigscheme="10200" fieldconfiguration="10200"/>
@@ -3999,6 +4110,16 @@ TnVtYmVyhqyVHQuU4IsCAAB4cAAAAAAAACcS
     <FieldConfigSchemeIssueType id="10800" fieldconfigscheme="10700" fieldconfiguration="10700"/>
     <FieldConfigSchemeIssueType id="10801" fieldconfigscheme="10701" fieldconfiguration="10701"/>
     <FieldConfigSchemeIssueType id="10802" fieldconfigscheme="10702" fieldconfiguration="10702"/>
+    <FieldConfigSchemeIssueType id="10803" fieldconfigscheme="10703" fieldconfiguration="10703"/>
+    <FieldConfigSchemeIssueType id="10804" fieldconfigscheme="10704" fieldconfiguration="10704"/>
+    <FieldConfigSchemeIssueType id="10805" fieldconfigscheme="10705" fieldconfiguration="10705"/>
+    <FieldConfigSchemeIssueType id="10806" fieldconfigscheme="10706" fieldconfiguration="10706"/>
+    <FieldConfigSchemeIssueType id="10807" fieldconfigscheme="10707" fieldconfiguration="10707"/>
+    <FieldConfigSchemeIssueType id="10808" fieldconfigscheme="10708" fieldconfiguration="10708"/>
+    <FieldConfigSchemeIssueType id="10809" fieldconfigscheme="10709" fieldconfiguration="10709"/>
+    <FieldConfigSchemeIssueType id="10810" fieldconfigscheme="10710" fieldconfiguration="10710"/>
+    <FieldConfigSchemeIssueType id="10811" fieldconfigscheme="10711" fieldconfiguration="10711"/>
+    <FieldConfigSchemeIssueType id="10812" fieldconfigscheme="10712" fieldconfiguration="10712"/>
     <FieldConfiguration id="10000" name="Default Configuration for Issue Type" description="Default configuration generated by JIRA" fieldid="issuetype"/>
     <FieldConfiguration id="10100" name="Default configuration for priority" description="Default configuration generated by JIRA" fieldid="priority"/>
     <FieldConfiguration id="10200" name="Default Configuration for 等级" description="Default configuration generated by JIRA" fieldid="customfield_10000"/>
@@ -4041,6 +4162,16 @@ TnVtYmVyhqyVHQuU4IsCAAB4cAAAAAAAACcS
     <FieldConfiguration id="10700" name="Default Configuration for issueFunction" description="Default configuration generated by JIRA" fieldid="customfield_10400"/>
     <FieldConfiguration id="10701" name="Default Configuration for gitBranch" description="Default configuration generated by JIRA" fieldid="customfield_10401"/>
     <FieldConfiguration id="10702" name="Default Configuration for gitCommitsReferenced" description="Default configuration generated by JIRA" fieldid="customfield_10402"/>
+    <FieldConfiguration id="10703" name="Default Configuration for Test sessions" description="Default configuration generated by JIRA" fieldid="customfield_10403"/>
+    <FieldConfiguration id="10704" name="Default Configuration for Raised during" description="Default configuration generated by JIRA" fieldid="customfield_10404"/>
+    <FieldConfiguration id="10705" name="Default Configuration for Bonfire User Agent" description="Default configuration generated by JIRA" fieldid="customfield_10405"/>
+    <FieldConfiguration id="10706" name="Default Configuration for Bonfire Browser" description="Default configuration generated by JIRA" fieldid="customfield_10406"/>
+    <FieldConfiguration id="10707" name="Default Configuration for Bonfire Operating System" description="Default configuration generated by JIRA" fieldid="customfield_10407"/>
+    <FieldConfiguration id="10708" name="Default Configuration for Bonfire URL" description="Default configuration generated by JIRA" fieldid="customfield_10408"/>
+    <FieldConfiguration id="10709" name="Default Configuration for Bonfire Screen Resolution" description="Default configuration generated by JIRA" fieldid="customfield_10409"/>
+    <FieldConfiguration id="10710" name="Default Configuration for Bonfire jQuery Version" description="Default configuration generated by JIRA" fieldid="customfield_10410"/>
+    <FieldConfiguration id="10711" name="Default Configuration for Bonfire Document Mode" description="Default configuration generated by JIRA" fieldid="customfield_10411"/>
+    <FieldConfiguration id="10712" name="Default Configuration for Testing status" description="Default configuration generated by JIRA" fieldid="customfield_10412"/>
     <FieldLayout id="10000" name="Default Field Configuration" description="The default field configuration" type="default"/>
     <FieldLayoutItem id="10482" fieldlayout="10000" fieldidentifier="summary" ishidden="false" isrequired="true" renderertype="jira-text-renderer"/>
     <FieldLayoutItem id="10483" fieldlayout="10000" fieldidentifier="issuetype" ishidden="false" isrequired="true" renderertype="jira-text-renderer"/>
@@ -4959,7 +5090,7 @@ You can add your own Quick Filters in the board configuration (select *Board > C
     <OSHistoryStepPrev id="10202" previousId="10201"/>
     <OSHistoryStepPrev id="10203" previousId="10202"/>
     <OSHistoryStepPrev id="10204" previousId="10203"/>
-    <OSPropertyDate id="11152" value="2021-07-09 17:20:40.243"/>
+    <OSPropertyDate id="11152" value="2021-07-12 11:31:01.243"/>
     <OSPropertyEntry id="1" entityName="jira.properties" entityId="1" propertyKey="jira.version.patched" type="5"/>
     <OSPropertyEntry id="2" entityName="jira.properties" entityId="1" propertyKey="jira.avatar.issuetype.subtask.default.id" type="5"/>
     <OSPropertyEntry id="3" entityName="jira.properties" entityId="1" propertyKey="jira.avatar.default.id" type="5"/>
@@ -5219,7 +5350,7 @@ You can add your own Quick Filters in the board configuration (select *Board > C
     <OSPropertyEntry id="10956" entityName="ZephyrPlugin" entityId="1" propertyKey="zephyr.customfield.teststep" type="5"/>
     <OSPropertyEntry id="10957" entityName="ZephyrPlugin" entityId="1" propertyKey="zephyr.testcase.execution.statuses" type="6"/>
     <OSPropertyEntry id="10958" entityName="jira.properties" entityId="1" propertyKey="com.atlassian.upm.license.internal.impl.PluginSettingsPluginLicenseR41ec4715595d3dba6e16cbe6e446f2e6" type="6"/>
-    <OSPropertyEntry id="10959" entityName="jira.properties" entityId="1" propertyKey="com.atlassian.upm.license.internal.impl.PluginSettingsPluginLicenseRfdbfad06c2f1036a60cb955d7e285d69" type="5"/>
+    <OSPropertyEntry id="10959" entityName="jira.properties" entityId="1" propertyKey="com.atlassian.upm.license.internal.impl.PluginSettingsPluginLicenseRfdbfad06c2f1036a60cb955d7e285d69" type="6"/>
     <OSPropertyEntry id="10960" entityName="ZephyrPlugin" entityId="1" propertyKey="zephyr.requirement.testcase.link.relation" type="5"/>
     <OSPropertyEntry id="10961" entityName="ZephyrPlugin" entityId="1" propertyKey="zephyr.display.workflow.settings" type="5"/>
     <OSPropertyEntry id="10962" entityName="ZephyrPlugin" entityId="1" propertyKey="10000-PW" type="6"/>
@@ -5312,6 +5443,34 @@ You can add your own Quick Filters in the board configuration (select *Board > C
     <OSPropertyEntry id="11178" entityName="jira.properties" entityId="1" propertyKey="com.atlassian.upm.impl.PluginManagerPluginAsynchronousTaskStatusStor429463967e662a60b97d0c635571d159" type="6"/>
     <OSPropertyEntry id="11179" entityName="jira.properties" entityId="1" propertyKey="com.atlassian.upm.license.internal.impl.PluginSettingsPluginLicenseRf17fd04234f0822291a81698763f362d" type="6"/>
     <OSPropertyEntry id="11180" entityName="jira.properties" entityId="1" propertyKey="com.innovalog.jmwe.prefs.throwExceptions" type="5"/>
+    <OSPropertyEntry id="11181" entityName="jira.properties" entityId="1" propertyKey="com.atlassian.upm.impl.PluginManagerPluginAsynchronousTaskStatusStorc78c5566e3aac9e8e6335f554c271c2d" type="6"/>
+    <OSPropertyEntry id="11182" entityName="Excalibur.properties" entityId="1" propertyKey="Excalibur.Session.Storage" type="6"/>
+    <OSPropertyEntry id="11183" entityName="jira.properties" entityId="1" propertyKey="com.atlassian.bonfire.plugin:build" type="5"/>
+    <OSPropertyEntry id="11184" entityName="Bonfire.Upgrade.Task.History" entityId="1" propertyKey="1.3.0" type="5"/>
+    <OSPropertyEntry id="11185" entityName="Excalibur.properties" entityId="1" propertyKey="Bonfire.Highest.Run.Version" type="5"/>
+    <OSPropertyEntry id="11186" entityName="Bonfire.Ids" entityId="1" propertyKey="data" type="3"/>
+    <OSPropertyEntry id="11187" entityName="Excalibur.Session.Index" entityId="1" propertyKey="data" type="6"/>
+    <OSPropertyEntry id="11188" entityName="Bonfire.Upgrade.Task.History" entityId="1" propertyKey="1.6.0" type="5"/>
+    <OSPropertyEntry id="11189" entityName="Bonfire.Upgrade.Task.History" entityId="1" propertyKey="1.7.0" type="5"/>
+    <OSPropertyEntry id="11190" entityName="Bonfire.Template.Index.Shared" entityId="1" propertyKey="template" type="6"/>
+    <OSPropertyEntry id="11191" entityName="Bonfire.Upgrade.Task.History" entityId="1" propertyKey="1.7.1" type="5"/>
+    <OSPropertyEntry id="11192" entityName="Bonfire.Upgrade.Task.History" entityId="1" propertyKey="1.8.4" type="5"/>
+    <OSPropertyEntry id="11193" entityName="Excalibur.properties" entityId="1" propertyKey="bonfire.session.relatedto.custom.field" type="3"/>
+    <OSPropertyEntry id="11194" entityName="Excalibur.properties" entityId="1" propertyKey="bonfire.session.raisedin.custom.field" type="3"/>
+    <OSPropertyEntry id="11195" entityName="Bonfire.Upgrade.Task.History" entityId="1" propertyKey="2.1.0" type="5"/>
+    <OSPropertyEntry id="11196" entityName="Bonfire.Upgrade.Task.History" entityId="1" propertyKey="2.5.0" type="5"/>
+    <OSPropertyEntry id="11197" entityName="Bonfire.properties" entityId="1" propertyKey="bonfire.useragent.custom.field" type="3"/>
+    <OSPropertyEntry id="11198" entityName="Bonfire.properties" entityId="1" propertyKey="bonfire.browser.custom.field" type="3"/>
+    <OSPropertyEntry id="11199" entityName="Bonfire.properties" entityId="1" propertyKey="bonfire.os.custom.field" type="3"/>
+    <OSPropertyEntry id="11200" entityName="Bonfire.properties" entityId="1" propertyKey="bonfire.url.custom.field" type="3"/>
+    <OSPropertyEntry id="11201" entityName="Bonfire.properties" entityId="1" propertyKey="bonfire.screenres.custom.field" type="3"/>
+    <OSPropertyEntry id="11202" entityName="Bonfire.properties" entityId="1" propertyKey="bonfire.jqueryversion.custom.field" type="3"/>
+    <OSPropertyEntry id="11203" entityName="Bonfire.properties" entityId="1" propertyKey="bonfire.documentmode.custom.field" type="3"/>
+    <OSPropertyEntry id="11204" entityName="Excalibur.properties" entityId="1" propertyKey="bonfire.session.testingstatus.custom.field" type="3"/>
+    <OSPropertyEntry id="11205" entityName="Bonfire.Upgrade.Task.History" entityId="1" propertyKey="2.6.0" type="5"/>
+    <OSPropertyEntry id="11206" entityName="Bonfire.Upgrade.Task.History" entityId="1" propertyKey="2.7.0" type="5"/>
+    <OSPropertyEntry id="11207" entityName="jira.properties" entityId="1" propertyKey="com.atlassian.upm.license.internal.impl.PluginSettingsPluginLicenseR4a77050ad94c4ee97a6558fc7e00b304" type="6"/>
+    <OSPropertyEntry id="11208" entityName="Bonfire.properties" entityId="1" propertyKey="adminbonfire.extension.callout" type="5"/>
     <OSPropertyNumber id="9" value="0"/>
     <OSPropertyNumber id="11" value="1"/>
     <OSPropertyNumber id="12" value="0"/>
@@ -5431,6 +5590,17 @@ You can add your own Quick Filters in the board configuration (select *Board > C
     <OSPropertyNumber id="11165" value="1"/>
     <OSPropertyNumber id="11166" value="1"/>
     <OSPropertyNumber id="11167" value="1"/>
+    <OSPropertyNumber id="11186" value="10005"/>
+    <OSPropertyNumber id="11193" value="10403"/>
+    <OSPropertyNumber id="11194" value="10404"/>
+    <OSPropertyNumber id="11197" value="10405"/>
+    <OSPropertyNumber id="11198" value="10406"/>
+    <OSPropertyNumber id="11199" value="10407"/>
+    <OSPropertyNumber id="11200" value="10408"/>
+    <OSPropertyNumber id="11201" value="10409"/>
+    <OSPropertyNumber id="11202" value="10410"/>
+    <OSPropertyNumber id="11203" value="10411"/>
+    <OSPropertyNumber id="11204" value="10412"/>
     <OSPropertyString id="1" value="710001"/>
     <OSPropertyString id="2" value="10316"/>
     <OSPropertyString id="3" value="10011"/>
@@ -5629,15 +5799,6 @@ com.atlassian.troubleshooting.plugin-jira]]></value>
     <OSPropertyString id="10954" value="10200"/>
     <OSPropertyString id="10955" value="10200"/>
     <OSPropertyString id="10956" value="customfield_10300"/>
-    <OSPropertyString id="10959">
-        <value><![CDATA[#java.util.List
-com.thed.zephyr.je
-com.onresolve.jira.groovy.groovyrunner
-com.xiplink.jira.git.jira_git_plugin
-com.googlecode.jira-suite-utilities
-com.eazybi.jira.plugins.eazybi-jira
-com.innovalog.jmwe.jira-misc-workflow-extensions]]></value>
-    </OSPropertyString>
     <OSPropertyString id="10960" value="10003"/>
     <OSPropertyString id="10961" value="true"/>
     <OSPropertyString id="11000" value="true"/>
@@ -5655,7 +5816,8 @@ com.innovalog.jmwe.jira-misc-workflow-extensions]]></value>
 b86a589e-e3a0-4586-b258-d9bb7f5c6abd
 d6220fd7-fdf3-41e1-9c16-16864ab985aa
 5cc0ab15-aaf1-4f4b-a76a-e889d7fc0996
-4d395b25-95e1-4915-a30f-44d4b7eb5974]]></value>
+4d395b25-95e1-4915-a30f-44d4b7eb5974
+9a15a760-9ab5-4b3c-aef0-bb7701ac1d9b]]></value>
     </OSPropertyString>
     <OSPropertyString id="11124" value="${issuekey}-${summary}"/>
     <OSPropertyString id="11126" value=""/>
@@ -5668,11 +5830,23 @@ d6220fd7-fdf3-41e1-9c16-16864ab985aa
     <OSPropertyString id="11142" value="*.mp3, *.mp4, *.mov, *.pdf, *.png, *.jpg, *.jpeg, *.webm, *.ogv, *.gif, *.mkv, *.zip, *.gz, *.bz2"/>
     <OSPropertyString id="11145" value="-"/>
     <OSPropertyString id="11151" value="admin"/>
-    <OSPropertyString id="11153" value="admin.notifications.task.timetracking"/>
+    <OSPropertyString id="11153" value="admin.notifications.task.plugins"/>
     <OSPropertyString id="11154" value="1"/>
     <OSPropertyString id="11155" value="11"/>
     <OSPropertyString id="11177" value="jira:7496739"/>
     <OSPropertyString id="11180" value="ALL"/>
+    <OSPropertyString id="11183" value="13"/>
+    <OSPropertyString id="11184" value="com.atlassian.bonfire.upgradetasks.SessionDaoAndNoteDaoUpgrade_2021-07-12T11:31:01.535+08:00"/>
+    <OSPropertyString id="11185" value="2.7.0"/>
+    <OSPropertyString id="11188" value="com.atlassian.bonfire.upgradetasks.reindex.SessionStatusReindex_2021-07-12T11:31:01.571+08:00"/>
+    <OSPropertyString id="11189" value="com.atlassian.bonfire.upgradetasks.TemplatesUpgrade_2021-07-12T11:31:01.572+08:00"/>
+    <OSPropertyString id="11191" value="com.atlassian.bonfire.upgradetasks.reindex.TemplatesReindex_2021-07-12T11:31:01.576+08:00"/>
+    <OSPropertyString id="11192" value="com.atlassian.bonfire.upgradetasks.reindex.TemplatesReindexBON758_2021-07-12T11:31:01.578+08:00"/>
+    <OSPropertyString id="11195" value="com.atlassian.bonfire.upgradetasks.SessionsCFTUpgradeTask_2021-07-12T11:31:02.284+08:00"/>
+    <OSPropertyString id="11196" value="com.atlassian.bonfire.upgradetasks.reindex.SessionReindexBON1386_2021-07-12T11:31:02.286+08:00"/>
+    <OSPropertyString id="11205" value="com.atlassian.bonfire.upgradetasks.EnvironmentFieldsBON1523_2021-07-12T11:31:02.318+08:00"/>
+    <OSPropertyString id="11206" value="com.atlassian.bonfire.upgradetasks.EnvironmentFieldsCapture_2021-07-12T11:31:02.358+08:00"/>
+    <OSPropertyString id="11208" value="shown"/>
     <OSPropertyText id="10">
         <value><![CDATA[http://www.atlassian.com/*
 ]]></value>
@@ -6404,9 +6578,11 @@ d6220fd7-fdf3-41e1-9c16-16864ab985aa
 }
 ]]></value>
     </OSPropertyText>
-    <OSPropertyText id="10308" value="{&quot;com.atlassian.jira.reindex.required&quot;:1625822440243}"/>
+    <OSPropertyText id="10308" value="{&quot;com.atlassian.jira.reindex.required&quot;:1626060661243}"/>
     <OSPropertyText id="10328">
         <value><![CDATA[#java.util.List
+{"userKey":"admin","date":1626060761862,"i18nKey":"upm.auditLog.plugin.license.add","entryType":"LICENSE_ADD","params":["Capture for JIRA","com.atlassian.bonfire.plugin"]}
+{"userKey":"admin","date":1626060662362,"i18nKey":"upm.auditLog.install.plugin.success","entryType":"PLUGIN_INSTALL","params":["Capture for JIRA","com.atlassian.bonfire.plugin","2.9.21.292100089"]}
 {"userKey":"admin","date":1626059049534,"i18nKey":"upm.auditLog.plugin.license.add","entryType":"LICENSE_ADD","params":["Jira Misc Workflow Extensions","com.innovalog.jmwe.jira-misc-workflow-extensions"]}
 {"userKey":"admin","date":1626058998911,"i18nKey":"upm.auditLog.install.plugin.success","entryType":"PLUGIN_INSTALL","params":["Jira Misc Workflow Extensions","com.innovalog.jmwe.jira-misc-workflow-extensions","6.6.1"]}
 {"userKey":"admin","date":1626057968611,"i18nKey":"upm.auditLog.plugin.license.add","entryType":"LICENSE_ADD","params":["eazyBI Reports and Charts for Jira","com.eazybi.jira.plugins.eazybi-jira"]}
@@ -6793,6 +6969,16 @@ WvKuiJBJn/EifyQ19uaOJ3WKWOnbTJVzyCFBvMxkx8BPYVN/ednfuY6TNIlQ9SJEkWjMW/oaPRaw
 hO1aIza0AAkPOO6xqXLXNGxUPDYp34FWdkYkK/jPsg70yXEEzAtAhRXAdtomu3lGgEaMQF9FVEga
 kjOuQIVAJGA+AQ3Zve9jlF2KIBMTXhCR871X02ia]]></value>
     </OSPropertyText>
+    <OSPropertyText id="10959">
+        <value><![CDATA[#java.util.List
+com.thed.zephyr.je
+com.onresolve.jira.groovy.groovyrunner
+com.xiplink.jira.git.jira_git_plugin
+com.googlecode.jira-suite-utilities
+com.eazybi.jira.plugins.eazybi-jira
+com.innovalog.jmwe.jira-misc-workflow-extensions
+com.atlassian.bonfire.plugin]]></value>
+    </OSPropertyText>
     <OSPropertyText id="10962" value="{&quot;planCycleSummary&quot;:&quot;10&quot;,&quot;searchTestExecution&quot;:&quot;10&quot;,&quot;standaloneExecution&quot;:&quot;10&quot;,&quot;testDetailsColumnFreezer&quot;:&quot;false&quot;,&quot;testExecutionColumnFreezer&quot;:&quot;false&quot;}"/>
     <OSPropertyText id="10963" value="{&quot;summary&quot;:{&quot;displayName&quot;:&quot;Summary&quot;,&quot;isVisible&quot;:&quot;true&quot;},&quot;executedBy&quot;:{&quot;displayName&quot;:&quot;Executed By&quot;,&quot;isVisible&quot;:&quot;true&quot;},&quot;component&quot;:{&quot;displayName&quot;:&quot;Component&quot;,&quot;isVisible&quot;:&quot;true&quot;},&quot;defects&quot;:{&quot;displayName&quot;:&quot;Defect&quot;,&quot;isVisible&quot;:&quot;true&quot;},&quot;executedOn&quot;:{&quot;displayName&quot;:&quot;Executed On&quot;,&quot;isVisible&quot;:&quot;true&quot;},&quot;label&quot;:{&quot;displayName&quot;:&quot;Label&quot;,&quot;isVisible&quot;:&quot;true&quot;},&quot;assignee&quot;:{&quot;displayName&quot;:&quot;Assignee&quot;,&quot;isVisible&quot;:&quot;true&quot;},&quot;status&quot;:{&quot;displayName&quot;:&quot;Status&quot;,&quot;isVisible&quot;:&quot;true&quot;}}"/>
     <OSPropertyText id="10964" value="{&quot;cycleSummary&quot;:false,&quot;customField&quot;:true,&quot;issueView&quot;:true,&quot;executionPage&quot;:true,&quot;skip&quot;:false,&quot;disableShowMore&quot;:false}"/>
@@ -6856,6 +7042,19 @@ PoStH4W3gq7YQXv+M1tM/X2PvFl1eeHqed59avcX825Gf4cbqqbr5Uy+T5N6dNi3e++/L6Tlo4bU
 fWnS7Zkb/c9c8I4MGwlagtvl4MO4p1R9jy6YDFEtNDyP7OYZRMWTpSTlH78RBOKSrMWWlnhjuu+m
 A43cIpfbuI8tZdPkqARWGnU7lRjHIhxEYjx4kyMs1di/H5cLLIPywHOgkl/qo7+Xp9d/AEv5+cbM
 CwCFCfXm1BUX0bfJ3PY2Yik9eXfPpQHAhQuk3BUx9tV35H54w2V2/FKB+bbMQ==X02j7]]></value>
+    </OSPropertyText>
+    <OSPropertyText id="11181" value="{&quot;id&quot;:&quot;9a15a760-9ab5-4b3c-aef0-bb7701ac1d9b&quot;,&quot;type&quot;:&quot;INSTALL&quot;,&quot;userKey&quot;:&quot;admin&quot;,&quot;timestamp&quot;:1626060536959,&quot;status&quot;:{&quot;done&quot;:true,&quot;error&quot;:null,&quot;description&quot;:null,&quot;stage&quot;:null,&quot;resourceName&quot;:null,&quot;resourceVersion&quot;:null,&quot;itemsDone&quot;:null,&quot;itemsTotal&quot;:null,&quot;progress&quot;:1.0,&quot;successes&quot;:null,&quot;failures&quot;:null,&quot;nextStepPostUri&quot;:null,&quot;resultUri&quot;:&quot;/rest/plugins/1.0/com.atlassian.bonfire.plugin-key&quot;,&quot;pollDelay&quot;:100},&quot;cancellable&quot;:false}"/>
+    <OSPropertyText id="11182" value="&lt;map/&gt;"/>
+    <OSPropertyText id="11187" value=""/>
+    <OSPropertyText id="11190" value="[]"/>
+    <OSPropertyText id="11207">
+        <value><![CDATA[AAABWg0ODAoPeNp1kdFPwjAQxt/7Vyzx0UzXDRyQNJGUGSUbIKAPhpcybq4yu3ltJ/vvnVPUkHhJH
+66X77tfvjtbWeVMbeFQ6vj+KPBHtOfwydrxPZ+SPTSPgFqWitErzwu9QRBQsi1VJhEuQBnACqUGZ
+tACmdnXLeA8e9CthrmU8FIZkZqZeAWmc/ki4bpUoC+EJAuLaS40TIQB9rnL9UKX+iSWKSgN66aCT
+sbnSRIt+d04Po6iQyWx+aMbuPSXaWUEtlQsE4WGI0CUCFmcEhRfdrdC5yzh7/wmauuQ2939MD9/a
+p7ekjjO5HAxpUsc50sN+559Cy6Hpg594E29LrBAu4ur+w3bMNKuaONQQqX/EK6iGWufG9Mw6PWDf
+p/M8VkoqYX5zPeEjiN0/6f5fFMfr+KTCegUZdV5cFEZi+BkJTpTiWIzcqJaFLZz+omoDUTW3yf7H
+X/1HzvKsN0wLAIUImGDb6wytYSo96rZ+41VISF0oiACFGcA9i8IwG9H9CFV4ZOIVbiptj9qX02h1]]></value>
     </OSPropertyText>
     <OSWorkflowEntry id="10000" name="Software Simplified Workflow for Project SAMPLE" state="1"/>
     <OSWorkflowEntry id="10001" name="Software Simplified Workflow for Project SAMPLE" state="1"/>
@@ -7218,6 +7417,7 @@ CwCFCfXm1BUX0bfJ3PY2Yik9eXfPpQHAhQuk3BUx9tV35H54w2V2/FKB+bbMQ==X02j7]]></value>
     <PluginVersion id="10402" name="JSU Automation Suite for Jira Workflows" key="com.googlecode.jira-suite-utilities" version="2.27.1" created="2021-07-09 15:43:38.573"/>
     <PluginVersion id="10403" name="eazyBI Reports and Charts for Jira" key="com.eazybi.jira.plugins.eazybi-jira" version="6.3.0" created="2021-07-12 10:44:29.184"/>
     <PluginVersion id="10404" name="Jira Misc Workflow Extensions" key="com.innovalog.jmwe.jira-misc-workflow-extensions" version="6.6.1" created="2021-07-12 11:03:18.909"/>
+    <PluginVersion id="10405" name="Capture for JIRA" key="com.atlassian.bonfire.plugin" version="2.9.21.292100089" created="2021-07-12 11:31:02.36"/>
     <PortalPage id="10000" pagename="System Dashboard" sequence="0" favCount="0" layout="AA" version="1"/>
     <PortalPage id="10100" username="admin" pagename="我的仪表盘" favCount="1" layout="AA" version="1"/>
     <PortalPage id="10101" username="admin" pagename="另一个" favCount="1" layout="AA" version="0"/>
@@ -7327,24 +7527,25 @@ RuntimeException: P]]></infoMessage>
     <RunDetails id="78713" jobId="CompatibilityPluginScheduler.JobId.hipchatInstallGlancesJob" startTime="2021-07-12 11:23:11.691" runDuration="1" runOutcome="S" infoMessage=""/>
     <RunDetails id="78714" jobId="com.atlassian.jira.web.action.issue.DefaultTemporaryWebAttachmentsMonitor" startTime="2021-07-12 11:23:11.693" runDuration="2" runOutcome="S" infoMessage="Removed 0 temporary attachments"/>
     <RunDetails id="78715" jobId="JiraPluginScheduler:com.atlassian.jira.plugins.workflow.sharing.file.FileCleaningJob" startTime="2021-07-12 11:23:11.691" runDuration="13" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78716" jobId="com.bigbrassband.jira.git.jiraservices.jobs.FlushIndexedRevisionsCacheJob" startTime="2021-07-12 11:23:11.88" runDuration="1" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78717" jobId="JiraPluginScheduler:ZFJ:SyncIndex" startTime="2021-07-12 11:23:11.883" runDuration="0" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78718" jobId="data-provider-poll" startTime="2021-07-12 11:23:11.883" runDuration="0" runOutcome="S" infoMessage=""/>
     <RunDetails id="78719" jobId="JiraPluginScheduler:com.atlassian.troubleshooting.healthcheck.scheduler.HealthCheckSchedulerImpl:job" startTime="2021-07-12 11:23:11.694" runDuration="268" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78732" jobId="com.bigbrassband.jira.git.jiraservices.jobs.RevisionIndexJob" startTime="2021-07-12 11:23:11.883" runDuration="726" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78759" jobId="com.atlassian.jira.service.JiraService:10000" startTime="2021-07-12 11:26:00.004" runDuration="1" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78760" jobId="14524c4e-f32c-4386-89ce-fc653c1c967e" startTime="2021-07-12 11:26:12.259" runDuration="4" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78761" jobId="8400c8a7-0a65-418b-bdec-f6ed16edb60c" startTime="2021-07-12 11:26:12.259" runDuration="4" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78762" jobId="5fc69ebf-8ecf-48ca-931b-d0a6385be361" startTime="2021-07-12 11:26:12.259" runDuration="7" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78763" jobId="CompatibilityPluginScheduler.JobId.LEXO_RANK_SCHEDULER_JOB" startTime="2021-07-12 11:26:12.259" runDuration="7" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78764" jobId="JiraPluginScheduler:LEXO_RANK_STATS_COLLECTOR_JOB" startTime="2021-07-12 11:26:12.266" runDuration="0" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78765" jobId="CompatibilityPluginScheduler.JobId.hipchatUpdateGlancesDataJob" startTime="2021-07-12 11:26:12.266" runDuration="0" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78766" jobId="a1e5c1c4-c338-48ec-84db-57009bf29409" startTime="2021-07-12 11:26:12.266" runDuration="1" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78767" jobId="a5c1f388-320d-4dcc-92b7-cb50c9533581" startTime="2021-07-12 11:26:12.267" runDuration="0" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78768" jobId="d6d3a744-c505-4217-b94d-add49717e534" startTime="2021-07-12 11:26:12.267" runDuration="0" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78769" jobId="a621a255-240c-455d-b5d4-bd5f63d0df04" startTime="2021-07-12 11:26:12.267" runDuration="0" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78770" jobId="d87d3249-8cc7-46f6-91f5-66193d040aa2" startTime="2021-07-12 11:26:12.267" runDuration="0" runOutcome="S" infoMessage=""/>
-    <RunDetails id="78771" jobId="f82cabf5-ad89-407b-bd14-9cb727c82535" startTime="2021-07-12 11:26:12.268" runDuration="0" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78829" jobId="CompatibilityPluginScheduler.JobId.Capture for JIRA background job" startTime="2021-07-12 11:30:59.561" runDuration="2294" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78856" jobId="JiraPluginScheduler:ZFJ:SyncIndex" startTime="2021-07-12 11:33:11.884" runDuration="1" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78857" jobId="data-provider-poll" startTime="2021-07-12 11:33:11.884" runDuration="6" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78858" jobId="com.bigbrassband.jira.git.jiraservices.jobs.FlushIndexedRevisionsCacheJob" startTime="2021-07-12 11:33:11.884" runDuration="6" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78859" jobId="com.bigbrassband.jira.git.jiraservices.jobs.RevisionIndexJob" startTime="2021-07-12 11:33:11.884" runDuration="702" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78898" jobId="com.atlassian.jira.service.JiraService:10000" startTime="2021-07-12 11:36:00.002" runDuration="1" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78899" jobId="14524c4e-f32c-4386-89ce-fc653c1c967e" startTime="2021-07-12 11:36:12.856" runDuration="1" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78900" jobId="5fc69ebf-8ecf-48ca-931b-d0a6385be361" startTime="2021-07-12 11:36:12.857" runDuration="1" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78901" jobId="8400c8a7-0a65-418b-bdec-f6ed16edb60c" startTime="2021-07-12 11:36:12.858" runDuration="3" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78902" jobId="CompatibilityPluginScheduler.JobId.LEXO_RANK_SCHEDULER_JOB" startTime="2021-07-12 11:36:12.858" runDuration="4" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78903" jobId="JiraPluginScheduler:LEXO_RANK_STATS_COLLECTOR_JOB" startTime="2021-07-12 11:36:12.864" runDuration="1" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78904" jobId="CompatibilityPluginScheduler.JobId.hipchatUpdateGlancesDataJob" startTime="2021-07-12 11:36:12.864" runDuration="1" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78905" jobId="a1e5c1c4-c338-48ec-84db-57009bf29409" startTime="2021-07-12 11:36:12.865" runDuration="0" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78906" jobId="a5c1f388-320d-4dcc-92b7-cb50c9533581" startTime="2021-07-12 11:36:12.865" runDuration="3" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78907" jobId="a621a255-240c-455d-b5d4-bd5f63d0df04" startTime="2021-07-12 11:36:12.867" runDuration="3" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78908" jobId="d6d3a744-c505-4217-b94d-add49717e534" startTime="2021-07-12 11:36:12.868" runDuration="2" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78909" jobId="f82cabf5-ad89-407b-bd14-9cb727c82535" startTime="2021-07-12 11:36:12.871" runDuration="0" runOutcome="S" infoMessage=""/>
+    <RunDetails id="78910" jobId="d87d3249-8cc7-46f6-91f5-66193d040aa2" startTime="2021-07-12 11:36:12.87" runDuration="1" runOutcome="S" infoMessage=""/>
     <SchemePermissions id="10000" permission="0" type="group" parameter="jira-administrators"/>
     <SchemePermissions id="10004" scheme="0" permission="23" type="projectrole" parameter="10002" permissionKey="ADMINISTER_PROJECTS"/>
     <SchemePermissions id="10005" scheme="0" permission="10" type="applicationRole" parameter="" permissionKey="BROWSE_PROJECTS"/>
@@ -7490,7 +7691,6 @@ RuntimeException: P]]></infoMessage>
     <SequenceValueItem seqName="PortalPage" seqId="10300"/>
     <SequenceValueItem seqName="PortletConfiguration" seqId="10300"/>
     <SequenceValueItem seqName="IssueType" seqId="10300"/>
-    <SequenceValueItem seqName="OSPropertyEntry" seqId="11200"/>
     <SequenceValueItem seqName="CustomField" seqId="10500"/>
     <SequenceValueItem seqName="FieldConfiguration" seqId="10800"/>
     <SequenceValueItem seqName="FieldConfigScheme" seqId="10800"/>
@@ -7505,7 +7705,8 @@ RuntimeException: P]]></infoMessage>
     <SequenceValueItem seqName="Worklog" seqId="10300"/>
     <SequenceValueItem seqName="ChangeGroup" seqId="10500"/>
     <SequenceValueItem seqName="ChangeItem" seqId="10600"/>
-    <SequenceValueItem seqName="RunDetails" seqId="78800"/>
+    <SequenceValueItem seqName="OSPropertyEntry" seqId="11300"/>
+    <SequenceValueItem seqName="RunDetails" seqId="79000"/>
     <ServiceConfig id="10000" time="60000" clazz="com.atlassian.jira.service.services.mail.MailQueueService" name="Mail Queue Service" cronExpression="0 * * * * ?"/>
     <ServiceConfig id="10001" time="43200000" clazz="com.atlassian.jira.service.services.export.ExportService" name="Backup Service" cronExpression="0 0 8/12 * * ?"/>
     <ServiceConfig id="10002" time="86400000" clazz="com.atlassian.jira.service.services.auditing.AuditLogCleaningService" name="Audit log cleaning service" cronExpression="0 0 8 * * ?"/>
@@ -9731,23 +9932,23 @@ RuntimeException: P]]></infoMessage>
 
 ___ Entities ________________________________
 
-     Total                                         : 3922
+     Total                                         : 4092
 
      Action                                        : 20
      Application                                   : 1
      ApplicationUser                               : 2
-     AuditChangedValue                             : 406
+     AuditChangedValue                             : 450
      AuditItem                                     : 64
-     AuditLog                                      : 214
+     AuditLog                                      : 231
      Avatar                                        : 97
      ChangeGroup                                   : 128
      ChangeItem                                    : 173
-     ClusteredJob                                  : 32
+     ClusteredJob                                  : 33
      ColumnLayout                                  : 1
      ColumnLayoutItem                              : 12
      Component                                     : 1
-     ConfigurationContext                          : 41
-     CustomField                                   : 32
+     ConfigurationContext                          : 51
+     CustomField                                   : 42
      CustomFieldOption                             : 23
      CustomFieldValue                              : 70
      Directory                                     : 1
@@ -9758,9 +9959,9 @@ ___ Entities ________________________________
      EventType                                     : 17
      FavouriteAssociations                         : 2
      Feature                                       : 7
-     FieldConfigScheme                             : 42
-     FieldConfigSchemeIssueType                    : 43
-     FieldConfiguration                            : 42
+     FieldConfigScheme                             : 52
+     FieldConfigSchemeIssueType                    : 53
+     FieldConfiguration                            : 52
      FieldLayout                                   : 1
      FieldLayoutItem                               : 47
      FieldScreen                                   : 17
@@ -9794,15 +9995,15 @@ ___ Entities ________________________________
      OSHistoryStep                                 : 35
      OSHistoryStepPrev                             : 21
      OSPropertyDate                                : 1
-     OSPropertyEntry                               : 352
-     OSPropertyNumber                              : 119
-     OSPropertyString                              : 176
-     OSPropertyText                                : 56
+     OSPropertyEntry                               : 380
+     OSPropertyNumber                              : 130
+     OSPropertyString                              : 187
+     OSPropertyText                                : 62
      OSWorkflowEntry                               : 48
      OptionConfiguration                           : 52
      PermissionScheme                              : 2
      PluginState                                   : 1
-     PluginVersion                                 : 258
+     PluginVersion                                 : 259
      PortalPage                                    : 4
      PortletConfiguration                          : 8
      Priority                                      : 6
@@ -9813,7 +10014,7 @@ ___ Entities ________________________________
      ProjectRole                                   : 2
      ProjectRoleActor                              : 9
      Resolution                                    : 5
-     RunDetails                                    : 73
+     RunDetails                                    : 74
      SchemePermissions                             : 67
      SearchRequest                                 : 7
      SequenceValueItem                             : 87
