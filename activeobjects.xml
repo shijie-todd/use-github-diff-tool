@@ -441,6 +441,571 @@
     <column name="WEDNESDAY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
     <foreignKey fromTable="AO_60DB71_WORKINGDAYS" fromColumn="RAPID_VIEW_ID" toTable="AO_60DB71_RAPIDVIEW" toColumn="ID"/>
   </table>
+  <table name="AO_69E499_ACTION">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_69E499_ACTIVEJOBS">
+    <column name="FILE_PATH" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PARAM1" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PARAM2" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_69E499_APPROVAL">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ITEM_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_69E499_APPROVER">
+    <column name="APPROVAL_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="COMMENT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATED_BY" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CREATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="USER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <foreignKey fromTable="AO_69E499_APPROVER" fromColumn="APPROVAL_ID" toTable="AO_69E499_APPROVAL" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_AUDIT_LOG">
+    <column name="ACTION_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LOG" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="LOG_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="MODULE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SOURCE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USER" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <foreignKey fromTable="AO_69E499_AUDIT_LOG" fromColumn="ACTION_ID" toTable="AO_69E499_ACTION" toColumn="ID"/>
+    <foreignKey fromTable="AO_69E499_AUDIT_LOG" fromColumn="MODULE_ID" toTable="AO_69E499_MODULE" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_AUTOMATIONAPP">
+    <column name="APP_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="APP_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="BASE_URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PASSWORD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USER_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_69E499_AUTOMATIONRUNSTEP">
+    <column name="AUTOMATION_APP_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="CALLBACK_URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="EXECUTION_STATE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LAST_EXECUTED_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LAST_EXECUTOR_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="RUN_STATUS_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TRIGGER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_69E499_AUTOMATIONSTEP">
+    <column name="AUTOMATION_APP_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQ_BALANCER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_CASE_DETAILS_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TRIGGER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_69E499_AUTOMATIONSTEP" fromColumn="AUTOMATION_APP_ID" toTable="AO_69E499_AUTOMATIONAPP" toColumn="ID"/>
+    <foreignKey fromTable="AO_69E499_AUTOMATIONSTEP" fromColumn="TEST_CASE_DETAILS_ID" toTable="AO_69E499_TESTCASEDETAILS" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_AUTO_BUILD_DETAIL">
+    <column name="AUTOMATION_APP_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="AUTO_STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CALLBACK_URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="EXECUTION_STATE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="EXECUTOR_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PARAMS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEST_CYCLE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TRIGGER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_69E499_AUTO_BUILD_DETAIL" fromColumn="AUTOMATION_APP_ID" toTable="AO_69E499_AUTOMATIONAPP" toColumn="ID"/>
+    <foreignKey fromTable="AO_69E499_AUTO_BUILD_DETAIL" fromColumn="TEST_CYCLE_ID" toTable="AO_69E499_TESTCYCLE" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_BASELINE">
+    <column name="ACTIVE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="CREATED_BY" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CREATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="GROUP_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="UPDATED_BY" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="UPDATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <foreignKey fromTable="AO_69E499_BASELINE" fromColumn="GROUP_ID" toTable="AO_69E499_GROUP" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_BASELINE_ITEM">
+    <column name="ACTIVE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="APPROVAL_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="BASELINE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="VERSION_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_69E499_BASELINE_ITEM" fromColumn="APPROVAL_ID" toTable="AO_69E499_APPROVAL" toColumn="ID"/>
+    <foreignKey fromTable="AO_69E499_BASELINE_ITEM" fromColumn="BASELINE_ID" toTable="AO_69E499_BASELINE" toColumn="ID"/>
+    <foreignKey fromTable="AO_69E499_BASELINE_ITEM" fromColumn="VERSION_ID" toTable="AO_69E499_VERSION" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_BASICFILTERCOL">
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FIELD_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ORDER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="STYLE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_69E499_BASICFILTERMOD">
+    <column name="BASIC_FILTER_COLUMN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MODULE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_69E499_BASICFILTERMOD" fromColumn="BASIC_FILTER_COLUMN_ID" toTable="AO_69E499_BASICFILTERCOL" toColumn="ID"/>
+    <foreignKey fromTable="AO_69E499_BASICFILTERMOD" fromColumn="MODULE_ID" toTable="AO_69E499_MODULE" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_COLUMN">
+    <column name="COLUMN_CONFIG_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FIELD_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ORDER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="STYLE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_69E499_COLUMN_CONFIG">
+    <column name="CATEGORY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DEFAULT" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MODULE_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="USER" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_69E499_COLUMN_SYNAPSE">
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FIELD_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="REF_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_69E499_COMMON_FILTER">
+    <column name="DEFAULT" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="FILTER_CATEGORY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FILTER_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FILTER_QUERY" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="FILTER_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MODULE_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="USER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_69E499_CONFIG_MAP">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+  </table>
+  <table name="AO_69E499_CURRENT_ACTIVITY">
+    <column name="ACTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="START_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USER" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_69E499_CUSTOM_DISPLAY">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MODULE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_69E499_CUSTOM_DISPLAY_PREF">
+    <column name="CUSTOM_DISPLAY_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FIELD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQ_BALANCER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_69E499_CUSTOM_DISPLAY_PREF" fromColumn="CUSTOM_DISPLAY_ID" toTable="AO_69E499_CUSTOM_DISPLAY" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_GROUP">
+    <column name="CREATED_BY" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CREATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_69E499_IMPORT_ID_MAPPING">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NEW_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="OLD_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TABLE_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_69E499_ITERATION_PARAM">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TEST_ITERATION_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_PARAM_VALUE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_STEP_PARAM_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_69E499_ITERATION_PARAM" fromColumn="TEST_ITERATION_ID" toTable="AO_69E499_TEST_ITERATION" toColumn="ID"/>
+    <foreignKey fromTable="AO_69E499_ITERATION_PARAM" fromColumn="TEST_PARAM_VALUE_ID" toTable="AO_69E499_TEST_PARAM_VALUE" toColumn="ID"/>
+    <foreignKey fromTable="AO_69E499_ITERATION_PARAM" fromColumn="TEST_STEP_PARAM_ID" toTable="AO_69E499_TEST_STEP_PARAM" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_JOB_RUN_INFO">
+    <column name="EXECUTION_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SUBSCRIPTION_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_69E499_MODULE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MODULE_TYPE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_69E499_MODULE" fromColumn="MODULE_TYPE_ID" toTable="AO_69E499_MODULE_TYPE" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_MODULE_TYPE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_69E499_PERMISSION">
+    <column name="CONFIGURED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PERMISSION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ROLE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_69E499_PLAN_MEMBER_SUITE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TEST_CASE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_PLAN" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_SUITE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_69E499_PLAN_MEMBER_SUITE" fromColumn="TEST_SUITE_ID" toTable="AO_69E499_TESTSUITE" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_REQUIREMENT_LINK">
+    <column name="CHILD_REQ" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PARENT_REQ" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQ_BALANCER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_69E499_REQ_RELATION">
+    <column name="CHILD" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CHILD_PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PARENT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PARENT_PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQ_BALANCER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_69E499_REQ_SUITE">
+    <column name="ACTIVE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="CREATED_BY" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CREATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQ_BALANCER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SUITE_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="UPDATED_BY" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="UPDATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_69E499_REQ_SUITE_MEMBER">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MEMBER" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="MEMBER_PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="MEMBER_TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="REQ_SUITE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQ_BALANCER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_69E499_REQ_SUITE_MEMBER" fromColumn="REQ_SUITE_ID" toTable="AO_69E499_REQ_SUITE" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_REQ_SUITE_NUMBER">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="REQ_SUITE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SUITE_NUMBER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_69E499_RUN_ATTRIBUTE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_69E499_RUN_ATTRIBUTE_MAP">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="RUN_ATTRIBUTE_VALUE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_69E499_RUN_ATTRIBUTE_MAP" fromColumn="RUN_ATTRIBUTE_VALUE_ID" toTable="AO_69E499_RUN_ATTRIBUTE_VALUE" toColumn="ID"/>
+    <foreignKey fromTable="AO_69E499_RUN_ATTRIBUTE_MAP" fromColumn="TEST_RUN_ID" toTable="AO_69E499_TESTRUN" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_RUN_ATTRIBUTE_PAIR">
+    <column name="ATTRIBUTE_VALUE_ONE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ATTRIBUTE_VALUE_TWO" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TEST_CYCLE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_69E499_RUN_ATTRIBUTE_VALUE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="RUN_ATTRIBUTE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <foreignKey fromTable="AO_69E499_RUN_ATTRIBUTE_VALUE" fromColumn="RUN_ATTRIBUTE_ID" toTable="AO_69E499_RUN_ATTRIBUTE" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_RUN_ATTRIB_COMBO">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="POSITION" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="RUN_ATTRIBUTE_VALUE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_CYCLE_ATTRIB_MAP_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_69E499_RUN_ATTRIB_COMBO" fromColumn="RUN_ATTRIBUTE_VALUE_ID" toTable="AO_69E499_RUN_ATTRIBUTE_VALUE" toColumn="ID"/>
+    <foreignKey fromTable="AO_69E499_RUN_ATTRIB_COMBO" fromColumn="TEST_CYCLE_ATTRIB_MAP_ID" toTable="AO_69E499_TESTCYCLEATTRIB" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_RUN_PARAM_VALUE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PARAM_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PARAM_REF" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="PARAM_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEST_RUN_ITERATION_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_RUN_STEP_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_69E499_RUN_PARAM_VALUE" fromColumn="TEST_RUN_STEP_ID" toTable="AO_69E499_TESTRUNSTEP" toColumn="ID"/>
+    <foreignKey fromTable="AO_69E499_RUN_PARAM_VALUE" fromColumn="TEST_RUN_ITERATION_ID" toTable="AO_69E499_TEST_RUN_ITERATION" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_RUN_STATUS">
+    <column name="COLOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DEFAULT" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ENABLED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQ_BALANCER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="STATUS_CATEGORY_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_69E499_RUN_STATUS_INFO">
+    <column name="ALIAS_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="RUN_STATUS_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_69E499_STATUS_CATEGORY">
+    <column name="DEFAULT" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_69E499_SUBSCRIPTION">
+    <column name="ACTIVE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="CATEGORY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CRON_EXPRESSION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FILTER_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RECIPIENTS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="USER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_69E499_SYNAPSE_FILTER">
+    <column name="DEFAULT" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="FILTER_CATEGORY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FILTER_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FILTER_QUERY" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="FILTER_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MODULE_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="USER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_69E499_TESTCASEDETAILS">
+    <column name="AUTOMATION_IDENTIFIER" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ESTIMATE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="FORECAST" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LATEST_STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PREVIOUS_STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TC_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_69E499_TESTCASE_REQ_LINK">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="REQ_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TC_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_69E499_TESTCYCLE">
+    <column name="BUILD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="END_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ENVIRONMENT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PLANNED_END_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="PLANNED_START_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="SPRINT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="START_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEST_CYCLE_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TP_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_69E499_TESTCYCLEATTRIB">
+    <column name="COMBINATION" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TEST_CYCLE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_69E499_TESTCYCLEATTRIB" fromColumn="TEST_CYCLE_ID" toTable="AO_69E499_TESTCYCLE" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_TESTPLANMEMBER">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQ_BALANCER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TC_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TESTER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TESTER_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TP_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_69E499_TESTPLANOVERVIEW">
+    <column name="COUNT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="STATUS_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="USER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_69E499_TESTRUN">
+    <column name="CHANGE_INFO" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="COMMENT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="EFFORT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ESTIMATE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="EXECUTED_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="EXECUTION_ON" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="EXECUTOR_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="RUN_STATUS_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQ_BALANCER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SPRINT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SUMMARY" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="TC_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TESTER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TESTER_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEST_CYCLE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="URGENCY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_69E499_TESTRUNATTACHMENT">
+    <column name="FILE_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MIME_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_RUN_STEP_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_69E499_TESTRUNBUG">
+    <column name="BUG_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_RUN_STEP_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_69E499_TESTRUNHISTORY">
+    <column name="ACTIVITY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ACTIVITY_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="EXECUTION_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="EXECUTOR_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="EXECUTOR_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="REMARKS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_69E499_TESTRUNSTEP">
+    <column name="ACTUAL_RESULT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="EXPECTED_RESULT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="RUN_STATUS_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STEP" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="STEP_DATA" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_RUN_ITERATION_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_69E499_TESTSTEP">
+    <column name="EXPECTED_RESULT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQ_BALANCER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="STEP" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="STEP_DATA" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="TC_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_CASE_DETAILS_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_69E499_TESTSUITE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQ_BALANCER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="STATE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_69E499_TESTSUITELABEL">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LABEL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEST_SUITE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_69E499_TESTSUITELABEL" fromColumn="TEST_SUITE_ID" toTable="AO_69E499_TESTSUITE" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_TESTSUITEMEMBER">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MEMBER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="MEMBER_TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQ_BALANCER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_SUITE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_69E499_TESTSUITEMEMBER" fromColumn="TEST_SUITE_ID" toTable="AO_69E499_TESTSUITE" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_TEST_ITERATION">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ORDER_NUMBER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQ_BALANCER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_CASE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_69E499_TEST_PARAM">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SCOPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SCOPE_REF_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQ_BALANCER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_69E499_TEST_PARAM_VALUE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQ_BALANCER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_PARAM_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_69E499_TEST_PARAM_VALUE" fromColumn="TEST_PARAM_ID" toTable="AO_69E499_TEST_PARAM" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_TEST_RUN_ITERATION">
+    <column name="EXECUTION_ON" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEST_ITERATION_REF_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_69E499_TEST_RUN_REQUIREMENT">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="REQUIREMENT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_69E499_TEST_STEP_PARAM">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PARAM_REF" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_PARAM_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_RUN_STEP_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_STEP_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_69E499_TEST_STEP_PARAM" fromColumn="TEST_RUN_STEP_ID" toTable="AO_69E499_TESTSTEP" toColumn="ID"/>
+    <foreignKey fromTable="AO_69E499_TEST_STEP_PARAM" fromColumn="TEST_STEP_ID" toTable="AO_69E499_TESTSTEP" toColumn="ID"/>
+    <foreignKey fromTable="AO_69E499_TEST_STEP_PARAM" fromColumn="TEST_PARAM_ID" toTable="AO_69E499_TEST_PARAM" toColumn="ID"/>
+  </table>
+  <table name="AO_69E499_VERSION">
+    <column name="CREATED_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ISSUE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="NOTES" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQ_BALANCER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="VERSION_NO" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
   <table name="AO_7AEB56_SHARED_SCRIPT">
     <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
     <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
@@ -3701,6 +4266,974 @@
       <boolean>true</boolean>
     </row>
   </data>
+  <data tableName="AO_69E499_ACTION">
+    <column name="ID"/>
+    <column name="NAME"/>
+    <row>
+      <integer>1</integer>
+      <string>CREATED</string>
+    </row>
+    <row>
+      <integer>2</integer>
+      <string>UPDATED</string>
+    </row>
+    <row>
+      <integer>3</integer>
+      <string>DELETED</string>
+    </row>
+    <row>
+      <integer>4</integer>
+      <string>ADDED</string>
+    </row>
+    <row>
+      <integer>5</integer>
+      <string>REMOVED</string>
+    </row>
+    <row>
+      <integer>6</integer>
+      <string>DISABLED</string>
+    </row>
+    <row>
+      <integer>7</integer>
+      <string>ENABLED</string>
+    </row>
+    <row>
+      <integer>8</integer>
+      <string>COPIED</string>
+    </row>
+    <row>
+      <integer>9</integer>
+      <string>MOVED</string>
+    </row>
+    <row>
+      <integer>10</integer>
+      <string>CLONED</string>
+    </row>
+    <row>
+      <integer>11</integer>
+      <string>IMPORTED</string>
+    </row>
+    <row>
+      <integer>12</integer>
+      <string>EXPORTED</string>
+    </row>
+    <row>
+      <integer>13</integer>
+      <string>LINKED</string>
+    </row>
+    <row>
+      <integer>14</integer>
+      <string>DELINKED</string>
+    </row>
+    <row>
+      <integer>15</integer>
+      <string>CONVERTED</string>
+    </row>
+    <row>
+      <integer>16</integer>
+      <string>REORDERED</string>
+    </row>
+  </data>
+  <data tableName="AO_69E499_ACTIVEJOBS">
+    <column name="FILE_PATH"/>
+    <column name="ID"/>
+    <column name="KEY"/>
+    <column name="PARAM1"/>
+    <column name="PARAM2"/>
+    <column name="URL"/>
+    <column name="VALUE"/>
+  </data>
+  <data tableName="AO_69E499_APPROVAL">
+    <column name="ID"/>
+    <column name="ITEM_ID"/>
+  </data>
+  <data tableName="AO_69E499_APPROVER">
+    <column name="APPROVAL_ID"/>
+    <column name="COMMENT"/>
+    <column name="CREATED_BY"/>
+    <column name="CREATED_DATE"/>
+    <column name="ID"/>
+    <column name="USER_ID"/>
+  </data>
+  <data tableName="AO_69E499_AUDIT_LOG">
+    <column name="ACTION_ID"/>
+    <column name="ID"/>
+    <column name="LOG"/>
+    <column name="LOG_TIME"/>
+    <column name="MODULE_ID"/>
+    <column name="PROJECT"/>
+    <column name="SOURCE"/>
+    <column name="USER"/>
+  </data>
+  <data tableName="AO_69E499_AUTOMATIONAPP">
+    <column name="APP_NAME"/>
+    <column name="APP_TYPE"/>
+    <column name="BASE_URL"/>
+    <column name="ID"/>
+    <column name="PASSWORD"/>
+    <column name="USER_NAME"/>
+  </data>
+  <data tableName="AO_69E499_AUTOMATIONRUNSTEP">
+    <column name="AUTOMATION_APP_ID"/>
+    <column name="CALLBACK_URL"/>
+    <column name="EXECUTION_STATE"/>
+    <column name="ID"/>
+    <column name="LAST_EXECUTED_BY"/>
+    <column name="STATUS"/>
+    <column name="TEST_RUN_ID"/>
+    <column name="TRIGGER_KEY"/>
+    <column name="LAST_EXECUTOR_ID"/>
+    <column name="RUN_STATUS_ID"/>
+  </data>
+  <data tableName="AO_69E499_AUTOMATIONSTEP">
+    <column name="AUTOMATION_APP_ID"/>
+    <column name="ID"/>
+    <column name="SEQUENCE"/>
+    <column name="SEQ_BALANCER"/>
+    <column name="TEST_CASE_DETAILS_ID"/>
+    <column name="TRIGGER_KEY"/>
+  </data>
+  <data tableName="AO_69E499_AUTO_BUILD_DETAIL">
+    <column name="AUTOMATION_APP_ID"/>
+    <column name="AUTO_STATUS"/>
+    <column name="CALLBACK_URL"/>
+    <column name="EXECUTION_STATE"/>
+    <column name="EXECUTOR_ID"/>
+    <column name="ID"/>
+    <column name="PARAMS"/>
+    <column name="TEST_CYCLE_ID"/>
+    <column name="TEST_TYPE"/>
+    <column name="TRIGGER_KEY"/>
+  </data>
+  <data tableName="AO_69E499_BASELINE">
+    <column name="ACTIVE"/>
+    <column name="CREATED_BY"/>
+    <column name="CREATED_DATE"/>
+    <column name="DESCRIPTION"/>
+    <column name="GROUP_ID"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="PROJECT"/>
+    <column name="UPDATED_BY"/>
+    <column name="UPDATED_DATE"/>
+  </data>
+  <data tableName="AO_69E499_BASELINE_ITEM">
+    <column name="ACTIVE"/>
+    <column name="APPROVAL_ID"/>
+    <column name="BASELINE_ID"/>
+    <column name="ID"/>
+    <column name="VERSION_ID"/>
+  </data>
+  <data tableName="AO_69E499_BASICFILTERCOL">
+    <column name="FIELD_ID"/>
+    <column name="FIELD_NAME"/>
+    <column name="ID"/>
+    <column name="ORDER"/>
+    <column name="STYLE"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_69E499_BASICFILTERMOD">
+    <column name="BASIC_FILTER_COLUMN_ID"/>
+    <column name="ID"/>
+    <column name="MODULE_ID"/>
+  </data>
+  <data tableName="AO_69E499_COLUMN">
+    <column name="COLUMN_CONFIG_ID"/>
+    <column name="FIELD_ID"/>
+    <column name="FIELD_NAME"/>
+    <column name="ID"/>
+    <column name="ORDER"/>
+    <column name="STYLE"/>
+    <column name="TYPE"/>
+    <row>
+      <integer>1</integer>
+      <string>issuekey</string>
+      <string>关键字</string>
+      <integer>1</integer>
+      <integer>1</integer>
+      <string xsi:nil="true"/>
+      <string>jira</string>
+    </row>
+    <row>
+      <integer>1</integer>
+      <string>summary</string>
+      <string>概要</string>
+      <integer>2</integer>
+      <integer>2</integer>
+      <string xsi:nil="true"/>
+      <string>jira</string>
+    </row>
+    <row>
+      <integer>1</integer>
+      <string>synapse.web.dlg.label.ty.tester</string>
+      <string>Tester</string>
+      <integer>3</integer>
+      <integer>3</integer>
+      <string xsi:nil="true"/>
+      <string>synapse</string>
+    </row>
+    <row>
+      <integer>1</integer>
+      <string>synapse.common.label.result</string>
+      <string>Result</string>
+      <integer>4</integer>
+      <integer>4</integer>
+      <string xsi:nil="true"/>
+      <string>synapse</string>
+    </row>
+    <row>
+      <integer>1</integer>
+      <string>labels</string>
+      <string>标签</string>
+      <integer>5</integer>
+      <integer>5</integer>
+      <string xsi:nil="true"/>
+      <string>jira</string>
+    </row>
+    <row>
+      <integer>1</integer>
+      <string>components</string>
+      <string>模块</string>
+      <integer>6</integer>
+      <integer>6</integer>
+      <string xsi:nil="true"/>
+      <string>jira</string>
+    </row>
+    <row>
+      <integer>1</integer>
+      <string>synapse.common.label.comments</string>
+      <string>Comments</string>
+      <integer>7</integer>
+      <integer>7</integer>
+      <string xsi:nil="true"/>
+      <string>synapse</string>
+    </row>
+    <row>
+      <integer>1</integer>
+      <string>synapse.report.test.cycle.header.attachments</string>
+      <string>Attachments</string>
+      <integer>8</integer>
+      <integer>8</integer>
+      <string xsi:nil="true"/>
+      <string>synapse</string>
+    </row>
+    <row>
+      <integer>1</integer>
+      <string>synapse.report.test.cycle.header.bug</string>
+      <string>Defect(s)</string>
+      <integer>9</integer>
+      <integer>9</integer>
+      <string xsi:nil="true"/>
+      <string>synapse</string>
+    </row>
+    <row>
+      <integer>2</integer>
+      <string>priority</string>
+      <string>优先级</string>
+      <integer>10</integer>
+      <integer>1</integer>
+      <string xsi:nil="true"/>
+      <string>jira</string>
+    </row>
+    <row>
+      <integer>2</integer>
+      <string>status</string>
+      <string>状态</string>
+      <integer>11</integer>
+      <integer>2</integer>
+      <string xsi:nil="true"/>
+      <string>jira</string>
+    </row>
+    <row>
+      <integer>2</integer>
+      <string>reporter</string>
+      <string>报告人</string>
+      <integer>12</integer>
+      <integer>3</integer>
+      <string xsi:nil="true"/>
+      <string>jira</string>
+    </row>
+  </data>
+  <data tableName="AO_69E499_COLUMN_CONFIG">
+    <column name="CATEGORY"/>
+    <column name="DEFAULT"/>
+    <column name="ID"/>
+    <column name="MODULE_NAME"/>
+    <column name="PROJECT"/>
+    <column name="USER"/>
+    <row>
+      <string>web-page</string>
+      <boolean>true</boolean>
+      <integer>1</integer>
+      <string>test-cycle</string>
+      <integer>0</integer>
+      <integer>0</integer>
+    </row>
+    <row>
+      <string>web-page</string>
+      <boolean>true</boolean>
+      <integer>2</integer>
+      <string>test-suite</string>
+      <integer>0</integer>
+      <integer>0</integer>
+    </row>
+  </data>
+  <data tableName="AO_69E499_COLUMN_SYNAPSE">
+    <column name="FIELD_ID"/>
+    <column name="FIELD_NAME"/>
+    <column name="ID"/>
+    <column name="PROJECT"/>
+    <column name="REF_ID"/>
+    <row>
+      <string>synapse.common.label.urgency</string>
+      <string>执行优先级</string>
+      <integer>1</integer>
+      <integer xsi:nil="true"/>
+      <string xsi:nil="true"/>
+    </row>
+    <row>
+      <string>synapse.field.customfield.run.status.name</string>
+      <string>最新结果</string>
+      <integer>2</integer>
+      <integer xsi:nil="true"/>
+      <string xsi:nil="true"/>
+    </row>
+    <row>
+      <string>synapse.field.customfield.requirement.name</string>
+      <string>需求</string>
+      <integer>3</integer>
+      <integer xsi:nil="true"/>
+      <string xsi:nil="true"/>
+    </row>
+  </data>
+  <data tableName="AO_69E499_COMMON_FILTER">
+    <column name="DEFAULT"/>
+    <column name="FILTER_CATEGORY"/>
+    <column name="FILTER_NAME"/>
+    <column name="FILTER_QUERY"/>
+    <column name="FILTER_TYPE"/>
+    <column name="ID"/>
+    <column name="MODULE_NAME"/>
+    <column name="PROJECT_ID"/>
+    <column name="USER"/>
+    <column name="USER_ID"/>
+  </data>
+  <data tableName="AO_69E499_CONFIG_MAP">
+    <column name="ID"/>
+    <column name="KEY"/>
+    <column name="TYPE"/>
+    <column name="VALUE"/>
+    <row>
+      <integer>1</integer>
+      <string>synapse.config.timetracking.flag</string>
+      <string xsi:nil="true"/>
+      <string>true</string>
+    </row>
+    <row>
+      <integer>2</integer>
+      <string>synapse.config.legacy.automation</string>
+      <string>AUTOMATION</string>
+      <string>N</string>
+    </row>
+  </data>
+  <data tableName="AO_69E499_CURRENT_ACTIVITY">
+    <column name="ACTION"/>
+    <column name="ID"/>
+    <column name="KEY"/>
+    <column name="PROJECT"/>
+    <column name="START_TIME"/>
+    <column name="STATUS"/>
+    <column name="USER"/>
+  </data>
+  <data tableName="AO_69E499_CUSTOM_DISPLAY">
+    <column name="ID"/>
+    <column name="MODULE"/>
+    <column name="USER"/>
+    <column name="USER_ID"/>
+  </data>
+  <data tableName="AO_69E499_CUSTOM_DISPLAY_PREF">
+    <column name="CUSTOM_DISPLAY_ID"/>
+    <column name="FIELD"/>
+    <column name="ID"/>
+    <column name="SEQUENCE"/>
+    <column name="SEQ_BALANCER"/>
+  </data>
+  <data tableName="AO_69E499_GROUP">
+    <column name="CREATED_BY"/>
+    <column name="CREATED_DATE"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="PROJECT"/>
+  </data>
+  <data tableName="AO_69E499_IMPORT_ID_MAPPING">
+    <column name="ID"/>
+    <column name="NEW_ID"/>
+    <column name="OLD_ID"/>
+    <column name="TABLE_NAME"/>
+  </data>
+  <data tableName="AO_69E499_ITERATION_PARAM">
+    <column name="ID"/>
+    <column name="TEST_ITERATION_ID"/>
+    <column name="TEST_PARAM_VALUE_ID"/>
+    <column name="TEST_STEP_PARAM_ID"/>
+  </data>
+  <data tableName="AO_69E499_JOB_RUN_INFO">
+    <column name="EXECUTION_TIME"/>
+    <column name="ID"/>
+    <column name="STATUS"/>
+    <column name="SUBSCRIPTION_ID"/>
+  </data>
+  <data tableName="AO_69E499_MODULE">
+    <column name="ID"/>
+    <column name="MODULE_TYPE_ID"/>
+    <column name="NAME"/>
+    <row>
+      <integer>1</integer>
+      <integer>1</integer>
+      <string>TEST SUITE</string>
+    </row>
+    <row>
+      <integer>2</integer>
+      <integer>1</integer>
+      <string>TEST CASE</string>
+    </row>
+    <row>
+      <integer>3</integer>
+      <integer>1</integer>
+      <string>REQUIREMENT</string>
+    </row>
+    <row>
+      <integer>4</integer>
+      <integer>1</integer>
+      <string>TEST PLAN</string>
+    </row>
+    <row>
+      <integer>5</integer>
+      <integer>1</integer>
+      <string>TEST CYCLE</string>
+    </row>
+    <row>
+      <integer>6</integer>
+      <integer>1</integer>
+      <string>TEST RUN</string>
+    </row>
+    <row>
+      <integer>7</integer>
+      <integer>1</integer>
+      <string>CONFIGURATION</string>
+    </row>
+    <row>
+      <integer>8</integer>
+      <integer>1</integer>
+      <string>FILTER</string>
+    </row>
+    <row>
+      <integer>9</integer>
+      <integer>1</integer>
+      <string>SUBSCRIPTION</string>
+    </row>
+    <row>
+      <integer>10</integer>
+      <integer>1</integer>
+      <string>AUDIT LOG</string>
+    </row>
+  </data>
+  <data tableName="AO_69E499_MODULE_TYPE">
+    <column name="ID"/>
+    <column name="NAME"/>
+    <row>
+      <integer>1</integer>
+      <string>WEB PAGE</string>
+    </row>
+    <row>
+      <integer>2</integer>
+      <string>REPORT</string>
+    </row>
+    <row>
+      <integer>3</integer>
+      <string>SCHEDULED JOB</string>
+    </row>
+    <row>
+      <integer>4</integer>
+      <string>REST</string>
+    </row>
+  </data>
+  <data tableName="AO_69E499_PERMISSION">
+    <column name="CONFIGURED"/>
+    <column name="ID"/>
+    <column name="PERMISSION"/>
+    <column name="ROLE"/>
+    <row>
+      <boolean>true</boolean>
+      <integer>1</integer>
+      <string>manage-requirements</string>
+      <string>tester</string>
+    </row>
+    <row>
+      <boolean>true</boolean>
+      <integer>2</integer>
+      <string>manage-requirements</string>
+      <string>test-lead</string>
+    </row>
+    <row>
+      <boolean>true</boolean>
+      <integer>3</integer>
+      <string>manage-testcases</string>
+      <string>tester</string>
+    </row>
+    <row>
+      <boolean>true</boolean>
+      <integer>4</integer>
+      <string>manage-testcases</string>
+      <string>test-lead</string>
+    </row>
+    <row>
+      <boolean>true</boolean>
+      <integer>5</integer>
+      <string>manage-testsuites</string>
+      <string>tester</string>
+    </row>
+    <row>
+      <boolean>true</boolean>
+      <integer>6</integer>
+      <string>manage-testsuites</string>
+      <string>test-lead</string>
+    </row>
+    <row>
+      <boolean>true</boolean>
+      <integer>7</integer>
+      <string>manage-testplans</string>
+      <string>test-lead</string>
+    </row>
+    <row>
+      <boolean>true</boolean>
+      <integer>8</integer>
+      <string>execute-testruns</string>
+      <string>tester</string>
+    </row>
+    <row>
+      <boolean>true</boolean>
+      <integer>9</integer>
+      <string>execute-testruns</string>
+      <string>test-lead</string>
+    </row>
+    <row>
+      <boolean>true</boolean>
+      <integer>10</integer>
+      <string>browse-synapse-panels</string>
+      <string>anyone</string>
+    </row>
+  </data>
+  <data tableName="AO_69E499_PLAN_MEMBER_SUITE">
+    <column name="ID"/>
+    <column name="TEST_CASE"/>
+    <column name="TEST_PLAN"/>
+    <column name="TEST_SUITE_ID"/>
+  </data>
+  <data tableName="AO_69E499_REQUIREMENT_LINK">
+    <column name="CHILD_REQ"/>
+    <column name="ID"/>
+    <column name="PARENT_REQ"/>
+    <column name="SEQUENCE"/>
+    <column name="SEQ_BALANCER"/>
+  </data>
+  <data tableName="AO_69E499_REQ_RELATION">
+    <column name="CHILD"/>
+    <column name="CHILD_PROJECT"/>
+    <column name="ID"/>
+    <column name="PARENT"/>
+    <column name="PARENT_PROJECT"/>
+    <column name="SEQUENCE"/>
+    <column name="SEQ_BALANCER"/>
+  </data>
+  <data tableName="AO_69E499_REQ_SUITE">
+    <column name="ACTIVE"/>
+    <column name="CREATED_BY"/>
+    <column name="CREATED_DATE"/>
+    <column name="ID"/>
+    <column name="PROJECT"/>
+    <column name="SEQUENCE"/>
+    <column name="SEQ_BALANCER"/>
+    <column name="SUITE_NAME"/>
+    <column name="UPDATED_BY"/>
+    <column name="UPDATED_DATE"/>
+  </data>
+  <data tableName="AO_69E499_REQ_SUITE_MEMBER">
+    <column name="ID"/>
+    <column name="MEMBER"/>
+    <column name="MEMBER_PROJECT"/>
+    <column name="MEMBER_TYPE"/>
+    <column name="REQ_SUITE_ID"/>
+    <column name="SEQUENCE"/>
+    <column name="SEQ_BALANCER"/>
+  </data>
+  <data tableName="AO_69E499_REQ_SUITE_NUMBER">
+    <column name="ID"/>
+    <column name="REQ_SUITE_ID"/>
+    <column name="SUITE_NUMBER"/>
+  </data>
+  <data tableName="AO_69E499_RUN_ATTRIBUTE">
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="PROJECT"/>
+  </data>
+  <data tableName="AO_69E499_RUN_ATTRIBUTE_MAP">
+    <column name="ID"/>
+    <column name="RUN_ATTRIBUTE_VALUE_ID"/>
+    <column name="TEST_RUN_ID"/>
+  </data>
+  <data tableName="AO_69E499_RUN_ATTRIBUTE_PAIR">
+    <column name="ATTRIBUTE_VALUE_ONE"/>
+    <column name="ATTRIBUTE_VALUE_TWO"/>
+    <column name="ID"/>
+    <column name="TEST_CYCLE_ID"/>
+  </data>
+  <data tableName="AO_69E499_RUN_ATTRIBUTE_VALUE">
+    <column name="ID"/>
+    <column name="RUN_ATTRIBUTE_ID"/>
+    <column name="VALUE"/>
+  </data>
+  <data tableName="AO_69E499_RUN_ATTRIB_COMBO">
+    <column name="ID"/>
+    <column name="POSITION"/>
+    <column name="RUN_ATTRIBUTE_VALUE_ID"/>
+    <column name="TEST_CYCLE_ATTRIB_MAP_ID"/>
+  </data>
+  <data tableName="AO_69E499_RUN_PARAM_VALUE">
+    <column name="ID"/>
+    <column name="PARAM_NAME"/>
+    <column name="PARAM_REF"/>
+    <column name="PARAM_VALUE"/>
+    <column name="TEST_RUN_ITERATION_ID"/>
+    <column name="TEST_RUN_STEP_ID"/>
+  </data>
+  <data tableName="AO_69E499_RUN_STATUS">
+    <column name="COLOR"/>
+    <column name="DEFAULT"/>
+    <column name="DESCRIPTION"/>
+    <column name="ENABLED"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="SEQUENCE"/>
+    <column name="SEQ_BALANCER"/>
+    <column name="STATUS_CATEGORY_ID"/>
+    <row>
+      <string>#00875a</string>
+      <boolean>true</boolean>
+      <string>测试结果为通过</string>
+      <boolean>true</boolean>
+      <integer>1</integer>
+      <string>通过</string>
+      <integer>1</integer>
+      <integer>1</integer>
+      <integer>1</integer>
+    </row>
+    <row>
+      <string>#de350b</string>
+      <boolean>true</boolean>
+      <string>测试结果为失败</string>
+      <boolean>true</boolean>
+      <integer>2</integer>
+      <string>失败</string>
+      <integer>1024</integer>
+      <integer>1</integer>
+      <integer>1</integer>
+    </row>
+    <row>
+      <string>#ffab00</string>
+      <boolean>true</boolean>
+      <string>由于某些原因此测试用例不能执行</string>
+      <boolean>true</boolean>
+      <integer>3</integer>
+      <string>锁定</string>
+      <integer>2048</integer>
+      <integer>1</integer>
+      <integer>1</integer>
+    </row>
+    <row>
+      <string>#747474</string>
+      <boolean>true</boolean>
+      <string>还没有被执行</string>
+      <boolean>true</boolean>
+      <integer>4</integer>
+      <string>未执行</string>
+      <integer>3072</integer>
+      <integer>1</integer>
+      <integer>2</integer>
+    </row>
+    <row>
+      <string>#8f2f8f</string>
+      <boolean>true</boolean>
+      <string>测试执行不适用（此测试周期）</string>
+      <boolean>true</boolean>
+      <integer>5</integer>
+      <string>不适用</string>
+      <integer>4096</integer>
+      <integer>1</integer>
+      <integer>1</integer>
+    </row>
+  </data>
+  <data tableName="AO_69E499_RUN_STATUS_INFO">
+    <column name="ALIAS_NAME"/>
+    <column name="ID"/>
+    <column name="RUN_STATUS_ID"/>
+    <row>
+      <string>Passed</string>
+      <integer>1</integer>
+      <integer>1</integer>
+    </row>
+    <row>
+      <string>Failed</string>
+      <integer>2</integer>
+      <integer>2</integer>
+    </row>
+    <row>
+      <string>Blocked</string>
+      <integer>3</integer>
+      <integer>3</integer>
+    </row>
+    <row>
+      <string>Not Tested</string>
+      <integer>4</integer>
+      <integer>4</integer>
+    </row>
+    <row>
+      <string>NA</string>
+      <integer>5</integer>
+      <integer>5</integer>
+    </row>
+  </data>
+  <data tableName="AO_69E499_STATUS_CATEGORY">
+    <column name="DEFAULT"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <row>
+      <boolean>true</boolean>
+      <integer>1</integer>
+      <string>Executed</string>
+    </row>
+    <row>
+      <boolean>false</boolean>
+      <integer>2</integer>
+      <string>Not Executed</string>
+    </row>
+  </data>
+  <data tableName="AO_69E499_SUBSCRIPTION">
+    <column name="ACTIVE"/>
+    <column name="CATEGORY"/>
+    <column name="CRON_EXPRESSION"/>
+    <column name="FILTER_ID"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="RECIPIENTS"/>
+    <column name="USER"/>
+    <column name="USER_ID"/>
+  </data>
+  <data tableName="AO_69E499_SYNAPSE_FILTER">
+    <column name="DEFAULT"/>
+    <column name="FILTER_CATEGORY"/>
+    <column name="FILTER_NAME"/>
+    <column name="FILTER_QUERY"/>
+    <column name="FILTER_TYPE"/>
+    <column name="ID"/>
+    <column name="MODULE_NAME"/>
+    <column name="PROJECT_ID"/>
+    <column name="USER"/>
+  </data>
+  <data tableName="AO_69E499_TESTCASEDETAILS">
+    <column name="ID"/>
+    <column name="TC_ID"/>
+    <column name="TYPE"/>
+    <column name="FORECAST"/>
+    <column name="ESTIMATE"/>
+    <column name="LATEST_STATUS"/>
+    <column name="PREVIOUS_STATUS"/>
+    <column name="AUTOMATION_IDENTIFIER"/>
+  </data>
+  <data tableName="AO_69E499_TESTCASE_REQ_LINK">
+    <column name="ID"/>
+    <column name="REQ_ID"/>
+    <column name="TC_ID"/>
+  </data>
+  <data tableName="AO_69E499_TESTCYCLE">
+    <column name="BUILD"/>
+    <column name="END_TIME"/>
+    <column name="ENVIRONMENT"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="START_TIME"/>
+    <column name="STATUS"/>
+    <column name="TP_ID"/>
+    <column name="PLANNED_END_TIME"/>
+    <column name="PLANNED_START_TIME"/>
+    <column name="SPRINT"/>
+    <column name="TEST_CYCLE_TYPE"/>
+  </data>
+  <data tableName="AO_69E499_TESTCYCLEATTRIB">
+    <column name="COMBINATION"/>
+    <column name="ID"/>
+    <column name="TEST_CYCLE_ID"/>
+  </data>
+  <data tableName="AO_69E499_TESTPLANMEMBER">
+    <column name="ID"/>
+    <column name="SEQUENCE"/>
+    <column name="SEQ_BALANCER"/>
+    <column name="TC_ID"/>
+    <column name="TESTER_ID"/>
+    <column name="TESTER_NAME"/>
+    <column name="TP_ID"/>
+  </data>
+  <data tableName="AO_69E499_TESTPLANOVERVIEW">
+    <column name="COUNT"/>
+    <column name="DATE"/>
+    <column name="ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="STATUS_ID"/>
+    <column name="USER_ID"/>
+  </data>
+  <data tableName="AO_69E499_TESTRUN">
+    <column name="COMMENT"/>
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="STATUS"/>
+    <column name="SUMMARY"/>
+    <column name="TC_ID"/>
+    <column name="TESTER_NAME"/>
+    <column name="TEST_CYCLE_ID"/>
+    <column name="CHANGE_INFO"/>
+    <column name="EFFORT"/>
+    <column name="EXECUTED_BY"/>
+    <column name="SEQ_BALANCER"/>
+    <column name="TYPE"/>
+    <column name="EXECUTION_ON"/>
+    <column name="SEQUENCE"/>
+    <column name="ESTIMATE"/>
+    <column name="EXECUTOR_ID"/>
+    <column name="TESTER_ID"/>
+    <column name="RUN_STATUS_ID"/>
+    <column name="SPRINT"/>
+    <column name="URGENCY"/>
+  </data>
+  <data tableName="AO_69E499_TESTRUNATTACHMENT">
+    <column name="FILE_NAME"/>
+    <column name="ID"/>
+    <column name="MIME_TYPE"/>
+    <column name="TEST_RUN_ID"/>
+    <column name="TEST_RUN_STEP_ID"/>
+  </data>
+  <data tableName="AO_69E499_TESTRUNBUG">
+    <column name="BUG_ID"/>
+    <column name="ID"/>
+    <column name="TEST_RUN_ID"/>
+    <column name="TEST_RUN_STEP_ID"/>
+  </data>
+  <data tableName="AO_69E499_TESTRUNHISTORY">
+    <column name="ACTIVITY"/>
+    <column name="ACTIVITY_TYPE"/>
+    <column name="EXECUTION_TIME"/>
+    <column name="EXECUTOR_NAME"/>
+    <column name="ID"/>
+    <column name="TEST_RUN_ID"/>
+    <column name="EXECUTOR_ID"/>
+    <column name="REMARKS"/>
+  </data>
+  <data tableName="AO_69E499_TESTRUNSTEP">
+    <column name="ACTUAL_RESULT"/>
+    <column name="EXPECTED_RESULT"/>
+    <column name="ID"/>
+    <column name="STATUS"/>
+    <column name="STEP"/>
+    <column name="STEP_DATA"/>
+    <column name="TEST_RUN_ID"/>
+    <column name="TEST_RUN_ITERATION_ID"/>
+    <column name="RUN_STATUS_ID"/>
+  </data>
+  <data tableName="AO_69E499_TESTSTEP">
+    <column name="EXPECTED_RESULT"/>
+    <column name="ID"/>
+    <column name="SEQUENCE"/>
+    <column name="SEQ_BALANCER"/>
+    <column name="STEP"/>
+    <column name="STEP_DATA"/>
+    <column name="TC_ID"/>
+    <column name="TEST_CASE_DETAILS_ID"/>
+  </data>
+  <data tableName="AO_69E499_TESTSUITE">
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="PROJECT_ID"/>
+    <column name="SEQUENCE"/>
+    <column name="SEQ_BALANCER"/>
+    <column name="STATE"/>
+  </data>
+  <data tableName="AO_69E499_TESTSUITELABEL">
+    <column name="ID"/>
+    <column name="LABEL"/>
+    <column name="TEST_SUITE_ID"/>
+  </data>
+  <data tableName="AO_69E499_TESTSUITEMEMBER">
+    <column name="ID"/>
+    <column name="MEMBER_ID"/>
+    <column name="MEMBER_TYPE"/>
+    <column name="SEQUENCE"/>
+    <column name="SEQ_BALANCER"/>
+    <column name="TEST_SUITE_ID"/>
+  </data>
+  <data tableName="AO_69E499_TEST_ITERATION">
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="ORDER_NUMBER"/>
+    <column name="SEQUENCE"/>
+    <column name="SEQ_BALANCER"/>
+    <column name="TEST_CASE"/>
+  </data>
+  <data tableName="AO_69E499_TEST_PARAM">
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="SCOPE"/>
+    <column name="SCOPE_REF_ID"/>
+    <column name="SEQUENCE"/>
+    <column name="SEQ_BALANCER"/>
+  </data>
+  <data tableName="AO_69E499_TEST_PARAM_VALUE">
+    <column name="ID"/>
+    <column name="SEQUENCE"/>
+    <column name="SEQ_BALANCER"/>
+    <column name="TEST_PARAM_ID"/>
+    <column name="VALUE"/>
+  </data>
+  <data tableName="AO_69E499_TEST_RUN_ITERATION">
+    <column name="EXECUTION_ON"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="STATUS"/>
+    <column name="TEST_ITERATION_REF_ID"/>
+    <column name="TEST_RUN_ID"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_69E499_TEST_RUN_REQUIREMENT">
+    <column name="ID"/>
+    <column name="REQUIREMENT"/>
+    <column name="TEST_RUN_ID"/>
+  </data>
+  <data tableName="AO_69E499_TEST_STEP_PARAM">
+    <column name="ID"/>
+    <column name="PARAM_REF"/>
+    <column name="TEST_PARAM_ID"/>
+    <column name="TEST_RUN_STEP_ID"/>
+    <column name="TEST_STEP_ID"/>
+  </data>
+  <data tableName="AO_69E499_VERSION">
+    <column name="CREATED_BY"/>
+    <column name="CREATED_DATE"/>
+    <column name="ID"/>
+    <column name="ISSUE_DATE"/>
+    <column name="ISSUE_ID"/>
+    <column name="NOTES"/>
+    <column name="SEQUENCE"/>
+    <column name="SEQ_BALANCER"/>
+    <column name="VERSION_NO"/>
+  </data>
   <data tableName="AO_7AEB56_SHARED_SCRIPT">
     <column name="DESCRIPTION"/>
     <column name="ID"/>
@@ -4758,7 +6291,7 @@
     <row>
       <boolean>false</boolean>
       <integer>25</integer>
-      <string>29f92abee4916f6db0b0bceb097e4a7c49e2f283</string>
+      <string>322ffd5dbeba4f340338512c02d513284e84f42b</string>
       <string>capture-for-JIRA</string>
       <integer>1</integer>
     </row>
@@ -4890,6 +6423,11 @@
       <string>29f92abee4916f6db0b0bceb097e4a7c49e2f283</string>
       <integer>1626060451</integer>
       <integer>5</integer>
+    </row>
+    <row>
+      <string>322ffd5dbeba4f340338512c02d513284e84f42b</string>
+      <integer>1626061053</integer>
+      <integer>6</integer>
     </row>
   </data>
   <data tableName="AO_8BA09E_USERS_PATS">
