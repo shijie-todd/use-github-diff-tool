@@ -1288,6 +1288,124 @@
     <column name="EXPIRY_TIMESTAMP" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
     <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
   </table>
+  <table name="AO_F9C6CD_NAFJ_ET">
+    <column name="CUSTOM_EMAIL_THEME" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="DEFAULT_TEMPLATE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="EMAIL_FOOTER" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="EMAIL_MESSAGE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="EMAIL_SUBJECT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="EMAIL_THEME_AOID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="EMAIL_THEME_MODE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="INCLUDE_CHANGES" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="INCLUDE_LINKS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_F9C6CD_NAFJ_ET" fromColumn="EMAIL_THEME_AOID" toTable="AO_F9C6CD_NAFJ_ETH" toColumn="ID"/>
+  </table>
+  <table name="AO_F9C6CD_NAFJ_ETH">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEMPLATE_DIR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEMPLATE_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_F9C6CD_NAFJ_ETK">
+    <column name="DISPLAY_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="EMAIL_TEMPLATE_AOID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_F9C6CD_NAFJ_ETK" fromColumn="EMAIL_TEMPLATE_AOID" toTable="AO_F9C6CD_NAFJ_ET" toColumn="ID"/>
+  </table>
+  <table name="AO_F9C6CD_NAFJ_EVENT">
+    <column name="CHANGES" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="COMMENT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="EVENT_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="USER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_F9C6CD_NAFJ_HCR">
+    <column name="API_BASE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="COLOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LINK_TEXT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NOTIFY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ROOM_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SENDER_MODE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SENDER_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_F9C6CD_NAFJ_IC">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LAST_NOTIFICATION_SENT" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="NOTIFICATION_AOID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="RUN_COUNT" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_F9C6CD_NAFJ_IC" fromColumn="NOTIFICATION_AOID" toTable="AO_F9C6CD_NAFJ_N" toColumn="ID"/>
+  </table>
+  <table name="AO_F9C6CD_NAFJ_N">
+    <column name="ACTOR_USER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="COMMENT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="COMMENT_SENDING_ACTIVE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="COMMENT_TYPE_EVENT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="COMMENT_USER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CRON_STRING" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DATE_TIME_INTERVAL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DATE_TIME_START" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DATE_TIME_STOP" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DAY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DAYS_OF_MONTH_OPT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DAYS_OF_WEEK" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DAY_OF_MONTH" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="DISABLED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="EMAIL_TEMPLATE_AOID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="EVENT_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FIELDS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="HIP_CHAT_ROOM_AOID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="HOURS_FROM" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="HOURS_RUN_ONCE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="HOURS_TO" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="INCREMENT_IN_MINUTES" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ISSUE_TIMES_IN_FILTER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="JQL" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="JQL_FILTER" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="MINIMUM_AMOUNT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="MINUTES" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="MODE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RECIPIENT_BCCEMAILADDRESS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="RECIPIENT_CCEMAILADDRESS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="RECIPIENT_CUSTOM_FIELD_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RECIPIENT_EMAILADDRESS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="RECIPIENT_GROUP" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="RECIPIENT_MODE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RECIPIENT_PEOPLE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="RECIPIENT_ROLES" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="RECIPIENT_USERS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="RESPECT_NOTIFY_ME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REST_METHOD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REST_PASSWORD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REST_POSTDATA" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="REST_SENDING_ACTIVE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="REST_URI" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REST_USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SENDER_EMAILADDRESS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SENDING_MODE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SLACK_SENDING_ACTIVE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="SLACK_WEB_HOOK_AOID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WEEK" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_F9C6CD_NAFJ_N" fromColumn="EMAIL_TEMPLATE_AOID" toTable="AO_F9C6CD_NAFJ_ET" toColumn="ID"/>
+    <foreignKey fromTable="AO_F9C6CD_NAFJ_N" fromColumn="HIP_CHAT_ROOM_AOID" toTable="AO_F9C6CD_NAFJ_HCR" toColumn="ID"/>
+    <foreignKey fromTable="AO_F9C6CD_NAFJ_N" fromColumn="SLACK_WEB_HOOK_AOID" toTable="AO_F9C6CD_NAFJ_WH" toColumn="ID"/>
+  </table>
+  <table name="AO_F9C6CD_NAFJ_WH">
+    <column name="CONFIGURATION_JSON" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
   <table name="AO_FDF29B_JEP_BUSINESS_HOUR">
     <column name="CALENDAR_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
     <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
@@ -1698,7 +1816,7 @@
     <row>
       <integer>1</integer>
       <string>last-run</string>
-      <string>1626162922647</string>
+      <string>1626166522784</string>
     </row>
   </data>
   <data tableName="AO_2F1435_READ_NOTIFICATIONS">
@@ -5044,6 +5162,323 @@
     <column name="ASSERTION_ID"/>
     <column name="EXPIRY_TIMESTAMP"/>
     <column name="ID"/>
+  </data>
+  <data tableName="AO_F9C6CD_NAFJ_ET">
+    <column name="CUSTOM_EMAIL_THEME"/>
+    <column name="DEFAULT_TEMPLATE"/>
+    <column name="EMAIL_FOOTER"/>
+    <column name="EMAIL_MESSAGE"/>
+    <column name="EMAIL_SUBJECT"/>
+    <column name="EMAIL_THEME_AOID"/>
+    <column name="EMAIL_THEME_MODE"/>
+    <column name="ID"/>
+    <column name="INCLUDE_CHANGES"/>
+    <column name="INCLUDE_LINKS"/>
+    <column name="NAME"/>
+    <row>
+      <string xsi:nil="true"/>
+      <boolean>true</boolean>
+      <string>&lt;div align="center">&lt;span style="font-size: xx-small;">This message is automatically generated by Notification Assistant for JIRA using the &lt;a href="${baseUrl}/secure/admin/NAAddNotification.jspa?id=${notification.id}">${notification.name}&lt;/a> Notification. &lt;br /> If you think it was sent incorrectly, please contact your JIRA administrators&lt;br /> For more information about Notification Assistant for JIRA, see: &lt;a href="https://atlasauthority.atlassian.net/wiki/spaces/NAFJ/overview">https://atlasauthority.atlassian.net/wiki/spaces/NAFJ/overview&lt;/a>&lt;/span>&lt;/div></string>
+      <string>&lt;p>&lt;span>Hi,&lt;br />&lt;br />This message is sent to alert you about the following issues. If you are unsure why, please contact your project manager.&lt;br />&lt;br />Best regards,&lt;br />JIRA administrator&lt;/span>&lt;/p></string>
+      <string>Notification Assistant</string>
+      <integer>1</integer>
+      <integer>0</integer>
+      <integer>1</integer>
+      <boolean>false</boolean>
+      <boolean>false</boolean>
+      <string>Default Email Template</string>
+    </row>
+  </data>
+  <data tableName="AO_F9C6CD_NAFJ_ETH">
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="TEMPLATE_DIR"/>
+    <column name="TEMPLATE_NAME"/>
+    <column name="TYPE"/>
+    <row>
+      <integer>1</integer>
+      <string>Default (List View)</string>
+      <string>/templates/email/listview/</string>
+      <string>template_default.html</string>
+      <integer>0</integer>
+    </row>
+    <row>
+      <integer>2</integer>
+      <string>Black (List View)</string>
+      <string>/templates/email/listview/</string>
+      <string>template_black.html</string>
+      <integer>0</integer>
+    </row>
+    <row>
+      <integer>3</integer>
+      <string>Green (List View)</string>
+      <string>/templates/email/listview/</string>
+      <string>template_green.html</string>
+      <integer>0</integer>
+    </row>
+    <row>
+      <integer>4</integer>
+      <string>Red (List View)</string>
+      <string>/templates/email/listview/</string>
+      <string>template_red.html</string>
+      <integer>0</integer>
+    </row>
+    <row>
+      <integer>5</integer>
+      <string>Blue (List View)</string>
+      <string>/templates/email/listview/</string>
+      <string>template_blue.html</string>
+      <integer>0</integer>
+    </row>
+    <row>
+      <integer>6</integer>
+      <string>Orange (List View)</string>
+      <string>/templates/email/listview/</string>
+      <string>template_orange.html</string>
+      <integer>0</integer>
+    </row>
+    <row>
+      <integer>7</integer>
+      <string>Default (Details View)</string>
+      <string>/templates/email/detailsview/</string>
+      <string>template_default.html</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>8</integer>
+      <string>Black (Details View)</string>
+      <string>/templates/email/detailsview/</string>
+      <string>template_black.html</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>9</integer>
+      <string>Green (Details View)</string>
+      <string>/templates/email/detailsview/</string>
+      <string>template_green.html</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>10</integer>
+      <string>Red (Details View)</string>
+      <string>/templates/email/detailsview/</string>
+      <string>template_red.html</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>11</integer>
+      <string>Blue (Details View)</string>
+      <string>/templates/email/detailsview/</string>
+      <string>template_blue.html</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>12</integer>
+      <string>Orange (Details View)</string>
+      <string>/templates/email/detailsview/</string>
+      <string>template_orange.html</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>13</integer>
+      <string>Default (JSD Details View)</string>
+      <string>/templates/email/jsdview/</string>
+      <string>template_default.html</string>
+      <integer>2</integer>
+    </row>
+    <row>
+      <integer>14</integer>
+      <string>Black (JSD Details View)</string>
+      <string>/templates/email/jsdview/</string>
+      <string>template_black.html</string>
+      <integer>2</integer>
+    </row>
+    <row>
+      <integer>15</integer>
+      <string>Green (JSD Details View)</string>
+      <string>/templates/email/jsdview/</string>
+      <string>template_green.html</string>
+      <integer>2</integer>
+    </row>
+    <row>
+      <integer>16</integer>
+      <string>Red (JSD Details View)</string>
+      <string>/templates/email/jsdview/</string>
+      <string>template_red.html</string>
+      <integer>2</integer>
+    </row>
+    <row>
+      <integer>17</integer>
+      <string>Blue (JSD Details View)</string>
+      <string>/templates/email/jsdview/</string>
+      <string>template_blue.html</string>
+      <integer>2</integer>
+    </row>
+    <row>
+      <integer>18</integer>
+      <string>Orange (JSD Details View)</string>
+      <string>/templates/email/jsdview/</string>
+      <string>template_orange.html</string>
+      <integer>2</integer>
+    </row>
+  </data>
+  <data tableName="AO_F9C6CD_NAFJ_ETK">
+    <column name="DISPLAY_NAME"/>
+    <column name="EMAIL_TEMPLATE_AOID"/>
+    <column name="ID"/>
+    <column name="KEY"/>
+    <row>
+      <string>Type</string>
+      <integer>1</integer>
+      <integer>1</integer>
+      <string>issuetype</string>
+    </row>
+    <row>
+      <string>Key</string>
+      <integer>1</integer>
+      <integer>2</integer>
+      <string>issuekey</string>
+    </row>
+    <row>
+      <string>Summary</string>
+      <integer>1</integer>
+      <integer>3</integer>
+      <string>summary</string>
+    </row>
+    <row>
+      <string>Assignee</string>
+      <integer>1</integer>
+      <integer>4</integer>
+      <string>assignee</string>
+    </row>
+    <row>
+      <string>Reporter</string>
+      <integer>1</integer>
+      <integer>5</integer>
+      <string>reporter</string>
+    </row>
+    <row>
+      <string>P</string>
+      <integer>1</integer>
+      <integer>6</integer>
+      <string>priority</string>
+    </row>
+    <row>
+      <string>Status</string>
+      <integer>1</integer>
+      <integer>7</integer>
+      <string>status</string>
+    </row>
+    <row>
+      <string>Resolution</string>
+      <integer>1</integer>
+      <integer>8</integer>
+      <string>resolution</string>
+    </row>
+    <row>
+      <string>Created</string>
+      <integer>1</integer>
+      <integer>9</integer>
+      <string>created</string>
+    </row>
+    <row>
+      <string>Updated</string>
+      <integer>1</integer>
+      <integer>10</integer>
+      <string>updated</string>
+    </row>
+    <row>
+      <string>Due</string>
+      <integer>1</integer>
+      <integer>11</integer>
+      <string>duedate</string>
+    </row>
+  </data>
+  <data tableName="AO_F9C6CD_NAFJ_EVENT">
+    <column name="CHANGES"/>
+    <column name="COMMENT_ID"/>
+    <column name="EVENT_TYPE"/>
+    <column name="ID"/>
+    <column name="ISSUE_KEY"/>
+    <column name="TIME"/>
+    <column name="USER_KEY"/>
+  </data>
+  <data tableName="AO_F9C6CD_NAFJ_HCR">
+    <column name="API_BASE"/>
+    <column name="COLOR"/>
+    <column name="ID"/>
+    <column name="LINK_TEXT"/>
+    <column name="NOTIFY"/>
+    <column name="ROOM_NAME"/>
+    <column name="SENDER_MODE"/>
+    <column name="SENDER_NAME"/>
+  </data>
+  <data tableName="AO_F9C6CD_NAFJ_IC">
+    <column name="ID"/>
+    <column name="ISSUE_KEY"/>
+    <column name="LAST_NOTIFICATION_SENT"/>
+    <column name="NOTIFICATION_AOID"/>
+    <column name="RUN_COUNT"/>
+  </data>
+  <data tableName="AO_F9C6CD_NAFJ_N">
+    <column name="ACTOR_USER"/>
+    <column name="COMMENT"/>
+    <column name="COMMENT_SENDING_ACTIVE"/>
+    <column name="COMMENT_TYPE_EVENT"/>
+    <column name="COMMENT_USER"/>
+    <column name="CRON_STRING"/>
+    <column name="DATE_TIME_INTERVAL"/>
+    <column name="DATE_TIME_START"/>
+    <column name="DATE_TIME_STOP"/>
+    <column name="DAY"/>
+    <column name="DAYS_OF_MONTH_OPT"/>
+    <column name="DAYS_OF_WEEK"/>
+    <column name="DAY_OF_MONTH"/>
+    <column name="DESCRIPTION"/>
+    <column name="DISABLED"/>
+    <column name="EMAIL_TEMPLATE_AOID"/>
+    <column name="EVENT_TYPE"/>
+    <column name="FIELDS"/>
+    <column name="HIP_CHAT_ROOM_AOID"/>
+    <column name="HOURS_FROM"/>
+    <column name="HOURS_RUN_ONCE"/>
+    <column name="HOURS_TO"/>
+    <column name="ID"/>
+    <column name="INCREMENT_IN_MINUTES"/>
+    <column name="ISSUE_TIMES_IN_FILTER"/>
+    <column name="JQL"/>
+    <column name="JQL_FILTER"/>
+    <column name="MINIMUM_AMOUNT"/>
+    <column name="MINUTES"/>
+    <column name="MODE"/>
+    <column name="NAME"/>
+    <column name="RECIPIENT_BCCEMAILADDRESS"/>
+    <column name="RECIPIENT_CCEMAILADDRESS"/>
+    <column name="RECIPIENT_CUSTOM_FIELD_KEY"/>
+    <column name="RECIPIENT_EMAILADDRESS"/>
+    <column name="RECIPIENT_GROUP"/>
+    <column name="RECIPIENT_MODE"/>
+    <column name="RECIPIENT_PEOPLE"/>
+    <column name="RECIPIENT_ROLES"/>
+    <column name="RECIPIENT_USERS"/>
+    <column name="RESPECT_NOTIFY_ME"/>
+    <column name="REST_METHOD"/>
+    <column name="REST_PASSWORD"/>
+    <column name="REST_POSTDATA"/>
+    <column name="REST_SENDING_ACTIVE"/>
+    <column name="REST_URI"/>
+    <column name="REST_USERNAME"/>
+    <column name="SENDER_EMAILADDRESS"/>
+    <column name="SENDING_MODE"/>
+    <column name="SLACK_SENDING_ACTIVE"/>
+    <column name="SLACK_WEB_HOOK_AOID"/>
+    <column name="WEEK"/>
+  </data>
+  <data tableName="AO_F9C6CD_NAFJ_WH">
+    <column name="CONFIGURATION_JSON"/>
+    <column name="ID"/>
+    <column name="TYPE"/>
+    <column name="URL"/>
   </data>
   <data tableName="AO_FDF29B_JEP_BUSINESS_HOUR">
     <column name="CALENDAR_ID"/>
