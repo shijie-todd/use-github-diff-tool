@@ -803,6 +803,41 @@
     <column name="USER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
     <column name="WORKFLOW_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
   </table>
+  <table name="AO_D4AF4C_DEVICE">
+    <column name="ACTIVE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="APP_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="BADGE_NUMBER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="COMMENT_ADDED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="COMMENT_MODIFIED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DEVICE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DEVICE_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="GENERIC_EVENT" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_ASSIGNED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ISSUE_CLOSED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ISSUE_CREATED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ISSUE_DELETED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ISSUE_MOVED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ISSUE_REOPENED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ISSUE_RESOLVED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ISSUE_UPDATED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="LAST_ACCESSED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="PROFILE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="USER_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="WORKLOG_ADDED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="WORKLOG_DELETED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="WORKLOG_UPDATED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="WORK_STARTED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="WORK_STOPPED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+  </table>
+  <table name="AO_D4AF4C_DEVICE_CONFIGURATION">
+    <column name="ALLOW_CACHING_ON_DEVICE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ALLOW_PUSH_ANDROID" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ALLOW_PUSH_NOTIFICATIONS_IOS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ALLOW_STORING_PASSWORD" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+  </table>
   <table name="AO_E8B6CC_BRANCH">
     <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
     <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
@@ -3684,6 +3719,41 @@
     <column name="TRIGGER_ID"/>
     <column name="USER_KEY"/>
     <column name="WORKFLOW_ID"/>
+  </data>
+  <data tableName="AO_D4AF4C_DEVICE">
+    <column name="ACTIVE"/>
+    <column name="APP_ID"/>
+    <column name="BADGE_NUMBER"/>
+    <column name="COMMENT_ADDED"/>
+    <column name="COMMENT_MODIFIED"/>
+    <column name="DESCRIPTION"/>
+    <column name="DEVICE_ID"/>
+    <column name="DEVICE_TYPE"/>
+    <column name="GENERIC_EVENT"/>
+    <column name="ID"/>
+    <column name="ISSUE_ASSIGNED"/>
+    <column name="ISSUE_CLOSED"/>
+    <column name="ISSUE_CREATED"/>
+    <column name="ISSUE_DELETED"/>
+    <column name="ISSUE_MOVED"/>
+    <column name="ISSUE_REOPENED"/>
+    <column name="ISSUE_RESOLVED"/>
+    <column name="ISSUE_UPDATED"/>
+    <column name="LAST_ACCESSED"/>
+    <column name="PROFILE_ID"/>
+    <column name="USER_NAME"/>
+    <column name="WORKLOG_ADDED"/>
+    <column name="WORKLOG_DELETED"/>
+    <column name="WORKLOG_UPDATED"/>
+    <column name="WORK_STARTED"/>
+    <column name="WORK_STOPPED"/>
+  </data>
+  <data tableName="AO_D4AF4C_DEVICE_CONFIGURATION">
+    <column name="ALLOW_CACHING_ON_DEVICE"/>
+    <column name="ALLOW_PUSH_ANDROID"/>
+    <column name="ALLOW_PUSH_NOTIFICATIONS_IOS"/>
+    <column name="ALLOW_STORING_PASSWORD"/>
+    <column name="ID"/>
   </data>
   <data tableName="AO_E8B6CC_BRANCH">
     <column name="ID"/>
