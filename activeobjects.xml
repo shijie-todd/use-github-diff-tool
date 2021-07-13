@@ -995,6 +995,212 @@
     <column name="WEDNESDAY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
     <foreignKey fromTable="AO_60DB71_WORKINGDAYS" fromColumn="RAPID_VIEW_ID" toTable="AO_60DB71_RAPIDVIEW" toColumn="ID"/>
   </table>
+  <table name="AO_67BD6E_BOARD">
+    <column name="BOARD_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ENABLED_EDIT_NON_OWNER" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="FILTER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="OWNER_GROUP_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="OWNER_USER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_67BD6E_BOARD_HISTORY">
+    <column name="BOARD_ID_LIST" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="USER_KEY" primaryKey="true" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_67BD6E_CALENDAR">
+    <column name="HOLIDAYS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REGULAR_HOLIDAYS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="WEEKENDS_ARE_WORKDAYS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="WEEKEND_FIRST_DAY" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WEEKEND_SECOND_DAY" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_67BD6E_CHILD_CREATE_CONFIG">
+    <column name="DISPLAY_IN_BOTTOM" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="DISPLAY_IN_PANEL" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="DISPLAY_IN_TOP" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LIMIT_EPIC" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="LIMIT_SUBTASK" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="PROJECT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_67BD6E_COLOR_CONFIG">
+    <column name="COLOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CONFIG_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="JQL" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="PRIORITY" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_67BD6E_DEPENDENCY">
+    <column name="LAG" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="LINK_ID" primaryKey="true" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_67BD6E_EXTRA_FIELD">
+    <column name="EDITABLE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="FIELD_ID" primaryKey="true" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="HIDDEN" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WIDTH" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_67BD6E_GENERAL_CONFIG">
+    <column name="ALERT_WITH_STATUS_CATEGORY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ALL_TICKET_MODE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="CONFIG_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATE_PLAN_TODAY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="DEPENDENCY_LINK_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="DISPLAY_VERSION_MODE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="DND" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="END_END_DEPENDENCY_LINK_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="END_END_DEPENDENCY_REVERSE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="END_START_DEPENDENCY_REVERSE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="EPIC" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="FISCAL_YEAR_START_MONTH" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="HIERARCHY_LINK_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="HIERARCHY_REVERSE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LIMIT" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ONLY_TICKET_VERSION" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="RESOLVED_STATUSES" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SHARE_PROJECT_IDS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STARTED_STATUSES" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="START_END_DEPENDENCY_LINK_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="START_END_DEPENDENCY_REVERSE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="START_START_DEPENDENCY_LINK_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="START_START_DEPENDENCY_REVERSE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="VERSION_BOTTOM" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="VERSION_MANUALLY_SCHEDULED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="VERSION_TOP" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+  </table>
+  <table name="AO_67BD6E_SCHEDULE_JOB">
+    <column name="ACTIVE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ACTIVE_LATEST" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ACTOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CRON_EXPRESSION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CURRENT_RUN_START_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LAST_RUN_DURATION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="LAST_RUN_START_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PAUSE_TIME" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PROJECT_OR_FILTER_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RUNNING" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_67BD6E_SCHEDULE_TASK">
+    <column name="ACTIVE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="JOB_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="LANGUAGE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SCRIPT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <foreignKey fromTable="AO_67BD6E_SCHEDULE_TASK" fromColumn="JOB_ID" toTable="AO_67BD6E_SCHEDULE_JOB" toColumn="ID"/>
+  </table>
+  <table name="AO_67BD6E_STANDARD_COLUMN">
+    <column name="CONFIG_KEY" primaryKey="true" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="HIDDEN_ALERT" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="HIDDEN_DEADLINE_DATE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="HIDDEN_DURATION" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="HIDDEN_END_DATE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="HIDDEN_KEY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="HIDDEN_MANUALLY_SCHEDULED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="HIDDEN_PERCENT_DONE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="HIDDEN_PRIORITY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="HIDDEN_RESPONSIBLE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="HIDDEN_START_DATE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="HIDDEN_STATUS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="HIDDEN_UNITS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="HIDDEN_WBSCODE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="WIDTH_DEADLINE_DATE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WIDTH_DURATION" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WIDTH_END_DATE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WIDTH_KEY" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WIDTH_NAME" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WIDTH_PERCENT_DONE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WIDTH_PRIORITY" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WIDTH_RESPONSIBLE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WIDTH_START_DATE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WIDTH_STATUS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WIDTH_UNITS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WIDTH_WBSCODE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_67BD6E_STATISTICS_HISTORY">
+    <column name="ACTIVE_USER_COUNT" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="AUTO_ADJUST_HIERARCHY_DISABLED" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="AUTO_ADJUST_HIERARCHY_ENABLED" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="AUTO_ADJUST_SUCCESSOR_DISABLED" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="AUTO_ADJUST_SUCCESSOR_ENABLED" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="JIRA_VERSION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="RECALCULATE_PER_DONE_DISABLED" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="RECALCULATE_PER_DONE_ENABLED" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SENDING_DATE_TIME" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="USER_SETTING_RECORD_COUNT" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_67BD6E_TASK_ORDER">
+    <column name="CHILD_KEYS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="FILTER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PARENT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TICKET_TEMPLATE_MODE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+  </table>
+  <table name="AO_67BD6E_TICKET_CACHE">
+    <column name="CACHE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CHILD" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NEW_PATH" primaryKey="false" autoIncrement="false" sqlType="12" precision="450"/>
+    <column name="PATH" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="USER_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_67BD6E_TICKET_STRUCTURE">
+    <column name="CHILD_TICKET_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PARENT_TICKET_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_67BD6E_TICKET_STRUCTURE" fromColumn="CHILD_TICKET_ID" toTable="AO_67BD6E_VIEW_TICKET" toColumn="ID"/>
+    <foreignKey fromTable="AO_67BD6E_TICKET_STRUCTURE" fromColumn="PARENT_TICKET_ID" toTable="AO_67BD6E_VIEW_TICKET" toColumn="ID"/>
+  </table>
+  <table name="AO_67BD6E_USER_SETTING">
+    <column name="AUTO_ADJUST_HIERARCHY_SCHEDULE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="AUTO_ADJUST_SUCCESSOR_SCHEDULE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="AUTO_CALCULATE_PERCENT_DONE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="DATE_FORMAT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DEFAULT_SORT_COLUMN" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DEFAULT_SORT_DIRECTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DEFAULT_VIEW_PRESET" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ENABLED_CACHE_VIEW" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ENABLED_USE_JIRA_DATE_FORMAT" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TIME_FORMAT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_67BD6E_VIEW_TICKET">
+    <column name="BASELINE_END_DATE_EDITABLE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="BASELINE_END_DATE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="BASELINE_START_DATE_EDITABLE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="BASELINE_START_DATE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CHILD_ALL" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="CONFIG_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="END_DATE_EDITABLE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="END_DATE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_TYPE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PERCENT_DONE_AUTO_REOPEN" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="PERCENT_DONE_AUTO_RESOLVE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="PERCENT_DONE_DENOMINATOR_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PERCENT_DONE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PERCENT_DONE_MODE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="PERCENT_DONE_NUMERATOR_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ROOT" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="START_DATE_EDITABLE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="START_DATE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
   <table name="AO_69E499_ACTION">
     <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
     <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
@@ -7334,6 +7540,257 @@
       <boolean>true</boolean>
       <boolean>true</boolean>
     </row>
+  </data>
+  <data tableName="AO_67BD6E_BOARD">
+    <column name="BOARD_NAME"/>
+    <column name="ENABLED_EDIT_NON_OWNER"/>
+    <column name="FILTER_ID"/>
+    <column name="ID"/>
+    <column name="OWNER_GROUP_NAME"/>
+    <column name="OWNER_USER_KEY"/>
+  </data>
+  <data tableName="AO_67BD6E_BOARD_HISTORY">
+    <column name="BOARD_ID_LIST"/>
+    <column name="USER_KEY"/>
+  </data>
+  <data tableName="AO_67BD6E_CALENDAR">
+    <column name="HOLIDAYS"/>
+    <column name="ID"/>
+    <column name="PROJECT_KEY"/>
+    <column name="REGULAR_HOLIDAYS"/>
+    <column name="WEEKENDS_ARE_WORKDAYS"/>
+    <column name="WEEKEND_FIRST_DAY"/>
+    <column name="WEEKEND_SECOND_DAY"/>
+    <row>
+      <string></string>
+      <integer>1</integer>
+      <string>.</string>
+      <string>0,6</string>
+      <boolean xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+    </row>
+  </data>
+  <data tableName="AO_67BD6E_CHILD_CREATE_CONFIG">
+    <column name="DISPLAY_IN_BOTTOM"/>
+    <column name="DISPLAY_IN_PANEL"/>
+    <column name="DISPLAY_IN_TOP"/>
+    <column name="ID"/>
+    <column name="LIMIT_EPIC"/>
+    <column name="LIMIT_SUBTASK"/>
+    <column name="PROJECT_KEY"/>
+    <row>
+      <boolean>false</boolean>
+      <boolean>false</boolean>
+      <boolean>true</boolean>
+      <integer>1</integer>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <string>.</string>
+    </row>
+  </data>
+  <data tableName="AO_67BD6E_COLOR_CONFIG">
+    <column name="COLOR"/>
+    <column name="CONFIG_KEY"/>
+    <column name="ID"/>
+    <column name="JQL"/>
+    <column name="NAME"/>
+    <column name="PRIORITY"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_67BD6E_DEPENDENCY">
+    <column name="LAG"/>
+    <column name="LINK_ID"/>
+  </data>
+  <data tableName="AO_67BD6E_EXTRA_FIELD">
+    <column name="EDITABLE"/>
+    <column name="FIELD_ID"/>
+    <column name="HIDDEN"/>
+    <column name="RANK"/>
+    <column name="TYPE"/>
+    <column name="WIDTH"/>
+  </data>
+  <data tableName="AO_67BD6E_GENERAL_CONFIG">
+    <column name="ALERT_WITH_STATUS_CATEGORY"/>
+    <column name="ALL_TICKET_MODE"/>
+    <column name="CONFIG_KEY"/>
+    <column name="CREATE_PLAN_TODAY"/>
+    <column name="DEPENDENCY_LINK_ID"/>
+    <column name="DISPLAY_VERSION_MODE"/>
+    <column name="DND"/>
+    <column name="END_END_DEPENDENCY_LINK_ID"/>
+    <column name="END_END_DEPENDENCY_REVERSE"/>
+    <column name="END_START_DEPENDENCY_REVERSE"/>
+    <column name="EPIC"/>
+    <column name="FISCAL_YEAR_START_MONTH"/>
+    <column name="HIERARCHY_LINK_ID"/>
+    <column name="HIERARCHY_REVERSE"/>
+    <column name="ID"/>
+    <column name="LIMIT"/>
+    <column name="ONLY_TICKET_VERSION"/>
+    <column name="PROJECT_ID"/>
+    <column name="RESOLVED_STATUSES"/>
+    <column name="SHARE_PROJECT_IDS"/>
+    <column name="STARTED_STATUSES"/>
+    <column name="START_END_DEPENDENCY_LINK_ID"/>
+    <column name="START_END_DEPENDENCY_REVERSE"/>
+    <column name="START_START_DEPENDENCY_LINK_ID"/>
+    <column name="START_START_DEPENDENCY_REVERSE"/>
+    <column name="VERSION_BOTTOM"/>
+    <column name="VERSION_MANUALLY_SCHEDULED"/>
+    <column name="VERSION_TOP"/>
+    <row>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <string>SYSTEM</string>
+      <boolean>true</boolean>
+      <integer>10402</integer>
+      <integer>0</integer>
+      <boolean>true</boolean>
+      <integer>10403</integer>
+      <boolean>false</boolean>
+      <boolean>false</boolean>
+      <boolean>false</boolean>
+      <integer>0</integer>
+      <integer xsi:nil="true"/>
+      <boolean>false</boolean>
+      <integer>1</integer>
+      <integer>2000</integer>
+      <boolean>true</boolean>
+      <integer>0</integer>
+      <string>5,6</string>
+      <string xsi:nil="true"/>
+      <string>5,6,3</string>
+      <integer>10401</integer>
+      <boolean>false</boolean>
+      <integer>10400</integer>
+      <boolean>false</boolean>
+      <boolean>false</boolean>
+      <boolean>false</boolean>
+      <boolean>true</boolean>
+    </row>
+  </data>
+  <data tableName="AO_67BD6E_SCHEDULE_JOB">
+    <column name="ACTIVE"/>
+    <column name="ACTIVE_LATEST"/>
+    <column name="ACTOR"/>
+    <column name="CRON_EXPRESSION"/>
+    <column name="CURRENT_RUN_START_TIME"/>
+    <column name="ID"/>
+    <column name="LAST_RUN_DURATION"/>
+    <column name="LAST_RUN_START_TIME"/>
+    <column name="NAME"/>
+    <column name="PAUSE_TIME"/>
+    <column name="PROJECT_OR_FILTER_ID"/>
+    <column name="RUNNING"/>
+    <column name="STATUS"/>
+  </data>
+  <data tableName="AO_67BD6E_SCHEDULE_TASK">
+    <column name="ACTIVE"/>
+    <column name="FIELD_ID"/>
+    <column name="ID"/>
+    <column name="JOB_ID"/>
+    <column name="LANGUAGE"/>
+    <column name="NAME"/>
+    <column name="RANK"/>
+    <column name="SCRIPT"/>
+  </data>
+  <data tableName="AO_67BD6E_STANDARD_COLUMN">
+    <column name="CONFIG_KEY"/>
+    <column name="HIDDEN_ALERT"/>
+    <column name="HIDDEN_DEADLINE_DATE"/>
+    <column name="HIDDEN_DURATION"/>
+    <column name="HIDDEN_END_DATE"/>
+    <column name="HIDDEN_KEY"/>
+    <column name="HIDDEN_MANUALLY_SCHEDULED"/>
+    <column name="HIDDEN_PERCENT_DONE"/>
+    <column name="HIDDEN_PRIORITY"/>
+    <column name="HIDDEN_RESPONSIBLE"/>
+    <column name="HIDDEN_START_DATE"/>
+    <column name="HIDDEN_STATUS"/>
+    <column name="HIDDEN_UNITS"/>
+    <column name="HIDDEN_WBSCODE"/>
+    <column name="WIDTH_DEADLINE_DATE"/>
+    <column name="WIDTH_DURATION"/>
+    <column name="WIDTH_END_DATE"/>
+    <column name="WIDTH_KEY"/>
+    <column name="WIDTH_NAME"/>
+    <column name="WIDTH_PERCENT_DONE"/>
+    <column name="WIDTH_PRIORITY"/>
+    <column name="WIDTH_RESPONSIBLE"/>
+    <column name="WIDTH_START_DATE"/>
+    <column name="WIDTH_STATUS"/>
+    <column name="WIDTH_UNITS"/>
+    <column name="WIDTH_WBSCODE"/>
+  </data>
+  <data tableName="AO_67BD6E_STATISTICS_HISTORY">
+    <column name="ACTIVE_USER_COUNT"/>
+    <column name="AUTO_ADJUST_HIERARCHY_DISABLED"/>
+    <column name="AUTO_ADJUST_HIERARCHY_ENABLED"/>
+    <column name="AUTO_ADJUST_SUCCESSOR_DISABLED"/>
+    <column name="AUTO_ADJUST_SUCCESSOR_ENABLED"/>
+    <column name="ID"/>
+    <column name="JIRA_VERSION"/>
+    <column name="RECALCULATE_PER_DONE_DISABLED"/>
+    <column name="RECALCULATE_PER_DONE_ENABLED"/>
+    <column name="SENDING_DATE_TIME"/>
+    <column name="USER_SETTING_RECORD_COUNT"/>
+  </data>
+  <data tableName="AO_67BD6E_TASK_ORDER">
+    <column name="CHILD_KEYS"/>
+    <column name="FILTER"/>
+    <column name="ID"/>
+    <column name="PARENT_KEY"/>
+    <column name="TICKET_TEMPLATE_MODE"/>
+  </data>
+  <data tableName="AO_67BD6E_TICKET_CACHE">
+    <column name="CACHE_ID"/>
+    <column name="CHILD"/>
+    <column name="CREATED"/>
+    <column name="ID"/>
+    <column name="NEW_PATH"/>
+    <column name="PATH"/>
+    <column name="USER_NAME"/>
+  </data>
+  <data tableName="AO_67BD6E_TICKET_STRUCTURE">
+    <column name="CHILD_TICKET_ID"/>
+    <column name="ID"/>
+    <column name="PARENT_TICKET_ID"/>
+  </data>
+  <data tableName="AO_67BD6E_USER_SETTING">
+    <column name="AUTO_ADJUST_HIERARCHY_SCHEDULE"/>
+    <column name="AUTO_ADJUST_SUCCESSOR_SCHEDULE"/>
+    <column name="AUTO_CALCULATE_PERCENT_DONE"/>
+    <column name="DATE_FORMAT"/>
+    <column name="DEFAULT_SORT_COLUMN"/>
+    <column name="DEFAULT_SORT_DIRECTION"/>
+    <column name="DEFAULT_VIEW_PRESET"/>
+    <column name="ENABLED_CACHE_VIEW"/>
+    <column name="ENABLED_USE_JIRA_DATE_FORMAT"/>
+    <column name="ID"/>
+    <column name="TIME_FORMAT"/>
+    <column name="USER_ID"/>
+  </data>
+  <data tableName="AO_67BD6E_VIEW_TICKET">
+    <column name="BASELINE_END_DATE_EDITABLE"/>
+    <column name="BASELINE_END_DATE_ID"/>
+    <column name="BASELINE_START_DATE_EDITABLE"/>
+    <column name="BASELINE_START_DATE_ID"/>
+    <column name="CHILD_ALL"/>
+    <column name="CONFIG_KEY"/>
+    <column name="END_DATE_EDITABLE"/>
+    <column name="END_DATE_ID"/>
+    <column name="ID"/>
+    <column name="ISSUE_TYPE_ID"/>
+    <column name="PERCENT_DONE_AUTO_REOPEN"/>
+    <column name="PERCENT_DONE_AUTO_RESOLVE"/>
+    <column name="PERCENT_DONE_DENOMINATOR_ID"/>
+    <column name="PERCENT_DONE_ID"/>
+    <column name="PERCENT_DONE_MODE"/>
+    <column name="PERCENT_DONE_NUMERATOR_ID"/>
+    <column name="ROOT"/>
+    <column name="START_DATE_EDITABLE"/>
+    <column name="START_DATE_ID"/>
   </data>
   <data tableName="AO_69E499_ACTION">
     <column name="ID"/>
@@ -16203,6 +16660,13 @@
       <string>tempo-timesheets</string>
       <integer>1</integer>
     </row>
+    <row>
+      <boolean>false</boolean>
+      <integer>33</integer>
+      <string>0f501be9f47b8e62a35baee67bd4ccc44d8c1b9f</string>
+      <string>reset-for-big-gantt</string>
+      <integer>1</integer>
+    </row>
   </data>
   <data tableName="AO_8BA09E_PROJECT_MAPPING">
     <column name="ID"/>
@@ -16353,6 +16817,11 @@
       <string>6f0e636e3f72e5cb54719c5a870f538e66989025</string>
       <integer>1626083645</integer>
       <integer>8</integer>
+    </row>
+    <row>
+      <string>0f501be9f47b8e62a35baee67bd4ccc44d8c1b9f</string>
+      <integer>1626144576</integer>
+      <integer>33</integer>
     </row>
   </data>
   <data tableName="AO_8BA09E_USERS_PATS">
