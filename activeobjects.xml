@@ -1082,6 +1082,350 @@
     <column name="EXPIRY_TIMESTAMP" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
     <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
   </table>
+  <table name="AO_FDF29B_JEP_BUSINESS_HOUR">
+    <column name="CALENDAR_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="END_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="END_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="START_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="START_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="WORKING_DAY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_BUSINESS_HOUR" fromColumn="CALENDAR_ID" toTable="AO_FDF29B_JEP_CALENDAR" toColumn="ID"/>
+  </table>
+  <table name="AO_FDF29B_JEP_CALENDAR">
+    <column name="BUSINESS_DAY_DURATION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="BUSINESS_DAY_MINUTES" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="BUSINESS_DAY_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ZONE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ZONE_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_FDF29B_JEP_COMMENT_DATE">
+    <column name="AUTHORED_BY_ASSIGNEE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CUSTOM_FIELD_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_FDF29B_JEP_COMMENT_FIELD">
+    <column name="AUTHORED_BY_ASSIGNEE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CUSTOM_FIELD_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FIRST_OR_LAST" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MAX_LENGTH" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ONLY_PUBLIC" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="RENDERER_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SHOW_TIMESTAMP" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="SHOW_USER" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_FDF29B_JEP_COUNTER_FIELD">
+    <column name="CHANGE_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CHANGE_FIELD_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CUSTOM_FIELD_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_FDF29B_JEP_CUSTOM_FIELD">
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CUSTOM_FIELD_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CUSTOM_FIELD_STATUS_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LAST" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="SKIP_SELF_TRANSITIONS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="STATUSES" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_FDF29B_JEP_DURATION_FRMT">
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="FIELD_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FORMATTER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_FDF29B_JEP_EPIC_FIELD">
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="FIELD_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_FDF29B_JEP_FIELD_CHANGE_CF">
+    <column name="CHANGE_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CHANGE_FIELD_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LAST" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_FDF29B_JEP_FORMATTER">
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DAY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="FIELD_CONFIG_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="HOUR" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MINUTE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="MONTH" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="SECOND" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="SEPARATOR_TEXT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SUFFIX_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="USE_SEPARATOR" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="USE_SUFFIX" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="VIEW_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="WEEK" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+  </table>
+  <table name="AO_FDF29B_JEP_HALF_DAY">
+    <column name="CALENDAR_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="END_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="END_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="EPOCH_DAYS" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="FORMATTED_DATE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RECURRENT" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="START_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="START_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_HALF_DAY" fromColumn="CALENDAR_ID" toTable="AO_FDF29B_JEP_CALENDAR" toColumn="ID"/>
+  </table>
+  <table name="AO_FDF29B_JEP_LINKED_FIELD">
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="DIRECTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_LINK_TYPE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_FDF29B_JEP_LINKED_FIELD_VAL">
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="FIELD_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LINKS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_FDF29B_JEP_NONWORKING_DAY">
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NONWORKING_DAY" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="WORKING_TIME_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_NONWORKING_DAY" fromColumn="WORKING_TIME_ID" toTable="AO_FDF29B_JEP_WORKING_TIME" toColumn="ID"/>
+  </table>
+  <table name="AO_FDF29B_JEP_NON_WORKING_DATE">
+    <column name="CALENDAR_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="EPOCH_DAYS" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="FORMATTED_DATE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RECURRENT" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_NON_WORKING_DATE" fromColumn="CALENDAR_ID" toTable="AO_FDF29B_JEP_CALENDAR" toColumn="ID"/>
+  </table>
+  <table name="AO_FDF29B_JEP_PARAMETER">
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PARAMETER_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PARAMETER_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_FDF29B_JEP_PARENT_FIELD">
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="FIELD_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_FDF29B_JEP_RESOLUTION_FIELD">
+    <column name="CLEAR_WHEN_REOPENED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_FDF29B_JEP_RESPONSE_TIME">
+    <column name="AUTHORED_BY_ASSIGNEE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="CALENDAR_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FIELD_CONFIG_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="FORMATTER_ISSUE_VIEW" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FORMATTER_MVID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FORMATTER_NAVIGATOR_VIEW" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FORMATTER_NVID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ONLY_PUBLIC_COMMENTS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="REPORTER_SHOULD_BE_DIFFERENT" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="WORKING_TIME_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_RESPONSE_TIME" fromColumn="CALENDAR_ID" toTable="AO_FDF29B_JEP_CALENDAR" toColumn="ID"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_RESPONSE_TIME" fromColumn="FORMATTER_MVID" toTable="AO_FDF29B_JEP_FORMATTER" toColumn="ID"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_RESPONSE_TIME" fromColumn="FORMATTER_NVID" toTable="AO_FDF29B_JEP_FORMATTER" toColumn="ID"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_RESPONSE_TIME" fromColumn="WORKING_TIME_ID" toTable="AO_FDF29B_JEP_WORKING_TIME" toColumn="ID"/>
+  </table>
+  <table name="AO_FDF29B_JEP_RESTRICTION">
+    <column name="ADDITIONAL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="VISIBLE_FOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_FDF29B_JEP_ROUND_ROBIN">
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TRANSITION_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="USER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="WORKFLOW_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_FDF29B_JEP_STATUS_FIELD">
+    <column name="COMMENT_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CUSTOM_FIELD_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FIELD_CONFIG_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LAST" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_FDF29B_JEP_STATUS_TIME">
+    <column name="CALENDAR_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CUSTOM_FIELD_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FIELD_CONFIG_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="FORMATTER_BVID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FORMATTER_MVID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FORMATTER_NVID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="OCCURRENCE_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STATUSES" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STATUS_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="WORKING_TIME_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_STATUS_TIME" fromColumn="CALENDAR_ID" toTable="AO_FDF29B_JEP_CALENDAR" toColumn="ID"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_STATUS_TIME" fromColumn="FORMATTER_BVID" toTable="AO_FDF29B_JEP_FORMATTER" toColumn="ID"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_STATUS_TIME" fromColumn="FORMATTER_MVID" toTable="AO_FDF29B_JEP_FORMATTER" toColumn="ID"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_STATUS_TIME" fromColumn="FORMATTER_NVID" toTable="AO_FDF29B_JEP_FORMATTER" toColumn="ID"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_STATUS_TIME" fromColumn="WORKING_TIME_ID" toTable="AO_FDF29B_JEP_WORKING_TIME" toColumn="ID"/>
+  </table>
+  <table name="AO_FDF29B_JEP_TBPAUSE">
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="JEP_TIME_BETWEEN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="STATUS_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_TBPAUSE" fromColumn="JEP_TIME_BETWEEN_ID" toTable="AO_FDF29B_JEP_TIME_BETWEEN" toColumn="ID"/>
+  </table>
+  <table name="AO_FDF29B_JEP_TIME_BETWEEN">
+    <column name="CALENDAR_ENTITY_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="EVENT_TYPE1" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="EVENT_TYPE2" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FIELD_CONFIG_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="FORMATTER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FORMATTER_BOARD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FORMATTER_BVID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FORMATTER_CSV" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FORMATTER_MVID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FORMATTER_NVID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="INCLUDE_PARENT_ISSUE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="JQL" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="LATEST_ORIGIN" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="MULTI_TRANSITION" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="OCCURRENCE_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ORIGIN_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ORIGIN_FIELD_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ORIGIN_TIME_PART" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STATUS1_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STATUS2_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TARGET_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TARGET_FIELD_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TARGET_TIME_PART" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="WORKING_TIME_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_TIME_BETWEEN" fromColumn="CALENDAR_ENTITY_ID" toTable="AO_FDF29B_JEP_CALENDAR" toColumn="ID"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_TIME_BETWEEN" fromColumn="FORMATTER_BVID" toTable="AO_FDF29B_JEP_FORMATTER" toColumn="ID"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_TIME_BETWEEN" fromColumn="FORMATTER_MVID" toTable="AO_FDF29B_JEP_FORMATTER" toColumn="ID"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_TIME_BETWEEN" fromColumn="FORMATTER_NVID" toTable="AO_FDF29B_JEP_FORMATTER" toColumn="ID"/>
+    <foreignKey fromTable="AO_FDF29B_JEP_TIME_BETWEEN" fromColumn="WORKING_TIME_ID" toTable="AO_FDF29B_JEP_WORKING_TIME" toColumn="ID"/>
+  </table>
+  <table name="AO_FDF29B_JEP_WORKING_TIME">
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="DISABLED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="END_HOUR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="END_MINUTE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FRIDAY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="FRIDAY_END_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FRIDAY_END_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FRIDAY_START_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FRIDAY_START_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MONDAY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="MONDAY_END_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="MONDAY_END_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="MONDAY_START_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="MONDAY_START_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SATURDAY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="SATURDAY_END_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SATURDAY_END_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SATURDAY_START_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SATURDAY_START_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="START_HOUR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="START_MINUTE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SUNDAY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="SUNDAY_END_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SUNDAY_END_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SUNDAY_START_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SUNDAY_START_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="THURSDAY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="THURSDAY_END_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="THURSDAY_END_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="THURSDAY_START_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="THURSDAY_START_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TUESDAY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="TUESDAY_END_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TUESDAY_END_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TUESDAY_START_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TUESDAY_START_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="WEDNESDAY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="WEDNESDAY_END_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WEDNESDAY_END_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WEDNESDAY_START_HOUR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="WEDNESDAY_START_MINUTE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_FDF29B_VENDOR_LICENSE">
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CREATED_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PARAMETER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PARAMETER_VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="UPDATED_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
   <data tableName="AO_21D670_WHITELIST_RULES">
     <column name="ALLOWINBOUND"/>
     <column name="EXPRESSION"/>
@@ -3988,5 +4332,362 @@
     <column name="ASSERTION_ID"/>
     <column name="EXPIRY_TIMESTAMP"/>
     <column name="ID"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_BUSINESS_HOUR">
+    <column name="CALENDAR_ID"/>
+    <column name="CREATED"/>
+    <column name="END_HOUR"/>
+    <column name="END_MINUTE"/>
+    <column name="ID"/>
+    <column name="START_HOUR"/>
+    <column name="START_MINUTE"/>
+    <column name="UPDATED"/>
+    <column name="WORKING_DAY"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_CALENDAR">
+    <column name="BUSINESS_DAY_DURATION"/>
+    <column name="BUSINESS_DAY_MINUTES"/>
+    <column name="BUSINESS_DAY_TYPE"/>
+    <column name="CREATED"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="UPDATED"/>
+    <column name="ZONE_ID"/>
+    <column name="ZONE_TYPE"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_COMMENT_DATE">
+    <column name="AUTHORED_BY_ASSIGNEE"/>
+    <column name="CREATED"/>
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="CUSTOM_FIELD_NAME"/>
+    <column name="ID"/>
+    <column name="UPDATED"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_COMMENT_FIELD">
+    <column name="AUTHORED_BY_ASSIGNEE"/>
+    <column name="CREATED"/>
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="CUSTOM_FIELD_NAME"/>
+    <column name="FIRST_OR_LAST"/>
+    <column name="ID"/>
+    <column name="MAX_LENGTH"/>
+    <column name="ONLY_PUBLIC"/>
+    <column name="RENDERER_TYPE"/>
+    <column name="SHOW_TIMESTAMP"/>
+    <column name="SHOW_USER"/>
+    <column name="UPDATED"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_COUNTER_FIELD">
+    <column name="CHANGE_FIELD_ID"/>
+    <column name="CHANGE_FIELD_NAME"/>
+    <column name="CREATED"/>
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="CUSTOM_FIELD_NAME"/>
+    <column name="ID"/>
+    <column name="UPDATED"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_CUSTOM_FIELD">
+    <column name="CREATED"/>
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="CUSTOM_FIELD_NAME"/>
+    <column name="CUSTOM_FIELD_STATUS_ID"/>
+    <column name="ID"/>
+    <column name="LAST"/>
+    <column name="SKIP_SELF_TRANSITIONS"/>
+    <column name="STATUSES"/>
+    <column name="UPDATED"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_DURATION_FRMT">
+    <column name="CREATED"/>
+    <column name="FIELD_TYPE"/>
+    <column name="FORMATTER"/>
+    <column name="ID"/>
+    <column name="UPDATED"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_EPIC_FIELD">
+    <column name="CREATED"/>
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="FIELD_KEY"/>
+    <column name="ID"/>
+    <column name="UPDATED"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_FIELD_CHANGE_CF">
+    <column name="CHANGE_FIELD_ID"/>
+    <column name="CHANGE_FIELD_NAME"/>
+    <column name="CREATED"/>
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="ID"/>
+    <column name="LAST"/>
+    <column name="UPDATED"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_FORMATTER">
+    <column name="CREATED"/>
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="DAY"/>
+    <column name="FIELD_CONFIG_ID"/>
+    <column name="HOUR"/>
+    <column name="ID"/>
+    <column name="MINUTE"/>
+    <column name="MONTH"/>
+    <column name="SECOND"/>
+    <column name="SEPARATOR_TEXT"/>
+    <column name="SUFFIX_TYPE"/>
+    <column name="UPDATED"/>
+    <column name="USE_SEPARATOR"/>
+    <column name="USE_SUFFIX"/>
+    <column name="VIEW_TYPE"/>
+    <column name="WEEK"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_HALF_DAY">
+    <column name="CALENDAR_ID"/>
+    <column name="CREATED"/>
+    <column name="END_HOUR"/>
+    <column name="END_MINUTE"/>
+    <column name="EPOCH_DAYS"/>
+    <column name="FORMATTED_DATE"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="RECURRENT"/>
+    <column name="START_HOUR"/>
+    <column name="START_MINUTE"/>
+    <column name="UPDATED"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_LINKED_FIELD">
+    <column name="CREATED"/>
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="DIRECTION"/>
+    <column name="ID"/>
+    <column name="ISSUE_LINK_TYPE_ID"/>
+    <column name="UPDATED"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_LINKED_FIELD_VAL">
+    <column name="CREATED"/>
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="FIELD_KEY"/>
+    <column name="ID"/>
+    <column name="LINKS"/>
+    <column name="UPDATED"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_NONWORKING_DAY">
+    <column name="CREATED"/>
+    <column name="ID"/>
+    <column name="NONWORKING_DAY"/>
+    <column name="UPDATED"/>
+    <column name="WORKING_TIME_ID"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_NON_WORKING_DATE">
+    <column name="CALENDAR_ID"/>
+    <column name="CREATED"/>
+    <column name="EPOCH_DAYS"/>
+    <column name="FORMATTED_DATE"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="RECURRENT"/>
+    <column name="UPDATED"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_PARAMETER">
+    <column name="CREATED"/>
+    <column name="ID"/>
+    <column name="PARAMETER_NAME"/>
+    <column name="PARAMETER_VALUE"/>
+    <column name="UPDATED"/>
+    <row>
+      <timestamp>2021-07-13T08:25:57.745Z</timestamp>
+      <integer>1</integer>
+      <string>JEP_VERSION</string>
+      <string>7000000000</string>
+      <timestamp>2021-07-13T08:25:57.757Z</timestamp>
+    </row>
+    <row>
+      <timestamp>2021-07-13T08:25:57.888Z</timestamp>
+      <integer>2</integer>
+      <string>SLA_REMOVAL_DONE</string>
+      <string>YES</string>
+      <timestamp>2021-07-13T08:25:57.888Z</timestamp>
+    </row>
+  </data>
+  <data tableName="AO_FDF29B_JEP_PARENT_FIELD">
+    <column name="CREATED"/>
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="FIELD_KEY"/>
+    <column name="ID"/>
+    <column name="UPDATED"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_RESOLUTION_FIELD">
+    <column name="CLEAR_WHEN_REOPENED"/>
+    <column name="CREATED"/>
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="ID"/>
+    <column name="UPDATED"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_RESPONSE_TIME">
+    <column name="AUTHORED_BY_ASSIGNEE"/>
+    <column name="CALENDAR_ID"/>
+    <column name="CREATED"/>
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="FIELD_CONFIG_ID"/>
+    <column name="FORMATTER_ISSUE_VIEW"/>
+    <column name="FORMATTER_MVID"/>
+    <column name="FORMATTER_NAVIGATOR_VIEW"/>
+    <column name="FORMATTER_NVID"/>
+    <column name="ID"/>
+    <column name="ONLY_PUBLIC_COMMENTS"/>
+    <column name="REPORTER_SHOULD_BE_DIFFERENT"/>
+    <column name="UPDATED"/>
+    <column name="WORKING_TIME_ID"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_RESTRICTION">
+    <column name="ADDITIONAL"/>
+    <column name="CREATED"/>
+    <column name="ID"/>
+    <column name="KEY"/>
+    <column name="NAME"/>
+    <column name="UPDATED"/>
+    <column name="VISIBLE_FOR"/>
+    <row>
+      <string xsi:nil="true"/>
+      <timestamp>2021-07-13T08:25:57.752Z</timestamp>
+      <integer>1</integer>
+      <string>plugin.jep:jep-timeanalyzer</string>
+      <string>Sub-task Elapsed Time Calculator</string>
+      <timestamp>2021-07-13T08:25:57.752Z</timestamp>
+      <string>LoggedIn</string>
+    </row>
+    <row>
+      <string xsi:nil="true"/>
+      <timestamp>2021-07-13T08:25:57.752Z</timestamp>
+      <integer>2</integer>
+      <string>plugin.jep:stateoscope-tabpanel</string>
+      <string>Stateoscope Issue Tab Panel</string>
+      <timestamp>2021-07-13T08:25:57.752Z</timestamp>
+      <string>LoggedIn</string>
+    </row>
+  </data>
+  <data tableName="AO_FDF29B_JEP_ROUND_ROBIN">
+    <column name="CREATED"/>
+    <column name="ID"/>
+    <column name="TRANSITION_ID"/>
+    <column name="UPDATED"/>
+    <column name="USER_ID"/>
+    <column name="WORKFLOW_ID"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_STATUS_FIELD">
+    <column name="COMMENT_TYPE"/>
+    <column name="CREATED"/>
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="CUSTOM_FIELD_NAME"/>
+    <column name="FIELD_CONFIG_ID"/>
+    <column name="ID"/>
+    <column name="LAST"/>
+    <column name="UPDATED"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_STATUS_TIME">
+    <column name="CALENDAR_ID"/>
+    <column name="CREATED"/>
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="CUSTOM_FIELD_NAME"/>
+    <column name="FIELD_CONFIG_ID"/>
+    <column name="FORMATTER_BVID"/>
+    <column name="FORMATTER_MVID"/>
+    <column name="FORMATTER_NVID"/>
+    <column name="ID"/>
+    <column name="OCCURRENCE_TYPE"/>
+    <column name="STATUSES"/>
+    <column name="STATUS_ID"/>
+    <column name="UPDATED"/>
+    <column name="WORKING_TIME_ID"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_TBPAUSE">
+    <column name="CREATED"/>
+    <column name="ID"/>
+    <column name="JEP_TIME_BETWEEN_ID"/>
+    <column name="STATUS_ID"/>
+    <column name="UPDATED"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_TIME_BETWEEN">
+    <column name="CALENDAR_ENTITY_ID"/>
+    <column name="CREATED"/>
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="DESCRIPTION"/>
+    <column name="EVENT_TYPE1"/>
+    <column name="EVENT_TYPE2"/>
+    <column name="FIELD_CONFIG_ID"/>
+    <column name="FORMATTER"/>
+    <column name="FORMATTER_BOARD"/>
+    <column name="FORMATTER_BVID"/>
+    <column name="FORMATTER_CSV"/>
+    <column name="FORMATTER_MVID"/>
+    <column name="FORMATTER_NVID"/>
+    <column name="ID"/>
+    <column name="INCLUDE_PARENT_ISSUE"/>
+    <column name="JQL"/>
+    <column name="LATEST_ORIGIN"/>
+    <column name="MULTI_TRANSITION"/>
+    <column name="OCCURRENCE_TYPE"/>
+    <column name="ORIGIN_FIELD_ID"/>
+    <column name="ORIGIN_FIELD_KEY"/>
+    <column name="ORIGIN_TIME_PART"/>
+    <column name="STATUS1_ID"/>
+    <column name="STATUS2_ID"/>
+    <column name="TARGET_FIELD_ID"/>
+    <column name="TARGET_FIELD_KEY"/>
+    <column name="TARGET_TIME_PART"/>
+    <column name="UPDATED"/>
+    <column name="WORKING_TIME_ID"/>
+  </data>
+  <data tableName="AO_FDF29B_JEP_WORKING_TIME">
+    <column name="CREATED"/>
+    <column name="DISABLED"/>
+    <column name="END_HOUR"/>
+    <column name="END_MINUTE"/>
+    <column name="FRIDAY"/>
+    <column name="FRIDAY_END_HOUR"/>
+    <column name="FRIDAY_END_MINUTE"/>
+    <column name="FRIDAY_START_HOUR"/>
+    <column name="FRIDAY_START_MINUTE"/>
+    <column name="ID"/>
+    <column name="MONDAY"/>
+    <column name="MONDAY_END_HOUR"/>
+    <column name="MONDAY_END_MINUTE"/>
+    <column name="MONDAY_START_HOUR"/>
+    <column name="MONDAY_START_MINUTE"/>
+    <column name="NAME"/>
+    <column name="SATURDAY"/>
+    <column name="SATURDAY_END_HOUR"/>
+    <column name="SATURDAY_END_MINUTE"/>
+    <column name="SATURDAY_START_HOUR"/>
+    <column name="SATURDAY_START_MINUTE"/>
+    <column name="START_HOUR"/>
+    <column name="START_MINUTE"/>
+    <column name="SUNDAY"/>
+    <column name="SUNDAY_END_HOUR"/>
+    <column name="SUNDAY_END_MINUTE"/>
+    <column name="SUNDAY_START_HOUR"/>
+    <column name="SUNDAY_START_MINUTE"/>
+    <column name="THURSDAY"/>
+    <column name="THURSDAY_END_HOUR"/>
+    <column name="THURSDAY_END_MINUTE"/>
+    <column name="THURSDAY_START_HOUR"/>
+    <column name="THURSDAY_START_MINUTE"/>
+    <column name="TUESDAY"/>
+    <column name="TUESDAY_END_HOUR"/>
+    <column name="TUESDAY_END_MINUTE"/>
+    <column name="TUESDAY_START_HOUR"/>
+    <column name="TUESDAY_START_MINUTE"/>
+    <column name="UPDATED"/>
+    <column name="WEDNESDAY"/>
+    <column name="WEDNESDAY_END_HOUR"/>
+    <column name="WEDNESDAY_END_MINUTE"/>
+    <column name="WEDNESDAY_START_HOUR"/>
+    <column name="WEDNESDAY_START_MINUTE"/>
+  </data>
+  <data tableName="AO_FDF29B_VENDOR_LICENSE">
+    <column name="CREATED"/>
+    <column name="CREATED_BY"/>
+    <column name="ID"/>
+    <column name="PARAMETER_KEY"/>
+    <column name="PARAMETER_VALUE"/>
+    <column name="UPDATED"/>
+    <column name="UPDATED_BY"/>
   </data>
 </backup>
