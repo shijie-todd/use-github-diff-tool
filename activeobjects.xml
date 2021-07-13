@@ -737,6 +737,19 @@
     <column name="RESOLVED_DATE"/>
     <column name="SEVERITY"/>
     <column name="STATUS_NAME"/>
+    <row>
+      <string>JIRA</string>
+      <string>com.atlassian.troubleshooting.plugin-jira:attachmentHealthCheck</string>
+      <string>检查最新附件是否可以找到并能够打开。</string>
+      <timestamp>2021-07-13T06:55:23.082Z</timestamp>
+      <string>无法读取问题(SCRUM-1附件)(需求.csv。</string>
+      <integer>1</integer>
+      <boolean>false</boolean>
+      <boolean>false</boolean>
+      <timestamp xsi:nil="true"/>
+      <string>MAJOR</string>
+      <string>附件</string>
+    </row>
   </data>
   <data tableName="AO_2F1435_PROPERTIES">
     <column name="ID"/>
@@ -745,7 +758,7 @@
     <row>
       <integer>1</integer>
       <string>last-run</string>
-      <string>1625710812591</string>
+      <string>1626159323085</string>
     </row>
   </data>
   <data tableName="AO_2F1435_READ_NOTIFICATIONS">
@@ -772,24 +785,24 @@
   <data tableName="AO_4AEACD_WEBHOOK_DAO">
     <column name="ENABLED"/>
     <column name="ENCODED_EVENTS"/>
+    <column name="EXCLUDE_ISSUE_DETAILS"/>
     <column name="FILTER"/>
     <column name="ID"/>
     <column name="JQL"/>
     <column name="LAST_UPDATED"/>
     <column name="LAST_UPDATED_USER"/>
     <column name="NAME"/>
+    <column name="PARAMETERS"/>
     <column name="REGISTRATION_METHOD"/>
     <column name="URL"/>
-    <column name="PARAMETERS"/>
-    <column name="EXCLUDE_ISSUE_DETAILS"/>
   </data>
   <data tableName="AO_550953_SHORTCUT">
+    <column name="ICON"/>
     <column name="ID"/>
     <column name="NAME"/>
     <column name="PROJECT_ID"/>
     <column name="SHORTCUT_URL"/>
     <column name="URL"/>
-    <column name="ICON"/>
   </data>
   <data tableName="AO_563AEE_ACTIVITY_ENTITY">
     <column name="ACTIVITY_ID"/>
@@ -869,12 +882,12 @@
     <column name="SEQUENCE_NO"/>
   </data>
   <data tableName="AO_587B34_GLANCE_CONFIG">
+    <column name="APPLICATION_USER_KEY"/>
+    <column name="JQL"/>
+    <column name="NAME"/>
     <column name="ROOM_ID"/>
     <column name="STATE"/>
     <column name="SYNC_NEEDED"/>
-    <column name="NAME"/>
-    <column name="APPLICATION_USER_KEY"/>
-    <column name="JQL"/>
   </data>
   <data tableName="AO_587B34_PROJECT_CONFIG">
     <column name="CONFIGURATION_GROUP_ID"/>
