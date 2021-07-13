@@ -3279,6 +3279,506 @@
     <column name="WEDNESDAY_FROM" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
     <column name="WEDNESDAY_TO" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
   </table>
+  <table name="AO_8B1069_ACTIVITY_ENTRY">
+    <column name="ACTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="AUTHOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="SUB_ELEMENT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_8B1069_ACTIVITY_ENTRY" fromColumn="TEST_RUN_ID" toTable="AO_8B1069_TEST_RUN" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_ACTIVITY_ITEM">
+    <column name="ACTIVITY_ENTRY_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FIELD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NEW_VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="OLD_VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <foreignKey fromTable="AO_8B1069_ACTIVITY_ITEM" fromColumn="ACTIVITY_ENTRY_ID" toTable="AO_8B1069_ACTIVITY_ENTRY" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_ANALYTICS_ENTRY">
+    <column name="COUNT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="KEY" primaryKey="true" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_8B1069_ATTACHMENT">
+    <column name="AUTHOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ENTITY_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FILE_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FILE_SIZE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="MIME_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_8B1069_AUTOMATED_LABEL">
+    <column name="ENTITY_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SEARCHABLE_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_8B1069_AUTOMATED_STEP">
+    <column name="ENTITY_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="LOOKUP_HASH" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SEARCHABLE_STEP" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="STEP" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+  </table>
+  <table name="AO_8B1069_AUTOMATED_STEP_ISSUE">
+    <column name="AUTOMATED_STEP_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="ISSUE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <foreignKey fromTable="AO_8B1069_AUTOMATED_STEP_ISSUE" fromColumn="AUTOMATED_STEP_ID" toTable="AO_8B1069_AUTOMATED_STEP" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_AUTOMATED_STEP_LABEL">
+    <column name="AUTOMATED_LABEL_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="AUTOMATED_STEP_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <foreignKey fromTable="AO_8B1069_AUTOMATED_STEP_LABEL" fromColumn="AUTOMATED_LABEL_ID" toTable="AO_8B1069_AUTOMATED_LABEL" toColumn="ID"/>
+    <foreignKey fromTable="AO_8B1069_AUTOMATED_STEP_LABEL" fromColumn="AUTOMATED_STEP_ID" toTable="AO_8B1069_AUTOMATED_STEP" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_CUSTOM_FIELD_MEMENTO">
+    <column name="ATTACHMENT_HASH" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TEST_STEP_MEMENTO_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <foreignKey fromTable="AO_8B1069_CUSTOM_FIELD_MEMENTO" fromColumn="TEST_STEP_MEMENTO_ID" toTable="AO_8B1069_TEST_STEP_MEMENTO" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_DATA_FIELD_VALUE">
+    <column name="ENTITY_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <foreignKey fromTable="AO_8B1069_DATA_FIELD_VALUE" fromColumn="FIELD_ID" toTable="AO_8B1069_FIELD" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_DB_PROVIDER">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_8B1069_DOC_GEN_PRJSETTINGS">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+  </table>
+  <table name="AO_8B1069_ENTITY_DATASET_SIZE">
+    <column name="ENTITY_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ITERATION_SIZE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="PARAMETER_SIZE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="PARAM_ENTITY_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_8B1069_FIELD">
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ENTITY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_8B1069_FIELD_EXT_CFG">
+    <column name="DELETED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ENABLED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="FIELD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="REQUIRED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+  </table>
+  <table name="AO_8B1069_FIELD_TEST_TYPE">
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TEST_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_8B1069_FIELD_TEST_TYPE" fromColumn="FIELD_ID" toTable="AO_8B1069_FIELD" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_FOLDER">
+    <column name="CREATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ENTITY_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="FOLDER_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PARENT_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <foreignKey fromTable="AO_8B1069_FOLDER" fromColumn="PARENT_ID" toTable="AO_8B1069_FOLDER" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_LEAF">
+    <column name="CREATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ENTITY_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="FOLDER_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LEAF_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <foreignKey fromTable="AO_8B1069_LEAF" fromColumn="FOLDER_ID" toTable="AO_8B1069_FOLDER" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_LIST_PROJECT_LINK">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LIST_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <foreignKey fromTable="AO_8B1069_LIST_PROJECT_LINK" fromColumn="LIST_ID" toTable="AO_8B1069_PARAM_TEST_LIST" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_OPTION_FIELD_OPT">
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_8B1069_OPTION_FIELD_OPT" fromColumn="FIELD_ID" toTable="AO_8B1069_FIELD" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_OPTION_FIELD_VALUE">
+    <column name="ENTITY_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="OPTION_FIELD_OPT_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_8B1069_OPTION_FIELD_VALUE" fromColumn="FIELD_ID" toTable="AO_8B1069_FIELD" toColumn="ID"/>
+    <foreignKey fromTable="AO_8B1069_OPTION_FIELD_VALUE" fromColumn="OPTION_FIELD_OPT_ID" toTable="AO_8B1069_OPTION_FIELD_OPT" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_PARAM">
+    <column name="ENTITY_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="IS_COMBINATORIAL" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PARAM_ENTITY_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_8B1069_PARAM_LIST_LINK">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PARAM_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="PARAM_TEST_LIST_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_8B1069_PARAM_LIST_LINK" fromColumn="PARAM_ID" toTable="AO_8B1069_PARAM" toColumn="ID"/>
+    <foreignKey fromTable="AO_8B1069_PARAM_LIST_LINK" fromColumn="PARAM_TEST_LIST_ID" toTable="AO_8B1069_PARAM_TEST_LIST" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_PARAM_MEMENTO">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_8B1069_PARAM_MEM_ITERATION">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="ITERATION_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PARAM_MEMENTO_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <foreignKey fromTable="AO_8B1069_PARAM_MEM_ITERATION" fromColumn="ITERATION_ID" toTable="AO_8B1069_TEST_RUN_ITERATION" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_PARAM_TEST_LIST">
+    <column name="CREATION_SCOPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_8B1069_PARAM_TEST_LIST_OPT">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="LIST_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_8B1069_PARAM_VALUE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="OPTION_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PARAM_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_8B1069_PARAM_VALUE" fromColumn="PARAM_ID" toTable="AO_8B1069_PARAM" toColumn="ID"/>
+    <foreignKey fromTable="AO_8B1069_PARAM_VALUE" fromColumn="OPTION_ID" toTable="AO_8B1069_PARAM_TEST_LIST_OPT" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_PRE_COND_MEMENTO">
+    <column name="CONDITIONS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SUMMARY" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_8B1069_PRE_COND_RESULT">
+    <column name="CONDITIONS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SUMMARY" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_8B1069_PRE_COND_RESULT" fromColumn="TEST_RUN_ID" toTable="AO_8B1069_TEST_RUN" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_PROCESS">
+    <column name="BREAK_PAGE_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CLAUSE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="CONTENT_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATION_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CREATOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DOCUMENT_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FILTER_NAME" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LAST_EDITOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LAST_UPDATE_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="MESSAGE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="OUTPUT_FORMAT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROCESS_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROGRESS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SCOPE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEMPLATE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_8B1069_PROCESS" fromColumn="TEMPLATE_ID" toTable="AO_8B1069_TEMPLATE" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_REQ_HSTATUS_ENTITY">
+    <column name="DAY" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ENVIRONMENT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="EXPLICIT" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="EXPLICIT_FINAL" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="GROUP" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="LATEST" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="LATEST_FINAL" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="REQ_ISSUE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SCOPE_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_8B1069_REQ_STATUS_ENTITY">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+  </table>
+  <table name="AO_8B1069_STEP_STATUS">
+    <column name="COLOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEST_RUN_STATUS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_8B1069_TEMPLATE">
+    <column name="CREATION_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CREATOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DEFAULT_BREAK_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DEFAULT_OUTPUT_FORMAT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="FILENAME" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="INCLUDE_ATTACHMENTS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="INSTALLATION_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LAST_EDITOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LAST_UPDATE_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="50"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEMPLATE_STORE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_8B1069_TEMPLATE_ENTITY">
+    <column name="ENTITY_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TEMPLATE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_8B1069_TEMPLATE_ENTITY" fromColumn="TEMPLATE_ID" toTable="AO_8B1069_TEMPLATE" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_TEMPLATE_OUTPUT">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="OUTPUT_FORMAT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEMPLATE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_8B1069_TEMPLATE_OUTPUT" fromColumn="TEMPLATE_ID" toTable="AO_8B1069_TEMPLATE" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_TEMPLATE_SCOPE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="SCOPE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEMPLATE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_8B1069_TEMPLATE_SCOPE" fromColumn="TEMPLATE_ID" toTable="AO_8B1069_TEMPLATE" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_TEST_EXAMPLE_RESULT">
+    <column name="DURATION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_EXAMPLE_RANK" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_EXAMPLE_ROW" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_RUN_RESULT_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_8B1069_TEST_EXAMPLE_RESULT" fromColumn="TEST_RUN_ID" toTable="AO_8B1069_TEST_RUN" toColumn="ID"/>
+    <foreignKey fromTable="AO_8B1069_TEST_EXAMPLE_RESULT" fromColumn="TEST_RUN_RESULT_ID" toTable="AO_8B1069_TEST_RUN_RESULT" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_TEST_EXAMPLE_STEP">
+    <column name="DURATION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="KEYWORD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LOG_ERROR" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="450"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_EXAMPLE_RESULT_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_8B1069_TEST_EXAMPLE_STEP" fromColumn="TEST_EXAMPLE_RESULT_ID" toTable="AO_8B1069_TEST_EXAMPLE_RESULT" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_TEST_MEMENTO">
+    <column name="CUCUMBER_STEPS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="CUCUMBER_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="GENERIC_PATH" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SUMMARY" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_8B1069_TEST_PLAN_TEST_LINK">
+    <column name="CREATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SOURCE_ISSUE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TARGET_ISSUE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_8B1069_TEST_PRECON_LINK">
+    <column name="CREATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SOURCE_ISSUE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TARGET_ISSUE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_8B1069_TEST_PRE_COND_LINK">
+    <column name="CREATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SOURCE_ISSUE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TARGET_ISSUE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_8B1069_TEST_RUN">
+    <column name="ASSIGNEE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="COMMENT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="CREATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="FINISH_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PRE_CONDITION_MEMENTO_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="START_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_EXEC_ISSUE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_ISSUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEST_ISSUE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_MEMENTO_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="USER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_8B1069_TEST_RUN" fromColumn="PRE_CONDITION_MEMENTO_ID" toTable="AO_8B1069_PRE_COND_MEMENTO" toColumn="ID"/>
+    <foreignKey fromTable="AO_8B1069_TEST_RUN" fromColumn="TEST_MEMENTO_ID" toTable="AO_8B1069_TEST_MEMENTO" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_TEST_RUN_CF_MEMENTO">
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="REQUIRED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_8B1069_TEST_RUN_CF_MEMENTO" fromColumn="TEST_RUN_ID" toTable="AO_8B1069_TEST_RUN" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_TEST_RUN_CF_VALUE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TEST_RUN_CF_MEMENTO_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+  </table>
+  <table name="AO_8B1069_TEST_RUN_DEFECT">
+    <column name="APP_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DEFECT_ISSUE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_STEP_RESULT_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_8B1069_TEST_RUN_DEFECT" fromColumn="TEST_RUN_ID" toTable="AO_8B1069_TEST_RUN" toColumn="ID"/>
+    <foreignKey fromTable="AO_8B1069_TEST_RUN_DEFECT" fromColumn="TEST_STEP_RESULT_ID" toTable="AO_8B1069_TEST_STEP_RESULT" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_TEST_RUN_ITERATION">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_8B1069_TEST_RUN_REQUIREMENT">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="REQUIREMENT_ISSUE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_8B1069_TEST_RUN_REQUIREMENT" fromColumn="TEST_RUN_ID" toTable="AO_8B1069_TEST_RUN" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_TEST_RUN_RESULT">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TEST_RESULT_DURATION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_RESULT_LOG" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="TEST_RESULT_NAME" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="TEST_RESULT_RANK" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_RESULT_STATUS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_8B1069_TEST_RUN_RESULT" fromColumn="TEST_RUN_ID" toTable="AO_8B1069_TEST_RUN" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_TEST_RUN_STATUS">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TEST_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+  </table>
+  <table name="AO_8B1069_TEST_SET_TEST_LINK">
+    <column name="CREATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SOURCE_ISSUE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TARGET_ISSUE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_8B1069_TEST_STATUS">
+    <column name="COLOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="IS_FINAL" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REQUIREMENT_STATUS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_8B1069_TEST_STEP">
+    <column name="DATA" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="EXPECTED_RESULT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="INDEX" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ISSUE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="STEP" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+  </table>
+  <table name="AO_8B1069_TEST_STEP_MEMENTO">
+    <column name="DATA" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="EXPECTED_RESULT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="INDEX" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="STEP" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_STEP_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_8B1069_TEST_STEP_MEMENTO" fromColumn="TEST_RUN_ID" toTable="AO_8B1069_TEST_RUN" toColumn="ID"/>
+    <foreignKey fromTable="AO_8B1069_TEST_STEP_MEMENTO" fromColumn="TEST_STEP_ID" toTable="AO_8B1069_TEST_STEP" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_TEST_STEP_RESULT">
+    <column name="ACTUAL_RESULT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="COMMENT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_RUN_ITERATION_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_STEP_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEST_STEP_MEMENTO_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_8B1069_TEST_STEP_RESULT" fromColumn="TEST_RUN_ID" toTable="AO_8B1069_TEST_RUN" toColumn="ID"/>
+    <foreignKey fromTable="AO_8B1069_TEST_STEP_RESULT" fromColumn="TEST_RUN_ITERATION_ID" toTable="AO_8B1069_TEST_RUN_ITERATION" toColumn="ID"/>
+    <foreignKey fromTable="AO_8B1069_TEST_STEP_RESULT" fromColumn="TEST_STEP_ID" toTable="AO_8B1069_TEST_STEP" toColumn="ID"/>
+    <foreignKey fromTable="AO_8B1069_TEST_STEP_RESULT" fromColumn="TEST_STEP_MEMENTO_ID" toTable="AO_8B1069_TEST_STEP_MEMENTO" toColumn="ID"/>
+  </table>
+  <table name="AO_8B1069_TETEST_PLAN_LINK">
+    <column name="CREATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SOURCE_ISSUE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TARGET_ISSUE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_8B1069_TRINFO_MIGRATION">
+    <column name="EXEC_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="INFO_TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="NEW_TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="NEW_TEST_STEP_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="NEW_TEST_STEP_RESULT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_STEP_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_STEP_RESULT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+  </table>
+  <table name="AO_8B1069_TRMIGRATION_FAULT">
+    <column name="EXEC_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="INFO_TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="NEW_TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="NEW_TEST_STEP_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="NEW_TEST_STEP_RESULT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PROCESS_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEST_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_RUN_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_STEP_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_STEP_RESULT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+  </table>
   <table name="AO_8BA09E_GIT_REPOSITORY">
     <column name="ABSOLUTE_ROOT" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
     <column name="API_FILTER" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
@@ -5222,7 +5722,7 @@
     <row>
       <integer>1</integer>
       <string>last-run</string>
-      <string>1626147806617</string>
+      <string>1626156350020</string>
     </row>
   </data>
   <data tableName="AO_2F1435_READ_NOTIFICATIONS">
@@ -16355,6 +16855,738 @@
       <integer>960</integer>
     </row>
   </data>
+  <data tableName="AO_8B1069_ACTIVITY_ENTRY">
+    <column name="ACTION"/>
+    <column name="AUTHOR"/>
+    <column name="CREATED"/>
+    <column name="ID"/>
+    <column name="SUB_ELEMENT"/>
+    <column name="TEST_RUN_ID"/>
+  </data>
+  <data tableName="AO_8B1069_ACTIVITY_ITEM">
+    <column name="ACTIVITY_ENTRY_ID"/>
+    <column name="FIELD"/>
+    <column name="ID"/>
+    <column name="NEW_VALUE"/>
+    <column name="OLD_VALUE"/>
+  </data>
+  <data tableName="AO_8B1069_ANALYTICS_ENTRY">
+    <column name="COUNT"/>
+    <column name="DESCRIPTION"/>
+    <column name="KEY"/>
+  </data>
+  <data tableName="AO_8B1069_ATTACHMENT">
+    <column name="AUTHOR"/>
+    <column name="CREATED"/>
+    <column name="ENTITY_ID"/>
+    <column name="FILE_NAME"/>
+    <column name="FILE_SIZE"/>
+    <column name="ID"/>
+    <column name="ISSUE_ID"/>
+    <column name="MIME_TYPE"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_8B1069_AUTOMATED_LABEL">
+    <column name="ENTITY_ID"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="SEARCHABLE_NAME"/>
+  </data>
+  <data tableName="AO_8B1069_AUTOMATED_STEP">
+    <column name="ENTITY_ID"/>
+    <column name="ID"/>
+    <column name="LOOKUP_HASH"/>
+    <column name="SEARCHABLE_STEP"/>
+    <column name="STEP"/>
+  </data>
+  <data tableName="AO_8B1069_AUTOMATED_STEP_ISSUE">
+    <column name="AUTOMATED_STEP_ID"/>
+    <column name="ID"/>
+    <column name="ISSUE_ID"/>
+  </data>
+  <data tableName="AO_8B1069_AUTOMATED_STEP_LABEL">
+    <column name="AUTOMATED_LABEL_ID"/>
+    <column name="AUTOMATED_STEP_ID"/>
+    <column name="ID"/>
+  </data>
+  <data tableName="AO_8B1069_CUSTOM_FIELD_MEMENTO">
+    <column name="ATTACHMENT_HASH"/>
+    <column name="ID"/>
+    <column name="TEST_STEP_MEMENTO_ID"/>
+    <column name="VALUE"/>
+  </data>
+  <data tableName="AO_8B1069_DATA_FIELD_VALUE">
+    <column name="ENTITY_ID"/>
+    <column name="FIELD_ID"/>
+    <column name="ID"/>
+    <column name="VALUE"/>
+  </data>
+  <data tableName="AO_8B1069_DB_PROVIDER">
+    <column name="ID"/>
+    <row>
+      <integer>1</integer>
+    </row>
+  </data>
+  <data tableName="AO_8B1069_DOC_GEN_PRJSETTINGS">
+    <column name="ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="STATUS"/>
+  </data>
+  <data tableName="AO_8B1069_ENTITY_DATASET_SIZE">
+    <column name="ENTITY_ID"/>
+    <column name="ID"/>
+    <column name="ITERATION_SIZE"/>
+    <column name="PARAMETER_SIZE"/>
+    <column name="PARAM_ENTITY_TYPE"/>
+  </data>
+  <data tableName="AO_8B1069_FIELD">
+    <column name="DESCRIPTION"/>
+    <column name="ENTITY"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="PROJECT_ID"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_8B1069_FIELD_EXT_CFG">
+    <column name="DELETED"/>
+    <column name="ENABLED"/>
+    <column name="FIELD"/>
+    <column name="ID"/>
+    <column name="PROJECT"/>
+    <column name="RANK"/>
+    <column name="REQUIRED"/>
+  </data>
+  <data tableName="AO_8B1069_FIELD_TEST_TYPE">
+    <column name="FIELD_ID"/>
+    <column name="ID"/>
+    <column name="TEST_TYPE"/>
+  </data>
+  <data tableName="AO_8B1069_FOLDER">
+    <column name="CREATED_DATE"/>
+    <column name="ENTITY_ID"/>
+    <column name="FOLDER_TYPE"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="PARENT_ID"/>
+    <column name="RANK"/>
+  </data>
+  <data tableName="AO_8B1069_LEAF">
+    <column name="CREATED_DATE"/>
+    <column name="ENTITY_ID"/>
+    <column name="FOLDER_ID"/>
+    <column name="ID"/>
+    <column name="LEAF_TYPE"/>
+    <column name="RANK"/>
+    <column name="TEST_ID"/>
+  </data>
+  <data tableName="AO_8B1069_LIST_PROJECT_LINK">
+    <column name="ID"/>
+    <column name="LIST_ID"/>
+    <column name="PROJECT_ID"/>
+  </data>
+  <data tableName="AO_8B1069_OPTION_FIELD_OPT">
+    <column name="FIELD_ID"/>
+    <column name="ID"/>
+    <column name="RANK"/>
+    <column name="VALUE"/>
+  </data>
+  <data tableName="AO_8B1069_OPTION_FIELD_VALUE">
+    <column name="ENTITY_ID"/>
+    <column name="FIELD_ID"/>
+    <column name="ID"/>
+    <column name="OPTION_FIELD_OPT_ID"/>
+  </data>
+  <data tableName="AO_8B1069_PARAM">
+    <column name="ENTITY_ID"/>
+    <column name="ID"/>
+    <column name="IS_COMBINATORIAL"/>
+    <column name="NAME"/>
+    <column name="PARAM_ENTITY_TYPE"/>
+    <column name="RANK"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_8B1069_PARAM_LIST_LINK">
+    <column name="ID"/>
+    <column name="PARAM_ID"/>
+    <column name="PARAM_TEST_LIST_ID"/>
+  </data>
+  <data tableName="AO_8B1069_PARAM_MEMENTO">
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="VALUE"/>
+  </data>
+  <data tableName="AO_8B1069_PARAM_MEM_ITERATION">
+    <column name="ID"/>
+    <column name="ITERATION_ID"/>
+    <column name="PARAM_MEMENTO_ID"/>
+  </data>
+  <data tableName="AO_8B1069_PARAM_TEST_LIST">
+    <column name="CREATION_SCOPE"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+  </data>
+  <data tableName="AO_8B1069_PARAM_TEST_LIST_OPT">
+    <column name="ID"/>
+    <column name="LIST_ID"/>
+    <column name="RANK"/>
+    <column name="VALUE"/>
+  </data>
+  <data tableName="AO_8B1069_PARAM_VALUE">
+    <column name="ID"/>
+    <column name="OPTION_ID"/>
+    <column name="PARAM_ID"/>
+    <column name="RANK"/>
+    <column name="TYPE"/>
+    <column name="VALUE"/>
+  </data>
+  <data tableName="AO_8B1069_PRE_COND_MEMENTO">
+    <column name="CONDITIONS"/>
+    <column name="ID"/>
+    <column name="KEY"/>
+    <column name="SUMMARY"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_8B1069_PRE_COND_RESULT">
+    <column name="CONDITIONS"/>
+    <column name="ID"/>
+    <column name="KEY"/>
+    <column name="RANK"/>
+    <column name="SUMMARY"/>
+    <column name="TEST_RUN_ID"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_8B1069_PROCESS">
+    <column name="BREAK_PAGE_TYPE"/>
+    <column name="CLAUSE"/>
+    <column name="CONTENT_TYPE"/>
+    <column name="CREATION_DATE"/>
+    <column name="CREATOR"/>
+    <column name="DOCUMENT_NAME"/>
+    <column name="FILTER_NAME"/>
+    <column name="ID"/>
+    <column name="LAST_EDITOR"/>
+    <column name="LAST_UPDATE_DATE"/>
+    <column name="MESSAGE"/>
+    <column name="OUTPUT_FORMAT"/>
+    <column name="PROCESS_ID"/>
+    <column name="PROGRESS"/>
+    <column name="SCOPE_ID"/>
+    <column name="STATUS"/>
+    <column name="TEMPLATE_ID"/>
+  </data>
+  <data tableName="AO_8B1069_REQ_HSTATUS_ENTITY">
+    <column name="DAY"/>
+    <column name="ENVIRONMENT"/>
+    <column name="EXPLICIT"/>
+    <column name="EXPLICIT_FINAL"/>
+    <column name="GROUP"/>
+    <column name="ID"/>
+    <column name="LATEST"/>
+    <column name="LATEST_FINAL"/>
+    <column name="REQ_ISSUE_ID"/>
+    <column name="SCOPE_TYPE"/>
+  </data>
+  <data tableName="AO_8B1069_REQ_STATUS_ENTITY">
+    <column name="ID"/>
+    <column name="KEY"/>
+    <column name="VALUE"/>
+  </data>
+  <data tableName="AO_8B1069_STEP_STATUS">
+    <column name="COLOR"/>
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="TEST_RUN_STATUS"/>
+  </data>
+  <data tableName="AO_8B1069_TEMPLATE">
+    <column name="CREATION_DATE"/>
+    <column name="CREATOR"/>
+    <column name="DEFAULT_BREAK_TYPE"/>
+    <column name="DEFAULT_OUTPUT_FORMAT"/>
+    <column name="DESCRIPTION"/>
+    <column name="FILENAME"/>
+    <column name="ID"/>
+    <column name="INCLUDE_ATTACHMENTS"/>
+    <column name="INSTALLATION_TYPE"/>
+    <column name="LAST_EDITOR"/>
+    <column name="LAST_UPDATE_DATE"/>
+    <column name="NAME"/>
+    <column name="PROJECT_ID"/>
+    <column name="TEMPLATE_STORE_ID"/>
+    <row>
+      <timestamp>2021-07-13T06:23:49.499Z</timestamp>
+      <string>admin</string>
+      <string>Never</string>
+      <string>DOCX</string>
+      <string>This template creates a report from a Test Excution showing its details and a table of Test Runs.</string>
+      <string>XrayTestExecBasicWithCoverPage.docx</string>
+      <integer>1</integer>
+      <boolean>false</boolean>
+      <string>PRE_INSTALLED</string>
+      <string>admin</string>
+      <timestamp>2021-07-13T06:23:49.499Z</timestamp>
+      <string>Xray Test Execution Basic with Cover Page</string>
+      <integer>0</integer>
+      <integer xsi:nil="true"/>
+    </row>
+    <row>
+      <timestamp>2021-07-13T06:23:49.521Z</timestamp>
+      <string>admin</string>
+      <string>Never</string>
+      <string>DOCX</string>
+      <string>This template creates a report from a Test Plan showing its details and a table of Test Runs and Test Executions.</string>
+      <string>XrayTestPlanBasicWithCoverPageNew.docx</string>
+      <integer>2</integer>
+      <boolean>false</boolean>
+      <string>PRE_INSTALLED</string>
+      <string>admin</string>
+      <timestamp>2021-07-13T06:23:49.521Z</timestamp>
+      <string>Xray Test Plan Basic with Cover Page</string>
+      <integer>0</integer>
+      <integer xsi:nil="true"/>
+    </row>
+    <row>
+      <timestamp>2021-07-13T06:23:49.523Z</timestamp>
+      <string>admin</string>
+      <string>Never</string>
+      <string>DOCX</string>
+      <string>This template creates a test report from the selection of multiple issues, created using Xray for JIRA.</string>
+      <string>XrayTestReport.docx</string>
+      <integer>3</integer>
+      <boolean>false</boolean>
+      <string>PRE_INSTALLED</string>
+      <string>admin</string>
+      <timestamp>2021-07-13T06:23:49.523Z</timestamp>
+      <string>Xray Test Report</string>
+      <integer>0</integer>
+      <integer xsi:nil="true"/>
+    </row>
+    <row>
+      <timestamp>2021-07-13T06:23:49.524Z</timestamp>
+      <string>admin</string>
+      <string>Never</string>
+      <string>DOCX</string>
+      <string>This template exports the information of a Xray for JIRA Test Set to a Word of PDF Document. It works with manual and automated tests.</string>
+      <string>XrayTestSet.docx</string>
+      <integer>4</integer>
+      <boolean>false</boolean>
+      <string>PRE_INSTALLED</string>
+      <string>admin</string>
+      <timestamp>2021-07-13T06:23:49.524Z</timestamp>
+      <string>Xray Test Set</string>
+      <integer>0</integer>
+      <integer xsi:nil="true"/>
+    </row>
+  </data>
+  <data tableName="AO_8B1069_TEMPLATE_ENTITY">
+    <column name="ENTITY_ID"/>
+    <column name="ID"/>
+    <column name="TEMPLATE_ID"/>
+    <row>
+      <string>-1</string>
+      <integer>1</integer>
+      <integer>1</integer>
+    </row>
+    <row>
+      <string>-2</string>
+      <integer>2</integer>
+      <integer>1</integer>
+    </row>
+    <row>
+      <string>10400</string>
+      <integer>3</integer>
+      <integer>1</integer>
+    </row>
+    <row>
+      <string>10401</string>
+      <integer>4</integer>
+      <integer>1</integer>
+    </row>
+    <row>
+      <string>10402</string>
+      <integer>5</integer>
+      <integer>1</integer>
+    </row>
+    <row>
+      <string>10403</string>
+      <integer>6</integer>
+      <integer>1</integer>
+    </row>
+    <row>
+      <string>10404</string>
+      <integer>7</integer>
+      <integer>1</integer>
+    </row>
+    <row>
+      <string>10405</string>
+      <integer>8</integer>
+      <integer>1</integer>
+    </row>
+    <row>
+      <string>-1</string>
+      <integer>9</integer>
+      <integer>2</integer>
+    </row>
+    <row>
+      <string>-2</string>
+      <integer>10</integer>
+      <integer>2</integer>
+    </row>
+    <row>
+      <string>10400</string>
+      <integer>11</integer>
+      <integer>2</integer>
+    </row>
+    <row>
+      <string>10401</string>
+      <integer>12</integer>
+      <integer>2</integer>
+    </row>
+    <row>
+      <string>10402</string>
+      <integer>13</integer>
+      <integer>2</integer>
+    </row>
+    <row>
+      <string>10403</string>
+      <integer>14</integer>
+      <integer>2</integer>
+    </row>
+    <row>
+      <string>10404</string>
+      <integer>15</integer>
+      <integer>2</integer>
+    </row>
+    <row>
+      <string>10405</string>
+      <integer>16</integer>
+      <integer>2</integer>
+    </row>
+    <row>
+      <string>-1</string>
+      <integer>17</integer>
+      <integer>3</integer>
+    </row>
+    <row>
+      <string>-2</string>
+      <integer>18</integer>
+      <integer>3</integer>
+    </row>
+    <row>
+      <string>10400</string>
+      <integer>19</integer>
+      <integer>3</integer>
+    </row>
+    <row>
+      <string>10401</string>
+      <integer>20</integer>
+      <integer>3</integer>
+    </row>
+    <row>
+      <string>10402</string>
+      <integer>21</integer>
+      <integer>3</integer>
+    </row>
+    <row>
+      <string>10403</string>
+      <integer>22</integer>
+      <integer>3</integer>
+    </row>
+    <row>
+      <string>10404</string>
+      <integer>23</integer>
+      <integer>3</integer>
+    </row>
+    <row>
+      <string>10405</string>
+      <integer>24</integer>
+      <integer>3</integer>
+    </row>
+    <row>
+      <string>-1</string>
+      <integer>25</integer>
+      <integer>4</integer>
+    </row>
+    <row>
+      <string>-2</string>
+      <integer>26</integer>
+      <integer>4</integer>
+    </row>
+    <row>
+      <string>10400</string>
+      <integer>27</integer>
+      <integer>4</integer>
+    </row>
+    <row>
+      <string>10401</string>
+      <integer>28</integer>
+      <integer>4</integer>
+    </row>
+    <row>
+      <string>10402</string>
+      <integer>29</integer>
+      <integer>4</integer>
+    </row>
+    <row>
+      <string>10403</string>
+      <integer>30</integer>
+      <integer>4</integer>
+    </row>
+    <row>
+      <string>10404</string>
+      <integer>31</integer>
+      <integer>4</integer>
+    </row>
+    <row>
+      <string>10405</string>
+      <integer>32</integer>
+      <integer>4</integer>
+    </row>
+  </data>
+  <data tableName="AO_8B1069_TEMPLATE_OUTPUT">
+    <column name="ID"/>
+    <column name="OUTPUT_FORMAT"/>
+    <column name="TEMPLATE_ID"/>
+    <row>
+      <integer>1</integer>
+      <string>DOCX</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>2</integer>
+      <string>DOCX</string>
+      <integer>2</integer>
+    </row>
+    <row>
+      <integer>3</integer>
+      <string>DOCX</string>
+      <integer>3</integer>
+    </row>
+    <row>
+      <integer>4</integer>
+      <string>DOCX</string>
+      <integer>4</integer>
+    </row>
+  </data>
+  <data tableName="AO_8B1069_TEMPLATE_SCOPE">
+    <column name="ID"/>
+    <column name="SCOPE_ID"/>
+    <column name="TEMPLATE_ID"/>
+    <row>
+      <integer>1</integer>
+      <integer>4</integer>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>2</integer>
+      <integer>4</integer>
+      <integer>2</integer>
+    </row>
+    <row>
+      <integer>3</integer>
+      <integer>4</integer>
+      <integer>3</integer>
+    </row>
+    <row>
+      <integer>4</integer>
+      <integer>2</integer>
+      <integer>3</integer>
+    </row>
+    <row>
+      <integer>5</integer>
+      <integer>4</integer>
+      <integer>4</integer>
+    </row>
+  </data>
+  <data tableName="AO_8B1069_TEST_EXAMPLE_RESULT">
+    <column name="DURATION"/>
+    <column name="ID"/>
+    <column name="STATUS"/>
+    <column name="TEST_EXAMPLE_RANK"/>
+    <column name="TEST_EXAMPLE_ROW"/>
+    <column name="TEST_RUN_ID"/>
+    <column name="TEST_RUN_RESULT_ID"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_EXAMPLE_STEP">
+    <column name="DURATION"/>
+    <column name="ID"/>
+    <column name="KEYWORD"/>
+    <column name="LOG_ERROR"/>
+    <column name="NAME"/>
+    <column name="RANK"/>
+    <column name="STATUS"/>
+    <column name="TEST_EXAMPLE_RESULT_ID"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_MEMENTO">
+    <column name="CUCUMBER_STEPS"/>
+    <column name="CUCUMBER_TYPE"/>
+    <column name="GENERIC_PATH"/>
+    <column name="ID"/>
+    <column name="KEY"/>
+    <column name="SUMMARY"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_PLAN_TEST_LINK">
+    <column name="CREATED_DATE"/>
+    <column name="ID"/>
+    <column name="RANK"/>
+    <column name="SOURCE_ISSUE"/>
+    <column name="TARGET_ISSUE"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_PRECON_LINK">
+    <column name="CREATED_DATE"/>
+    <column name="ID"/>
+    <column name="RANK"/>
+    <column name="SOURCE_ISSUE"/>
+    <column name="TARGET_ISSUE"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_PRE_COND_LINK">
+    <column name="CREATED_DATE"/>
+    <column name="ID"/>
+    <column name="RANK"/>
+    <column name="SOURCE_ISSUE"/>
+    <column name="TARGET_ISSUE"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_RUN">
+    <column name="ASSIGNEE"/>
+    <column name="COMMENT"/>
+    <column name="CREATED_DATE"/>
+    <column name="FINISH_DATE"/>
+    <column name="ID"/>
+    <column name="PRE_CONDITION_MEMENTO_ID"/>
+    <column name="RANK"/>
+    <column name="START_DATE"/>
+    <column name="STATUS"/>
+    <column name="TEST_EXEC_ISSUE"/>
+    <column name="TEST_ISSUE"/>
+    <column name="TEST_ISSUE_ID"/>
+    <column name="TEST_MEMENTO_ID"/>
+    <column name="USER"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_RUN_CF_MEMENTO">
+    <column name="FIELD_ID"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="RANK"/>
+    <column name="REQUIRED"/>
+    <column name="TEST_RUN_ID"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_RUN_CF_VALUE">
+    <column name="ID"/>
+    <column name="TEST_RUN_CF_MEMENTO_ID"/>
+    <column name="VALUE"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_RUN_DEFECT">
+    <column name="APP_ID"/>
+    <column name="DEFECT_ISSUE"/>
+    <column name="ID"/>
+    <column name="TEST_RUN_ID"/>
+    <column name="TEST_STEP_RESULT_ID"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_RUN_ITERATION">
+    <column name="ID"/>
+    <column name="RANK"/>
+    <column name="STATUS"/>
+    <column name="TEST_RUN_ID"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_RUN_REQUIREMENT">
+    <column name="ID"/>
+    <column name="REQUIREMENT_ISSUE"/>
+    <column name="STATUS"/>
+    <column name="TEST_RUN_ID"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_RUN_RESULT">
+    <column name="ID"/>
+    <column name="TEST_RESULT_DURATION"/>
+    <column name="TEST_RESULT_LOG"/>
+    <column name="TEST_RESULT_NAME"/>
+    <column name="TEST_RESULT_RANK"/>
+    <column name="TEST_RESULT_STATUS"/>
+    <column name="TEST_RUN_ID"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_RUN_STATUS">
+    <column name="ID"/>
+    <column name="TEST_ID"/>
+    <column name="VALUE"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_SET_TEST_LINK">
+    <column name="CREATED_DATE"/>
+    <column name="ID"/>
+    <column name="RANK"/>
+    <column name="SOURCE_ISSUE"/>
+    <column name="TARGET_ISSUE"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_STATUS">
+    <column name="COLOR"/>
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="IS_FINAL"/>
+    <column name="NAME"/>
+    <column name="REQUIREMENT_STATUS"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_STEP">
+    <column name="DATA"/>
+    <column name="EXPECTED_RESULT"/>
+    <column name="ID"/>
+    <column name="INDEX"/>
+    <column name="ISSUE"/>
+    <column name="STEP"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_STEP_MEMENTO">
+    <column name="DATA"/>
+    <column name="EXPECTED_RESULT"/>
+    <column name="ID"/>
+    <column name="INDEX"/>
+    <column name="STEP"/>
+    <column name="TEST_RUN_ID"/>
+    <column name="TEST_STEP_ID"/>
+  </data>
+  <data tableName="AO_8B1069_TEST_STEP_RESULT">
+    <column name="ACTUAL_RESULT"/>
+    <column name="COMMENT"/>
+    <column name="ID"/>
+    <column name="STATUS"/>
+    <column name="TEST_RUN_ID"/>
+    <column name="TEST_RUN_ITERATION_ID"/>
+    <column name="TEST_STEP_ID"/>
+    <column name="TEST_STEP_MEMENTO_ID"/>
+  </data>
+  <data tableName="AO_8B1069_TETEST_PLAN_LINK">
+    <column name="CREATED_DATE"/>
+    <column name="ID"/>
+    <column name="RANK"/>
+    <column name="SOURCE_ISSUE"/>
+    <column name="TARGET_ISSUE"/>
+  </data>
+  <data tableName="AO_8B1069_TRINFO_MIGRATION">
+    <column name="EXEC_ID"/>
+    <column name="ID"/>
+    <column name="INFO_TYPE"/>
+    <column name="NEW_TEST_RUN_ID"/>
+    <column name="NEW_TEST_STEP_ID"/>
+    <column name="NEW_TEST_STEP_RESULT_ID"/>
+    <column name="TEST_ID"/>
+    <column name="TEST_RUN_ID"/>
+    <column name="TEST_STEP_ID"/>
+    <column name="TEST_STEP_RESULT_ID"/>
+    <column name="VALUE"/>
+  </data>
+  <data tableName="AO_8B1069_TRMIGRATION_FAULT">
+    <column name="EXEC_ID"/>
+    <column name="ID"/>
+    <column name="INFO_TYPE"/>
+    <column name="NEW_TEST_RUN_ID"/>
+    <column name="NEW_TEST_STEP_ID"/>
+    <column name="NEW_TEST_STEP_RESULT_ID"/>
+    <column name="PROCESS_ID"/>
+    <column name="TEST_ID"/>
+    <column name="TEST_RUN_ID"/>
+    <column name="TEST_STEP_ID"/>
+    <column name="TEST_STEP_RESULT_ID"/>
+    <column name="VALUE"/>
+  </data>
   <data tableName="AO_8BA09E_GIT_REPOSITORY">
     <column name="ABSOLUTE_ROOT"/>
     <column name="API_FILTER"/>
@@ -16698,6 +17930,20 @@
       <string>wbs-gantt-chart</string>
       <integer>1</integer>
     </row>
+    <row>
+      <boolean>false</boolean>
+      <integer>35</integer>
+      <string>a78b23a5bfcf578b8f7e37b8f4621c156cb5f71d</string>
+      <string>jira-workflow-toolbox</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <boolean>false</boolean>
+      <integer>36</integer>
+      <string>a78b23a5bfcf578b8f7e37b8f4621c156cb5f71d</string>
+      <string>xray-test-management</string>
+      <integer>1</integer>
+    </row>
   </data>
   <data tableName="AO_8BA09E_PROJECT_MAPPING">
     <column name="ID"/>
@@ -16858,6 +18104,11 @@
       <string>c8b57243bf71174fbb73d88bcacce90de0f17f39</string>
       <integer>1626145620</integer>
       <integer>34</integer>
+    </row>
+    <row>
+      <string>a78b23a5bfcf578b8f7e37b8f4621c156cb5f71d</string>
+      <integer>1626148816</integer>
+      <integer>35</integer>
     </row>
   </data>
   <data tableName="AO_8BA09E_USERS_PATS">
