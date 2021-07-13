@@ -3608,6 +3608,30 @@
     <column name="USER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
     <column name="USER_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
   </table>
+  <table name="AO_B6F86F_RULE">
+    <column name="CHANGED_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CONFIGURATION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CREATOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="TRIGGER_DATA" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TRIGGER_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_B6F86F_RULE_ENTITY">
+    <column name="CONFIGURATION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="RULE_ENTITY_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="RULE_ENTITY_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RULE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_B6F86F_RULE_ENTITY" fromColumn="RULE_ID" toTable="AO_B6F86F_RULE" toColumn="ID"/>
+    <foreignKey fromTable="AO_B6F86F_RULE_ENTITY" fromColumn="RULE_ENTITY_ID" toTable="AO_B6F86F_RULE_ENTITY" toColumn="ID"/>
+  </table>
   <table name="AO_B9A0F0_APPLIED_TEMPLATE">
     <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
     <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
@@ -5184,9 +5208,9 @@
       <timestamp>2021-07-12T10:35:30.673Z</timestamp>
       <string>Jira不能通过小工具源URL访问自身。这是必要的，以便可以成功生成仪表板小工具。请核准当前的基本URL，如果有必要，检查您的网络配置，以便解决问题。</string>
       <integer>33</integer>
-      <boolean>false</boolean>
-      <boolean>false</boolean>
-      <timestamp xsi:nil="true"/>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <timestamp>2021-07-13T03:43:26.616Z</timestamp>
       <string>WARNING</string>
       <string>小工具源URL</string>
     </row>
@@ -5198,7 +5222,7 @@
     <row>
       <integer>1</integer>
       <string>last-run</string>
-      <string>1626143949196</string>
+      <string>1626147806617</string>
     </row>
   </data>
   <data tableName="AO_2F1435_READ_NOTIFICATIONS">
@@ -16667,6 +16691,13 @@
       <string>reset-for-big-gantt</string>
       <integer>1</integer>
     </row>
+    <row>
+      <boolean>false</boolean>
+      <integer>34</integer>
+      <string>c8b57243bf71174fbb73d88bcacce90de0f17f39</string>
+      <string>wbs-gantt-chart</string>
+      <integer>1</integer>
+    </row>
   </data>
   <data tableName="AO_8BA09E_PROJECT_MAPPING">
     <column name="ID"/>
@@ -16822,6 +16853,11 @@
       <string>0f501be9f47b8e62a35baee67bd4ccc44d8c1b9f</string>
       <integer>1626144576</integer>
       <integer>33</integer>
+    </row>
+    <row>
+      <string>c8b57243bf71174fbb73d88bcacce90de0f17f39</string>
+      <integer>1626145620</integer>
+      <integer>34</integer>
     </row>
   </data>
   <data tableName="AO_8BA09E_USERS_PATS">
@@ -17197,6 +17233,41 @@
       <string>admin</string>
       <string>admin</string>
     </row>
+  </data>
+  <data tableName="AO_B6F86F_RULE">
+    <column name="CHANGED_BY"/>
+    <column name="CONFIGURATION"/>
+    <column name="CREATED"/>
+    <column name="CREATOR"/>
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="STATUS"/>
+    <column name="TRIGGER_DATA"/>
+    <column name="TRIGGER_TYPE"/>
+    <column name="UPDATED"/>
+    <row>
+      <string>admin</string>
+      <string>{"refs":["issue","system","trigger.issue","trigger.parent"],"triggerType":"6"}</string>
+      <timestamp>2021-07-13T03:57:14.499Z</timestamp>
+      <string>admin</string>
+      <string></string>
+      <integer>1</integer>
+      <string>my rule</string>
+      <boolean>false</boolean>
+      <string>6</string>
+      <string>ISSUE_EVENT</string>
+      <timestamp>2021-07-13T03:57:40.029Z</timestamp>
+    </row>
+  </data>
+  <data tableName="AO_B6F86F_RULE_ENTITY">
+    <column name="CONFIGURATION"/>
+    <column name="ID"/>
+    <column name="RULE_ENTITY_ID"/>
+    <column name="RULE_ENTITY_TYPE"/>
+    <column name="RULE_ID"/>
+    <column name="SEQUENCE"/>
+    <column name="TYPE"/>
   </data>
   <data tableName="AO_B9A0F0_APPLIED_TEMPLATE">
     <column name="ID"/>
