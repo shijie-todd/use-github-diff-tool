@@ -641,6 +641,145 @@
     <column name="PROJECT_TEMPLATE_MODULE_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
     <column name="PROJECT_TEMPLATE_WEB_ITEM_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
   </table>
+  <table name="AO_BF4748_ATTACH_FROM_MAIL">
+    <column name="ATTACH_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CONTENT_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FILE_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="MESSAGE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="MIME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STORED_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="UNIQUE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_BF4748_ATTACH_UPLOAD">
+    <column name="ATTACHED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ATTACH_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATION_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="FILE_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_BF4748_DYNAMIC_FORM">
+    <column name="FORM_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="HTML_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="HTML_VALUE_UNLM" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_BF4748_DYNAMIC_FORM_VALUE">
+    <column name="DYNAMIC_FORM_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FIELD_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FIELD_VALUE_UNLM" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_BF4748_MENTION_REQUEST">
+    <column name="CREATION_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MENTION_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_BF4748_PROJECT_TEMPLATE">
+    <column name="BODY" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PREPOPULATION_FIELDS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="PREPOPULATION_TYPES" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SHARED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="VISIBILITY_FIELDS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="VISIBILITY_TYPES" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="VISIBILITY_USER_GROUPS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+  </table>
+  <table name="AO_BF4748_SD_AGENT_COMMENT">
+    <column name="ALL_TYPES" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PORTAL_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TYPES" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+  </table>
+  <table name="AO_BF4748_SD_PREP">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PORTAL_STR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEMPLATE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_BF4748_SD_SCHEME">
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PORTAL_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REQUEST_TYPE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEMPLATE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TOOLBAR_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_BF4748_SD_SECURITY_SETTINGS">
+    <column name="CUSTOMERS_CAN_SEE_EMBEDS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="INSERT_IMAGES_AS_LINKS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+  </table>
+  <table name="AO_BF4748_SD_SETTINGS">
+    <column name="AUTO_INIT" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ENABLE_ALL_AGENT_COMMENTS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_BF4748_SD_TOOLBAR">
+    <column name="CONFIG" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_BF4748_SECURITY_SETTINGS">
+    <column name="CORS_ALLOWED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="EDITOR_FILES_REQUIRE_AUTH" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="INSERT_IMAGES_AS_LINKS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="UPLOADS_REQUIRE_AUTH" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="UPLOADS_REQUIRE_PERMISSION" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="USER_FILES_REQUIRE_AUTH" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="XSS_ALLOW_IFRAME" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="XSS_FILTER_ENABLED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+  </table>
+  <table name="AO_BF4748_SETTINGS">
+    <column name="ALLOW_OUTER_UPDATES" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ATTACH_UPLOADS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="AUTOGROW" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="AUTOGROW_MAX" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="AUTOLINKING" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="AUTOLINK_TYPE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="AUTO_INIT_HTML" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="CONFIRM_EXT_LINKS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="DEFAULT_FONT_CSS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DROP_PASTED_STYLES" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="DROP_STYLE_TAGS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="EDITABLE_HEIGHT" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="EDITABLE_WIDTH" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="EDITOR_LANG" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FILENAME_FORMAT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FILTER_MENTIONS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="GLOBAL_WIKI_MODE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="IMAGE_SHADOW" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="IMAGE_WIDTH" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="IMPORT_COMMENT_EVENT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LEAN_FORMATTING" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="LINE_BREAKS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="PASTE_TABLE_AS_IMAGE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="PATH_TO_MATHJAX" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PREPOPULATE_ALL" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="PREPOPULATE_BLANK" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="REDLINE_BTN" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="RENDER_WIKI_AS_TEXT" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="RESIZE_TABLE" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="RTL" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="SENSE_INLINE_EDIT" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="SPELLCHECKER" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="TOOLBAR_SWITCH_BTN" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="USE_JIRA_LINKS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="WIKI_MODE_BTN" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+  </table>
+  <table name="AO_BF4748_TEMPLATE_ORDER">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEMPLATE_ORDER" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+  </table>
   <table name="AO_C5CA76_APP_LOG_MESSAGES">
     <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
     <column name="LOG_LEVEL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
@@ -974,7 +1113,7 @@
     <row>
       <integer>1</integer>
       <string>last-run</string>
-      <string>1626159323085</string>
+      <string>1626162922647</string>
     </row>
   </data>
   <data tableName="AO_2F1435_READ_NOTIFICATIONS">
@@ -3317,6 +3456,205 @@
       <string>com.pyxis.greenhopper.jira:gh-scrum-template</string>
       <string>com.pyxis.greenhopper.jira:gh-scrum-template</string>
     </row>
+  </data>
+  <data tableName="AO_BF4748_ATTACH_FROM_MAIL">
+    <column name="ATTACH_ID"/>
+    <column name="CONTENT_ID"/>
+    <column name="FILE_NAME"/>
+    <column name="ID"/>
+    <column name="ISSUE_KEY"/>
+    <column name="MESSAGE_ID"/>
+    <column name="MIME"/>
+    <column name="STORED_NAME"/>
+    <column name="UNIQUE_ID"/>
+  </data>
+  <data tableName="AO_BF4748_ATTACH_UPLOAD">
+    <column name="ATTACHED"/>
+    <column name="ATTACH_ID"/>
+    <column name="CREATION_DATE"/>
+    <column name="FILE_NAME"/>
+    <column name="ID"/>
+  </data>
+  <data tableName="AO_BF4748_DYNAMIC_FORM">
+    <column name="FORM_ID"/>
+    <column name="HTML_VALUE"/>
+    <column name="ID"/>
+    <column name="HTML_VALUE_UNLM"/>
+  </data>
+  <data tableName="AO_BF4748_DYNAMIC_FORM_VALUE">
+    <column name="DYNAMIC_FORM_ID"/>
+    <column name="FIELD_ID"/>
+    <column name="FIELD_VALUE"/>
+    <column name="FIELD_VALUE_UNLM"/>
+    <column name="ID"/>
+  </data>
+  <data tableName="AO_BF4748_MENTION_REQUEST">
+    <column name="CREATION_DATE"/>
+    <column name="ID"/>
+    <column name="MENTION_ID"/>
+  </data>
+  <data tableName="AO_BF4748_PROJECT_TEMPLATE">
+    <column name="BODY"/>
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="PREPOPULATION_FIELDS"/>
+    <column name="PREPOPULATION_TYPES"/>
+    <column name="PROJECT_ID"/>
+    <column name="SHARED"/>
+    <column name="VISIBILITY_FIELDS"/>
+    <column name="VISIBILITY_TYPES"/>
+    <column name="VISIBILITY_USER_GROUPS"/>
+  </data>
+  <data tableName="AO_BF4748_SD_AGENT_COMMENT">
+    <column name="ALL_TYPES"/>
+    <column name="ID"/>
+    <column name="PORTAL_ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="TYPES"/>
+  </data>
+  <data tableName="AO_BF4748_SD_PREP">
+    <column name="ID"/>
+    <column name="PORTAL_STR"/>
+    <column name="TEMPLATE_ID"/>
+  </data>
+  <data tableName="AO_BF4748_SD_SCHEME">
+    <column name="FIELD_ID"/>
+    <column name="ID"/>
+    <column name="PORTAL_ID"/>
+    <column name="REQUEST_TYPE_ID"/>
+    <column name="TEMPLATE_ID"/>
+    <column name="TOOLBAR_ID"/>
+  </data>
+  <data tableName="AO_BF4748_SD_SECURITY_SETTINGS">
+    <column name="CUSTOMERS_CAN_SEE_EMBEDS"/>
+    <column name="ID"/>
+    <column name="INSERT_IMAGES_AS_LINKS"/>
+  </data>
+  <data tableName="AO_BF4748_SD_SETTINGS">
+    <column name="ENABLE_ALL_AGENT_COMMENTS"/>
+    <column name="ID"/>
+    <column name="AUTO_INIT"/>
+    <row>
+      <boolean>false</boolean>
+      <integer>1</integer>
+      <boolean>true</boolean>
+    </row>
+  </data>
+  <data tableName="AO_BF4748_SD_TOOLBAR">
+    <column name="CONFIG"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <row>
+      <string>[{"enabled":true, "name":"Bold"},{"enabled":true, "name":"Italic"},{"enabled":true, "name":"Underline"},{"enabled":true, "name":"TextColor"},{"enabled":true, "name":"BGColor"},{"enabled":true, "name":"RemoveFormat"},{"enabled":true, "name":"NumberedList"},{"enabled":true, "name":"BulletedList"},{"enabled":true, "name":"Outdent"},{"enabled":true, "name":"Indent"},{"enabled":true, "name":"Format"},{"enabled":true, "name":"Image"},{"enabled":true, "name":"Link"},{"enabled":true, "name":"Table"},{"enabled":false, "name":"Mathjax"},{"enabled":false, "name":"Code"},{"enabled":false, "name":"Maximize"}]</string>
+      <integer>1</integer>
+      <string>Default</string>
+    </row>
+  </data>
+  <data tableName="AO_BF4748_SECURITY_SETTINGS">
+    <column name="CORS_ALLOWED"/>
+    <column name="EDITOR_FILES_REQUIRE_AUTH"/>
+    <column name="ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="UPLOADS_REQUIRE_AUTH"/>
+    <column name="UPLOADS_REQUIRE_PERMISSION"/>
+    <column name="USER_FILES_REQUIRE_AUTH"/>
+    <column name="XSS_FILTER_ENABLED"/>
+    <column name="XSS_ALLOW_IFRAME"/>
+    <column name="INSERT_IMAGES_AS_LINKS"/>
+    <row>
+      <boolean>false</boolean>
+      <boolean>true</boolean>
+      <integer>1</integer>
+      <string>ALL_UNMAPPED</string>
+      <boolean>true</boolean>
+      <boolean>false</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>false</boolean>
+      <boolean>false</boolean>
+    </row>
+  </data>
+  <data tableName="AO_BF4748_SETTINGS">
+    <column name="ALLOW_OUTER_UPDATES"/>
+    <column name="ATTACH_UPLOADS"/>
+    <column name="AUTOGROW"/>
+    <column name="AUTOGROW_MAX"/>
+    <column name="AUTOLINKING"/>
+    <column name="AUTOLINK_TYPE"/>
+    <column name="AUTO_INIT_HTML"/>
+    <column name="CONFIRM_EXT_LINKS"/>
+    <column name="DEFAULT_FONT_CSS"/>
+    <column name="DROP_PASTED_STYLES"/>
+    <column name="DROP_STYLE_TAGS"/>
+    <column name="EDITABLE_HEIGHT"/>
+    <column name="EDITABLE_WIDTH"/>
+    <column name="EDITOR_LANG"/>
+    <column name="FILENAME_FORMAT"/>
+    <column name="FILTER_MENTIONS"/>
+    <column name="GLOBAL_WIKI_MODE"/>
+    <column name="ID"/>
+    <column name="IMAGE_SHADOW"/>
+    <column name="IMAGE_WIDTH"/>
+    <column name="IMPORT_COMMENT_EVENT"/>
+    <column name="LEAN_FORMATTING"/>
+    <column name="LINE_BREAKS"/>
+    <column name="PASTE_TABLE_AS_IMAGE"/>
+    <column name="PATH_TO_MATHJAX"/>
+    <column name="PREPOPULATE_ALL"/>
+    <column name="PREPOPULATE_BLANK"/>
+    <column name="REDLINE_BTN"/>
+    <column name="RENDER_WIKI_AS_TEXT"/>
+    <column name="RESIZE_TABLE"/>
+    <column name="RTL"/>
+    <column name="SENSE_INLINE_EDIT"/>
+    <column name="SPELLCHECKER"/>
+    <column name="TOOLBAR_SWITCH_BTN"/>
+    <column name="USE_JIRA_LINKS"/>
+    <column name="WIKI_MODE_BTN"/>
+    <row>
+      <boolean>false</boolean>
+      <boolean>false</boolean>
+      <boolean>true</boolean>
+      <integer>900</integer>
+      <boolean>false</boolean>
+      <integer>-1</integer>
+      <boolean>true</boolean>
+      <boolean>false</boolean>
+      <string xsi:nil="true"/>
+      <boolean>false</boolean>
+      <boolean>true</boolean>
+      <integer>200</integer>
+      <integer>600</integer>
+      <string>zh-cn</string>
+      <string>STATIC</string>
+      <boolean>true</boolean>
+      <boolean>false</boolean>
+      <integer>1</integer>
+      <boolean>false</boolean>
+      <integer>0</integer>
+      <string>ISSUE_UPDATED</string>
+      <boolean>false</boolean>
+      <boolean>true</boolean>
+      <boolean>false</boolean>
+      <string xsi:nil="true"/>
+      <boolean>false</boolean>
+      <boolean>false</boolean>
+      <boolean>true</boolean>
+      <boolean>false</boolean>
+      <boolean>true</boolean>
+      <boolean>false</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>false</boolean>
+      <boolean>false</boolean>
+      <boolean>false</boolean>
+    </row>
+  </data>
+  <data tableName="AO_BF4748_TEMPLATE_ORDER">
+    <column name="ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="TEMPLATE_ORDER"/>
   </data>
   <data tableName="AO_C5CA76_APP_LOG_MESSAGES">
     <column name="ID"/>
