@@ -841,6 +841,52 @@
     <column name="REGISTRATION_METHOD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
     <column name="URL" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
   </table>
+  <table name="AO_AA8730_DEVICE">
+    <column name="APP_VERSION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DEVICE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="EVENT_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="IS_NOTIFICATION_ENABLED" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="JIRA_USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LOGIN_DATE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LOGIN_DATE_TIMESTAMP" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="LOGOUT_DATE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LOGOUT_DATE_TIMESTAMP" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="OPERATING_SYSTEM" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="OPERATING_SYSTEM_VERSION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_AA8730_IAPNS_CERTIFICATE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="IS_PRODUCTION_CERTIFICATE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_AA8730_IGENERAL_CONFIG">
+    <column name="COUNTRY_CODE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="INTERVAL_OPTION" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="INTERVAL_OPTION_VALUE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="IS_DEFAULT" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="MAX_RECORDS_SIZE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="START_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_AA8730_INOTIFICATION_STATUS">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="IS_ENABLED" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_AA8730_IPRO_NOTIF_SCHEMA">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SCHEMA_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_AA8730_MOBILE_NOTIFICATION">
+    <column name="AVATAR_URI" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="JIRA_USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="MESSAGE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="NOTIFICATION_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="TITLE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
   <table name="AO_B9A0F0_APPLIED_TEMPLATE">
     <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
     <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
@@ -4623,6 +4669,52 @@
     <column name="PARAMETERS"/>
     <column name="REGISTRATION_METHOD"/>
     <column name="URL"/>
+  </data>
+  <data tableName="AO_AA8730_DEVICE">
+    <column name="APP_VERSION"/>
+    <column name="DEVICE_ID"/>
+    <column name="EVENT_TYPE"/>
+    <column name="ID"/>
+    <column name="IS_NOTIFICATION_ENABLED"/>
+    <column name="JIRA_USERNAME"/>
+    <column name="LOGIN_DATE"/>
+    <column name="LOGIN_DATE_TIMESTAMP"/>
+    <column name="LOGOUT_DATE"/>
+    <column name="LOGOUT_DATE_TIMESTAMP"/>
+    <column name="OPERATING_SYSTEM"/>
+    <column name="OPERATING_SYSTEM_VERSION"/>
+    <column name="STATUS"/>
+  </data>
+  <data tableName="AO_AA8730_IAPNS_CERTIFICATE">
+    <column name="ID"/>
+    <column name="IS_PRODUCTION_CERTIFICATE"/>
+  </data>
+  <data tableName="AO_AA8730_IGENERAL_CONFIG">
+    <column name="COUNTRY_CODE"/>
+    <column name="ID"/>
+    <column name="INTERVAL_OPTION"/>
+    <column name="INTERVAL_OPTION_VALUE"/>
+    <column name="IS_DEFAULT"/>
+    <column name="MAX_RECORDS_SIZE"/>
+    <column name="START_TIME"/>
+  </data>
+  <data tableName="AO_AA8730_INOTIFICATION_STATUS">
+    <column name="ID"/>
+    <column name="IS_ENABLED"/>
+  </data>
+  <data tableName="AO_AA8730_IPRO_NOTIF_SCHEMA">
+    <column name="ID"/>
+    <column name="PROJECT_KEY"/>
+    <column name="SCHEMA_ID"/>
+  </data>
+  <data tableName="AO_AA8730_MOBILE_NOTIFICATION">
+    <column name="AVATAR_URI"/>
+    <column name="ID"/>
+    <column name="ISSUE_KEY"/>
+    <column name="JIRA_USERNAME"/>
+    <column name="MESSAGE"/>
+    <column name="NOTIFICATION_DATE"/>
+    <column name="TITLE"/>
   </data>
   <data tableName="AO_B9A0F0_APPLIED_TEMPLATE">
     <column name="ID"/>
