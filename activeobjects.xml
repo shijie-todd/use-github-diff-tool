@@ -190,6 +190,210 @@
     <column name="ROOM_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
     <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
   </table>
+  <table name="AO_589059_AUDIT_ITEM">
+    <column name="AUTHOR_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CATEGORY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CLIENT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="DURATION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="END_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="END_TO_END_DURATION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="EVENT_SOURCE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="OBJECT_ITEM_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="OBJECT_ITEM_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="OBJECT_ITEM_PARENT_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="OBJECT_ITEM_PARENT_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="OBJECT_ITEM_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="START_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="SUMMARY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_589059_AUDIT_ITEM_ASC_ITEM">
+    <column name="ASSOC_ITEM_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="AUDIT_ITEM_COMPONENT_CHANGE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="AUDIT_ITEM_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PARENT_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PARENT_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TYPE_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_589059_AUDIT_ITEM_ASC_ITEM" fromColumn="AUDIT_ITEM_ID" toTable="AO_589059_AUDIT_ITEM" toColumn="ID"/>
+    <foreignKey fromTable="AO_589059_AUDIT_ITEM_ASC_ITEM" fromColumn="AUDIT_ITEM_COMPONENT_CHANGE_ID" toTable="AO_589059_AUDIT_ITEM_COMP_CGE" toColumn="ID"/>
+  </table>
+  <table name="AO_589059_AUDIT_ITEM_CGE_ITEM">
+    <column name="AUDIT_ITEM_COMPONENT_CHANGE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="AUDIT_ITEM_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CHANGE_FROM" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="CHANGE_TO" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="FIELD_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="MESSAGE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <foreignKey fromTable="AO_589059_AUDIT_ITEM_CGE_ITEM" fromColumn="AUDIT_ITEM_ID" toTable="AO_589059_AUDIT_ITEM" toColumn="ID"/>
+    <foreignKey fromTable="AO_589059_AUDIT_ITEM_CGE_ITEM" fromColumn="AUDIT_ITEM_COMPONENT_CHANGE_ID" toTable="AO_589059_AUDIT_ITEM_COMP_CGE" toColumn="ID"/>
+  </table>
+  <table name="AO_589059_AUDIT_ITEM_COMP_CGE">
+    <column name="AUDIT_ITEM_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="COMPONENT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="COMPONENT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="COMPONENT_NAME_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DURATION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="OPTIMISED_IDS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="START_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <foreignKey fromTable="AO_589059_AUDIT_ITEM_COMP_CGE" fromColumn="AUDIT_ITEM_ID" toTable="AO_589059_AUDIT_ITEM" toColumn="ID"/>
+  </table>
+  <table name="AO_589059_AUDIT_ITEM_PROJECT">
+    <column name="AUDIT_ITEM_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_589059_AUDIT_ITEM_PROJECT" fromColumn="AUDIT_ITEM_ID" toTable="AO_589059_AUDIT_ITEM" toColumn="ID"/>
+  </table>
+  <table name="AO_589059_AUTOMATION_QUEUE">
+    <column name="AUDIT_ITEM_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CLAIMANT" primaryKey="false" autoIncrement="false" sqlType="12" precision="127"/>
+    <column name="CLAIM_COUNT" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="CLAIM_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CLIENT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="EXECUTION_UUID" primaryKey="false" autoIncrement="false" sqlType="12" precision="127"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="PAYLOAD" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="PRIORITY" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="RULE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ZIPPED_PAYLOAD" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <foreignKey fromTable="AO_589059_AUTOMATION_QUEUE" fromColumn="AUDIT_ITEM_ID" toTable="AO_589059_AUDIT_ITEM" toColumn="ID"/>
+  </table>
+  <table name="AO_589059_COUNTERS">
+    <column name="CLIENT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="COUNT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_589059_LEGACY_RULE_LINK">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="LEGACY_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="NEW_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_589059_RULE_CFG_COMPONENT">
+    <column name="COMPONENT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CONDITION_PARENT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="PARENT_CFG_COMPONENT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="RULE_CONFIG_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SCHEMA_VERSION" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <foreignKey fromTable="AO_589059_RULE_CFG_COMPONENT" fromColumn="CONDITION_PARENT_ID" toTable="AO_589059_RULE_CFG_COMPONENT" toColumn="ID"/>
+    <foreignKey fromTable="AO_589059_RULE_CFG_COMPONENT" fromColumn="PARENT_CFG_COMPONENT_ID" toTable="AO_589059_RULE_CFG_COMPONENT" toColumn="ID"/>
+    <foreignKey fromTable="AO_589059_RULE_CFG_COMPONENT" fromColumn="RULE_CONFIG_ID" toTable="AO_589059_RULE_CONFIG" toColumn="ID"/>
+  </table>
+  <table name="AO_589059_RULE_CFG_PROJ_ASSOC">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_TYPE_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RULE_CONFIG_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <foreignKey fromTable="AO_589059_RULE_CFG_PROJ_ASSOC" fromColumn="RULE_CONFIG_ID" toTable="AO_589059_RULE_CONFIG" toColumn="ID"/>
+  </table>
+  <table name="AO_589059_RULE_CONFIG">
+    <column name="ACTOR_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="AUTHOR_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CAN_OTHER_RULE_TRIGGER" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="CLIENT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NOTIFY_ON_ERROR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_TYPE_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STATE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+  </table>
+  <table name="AO_589059_RULE_LABEL">
+    <column name="COLOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_589059_RULE_SCHEDULE">
+    <column name="CLIENT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ERROR_COUNT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="NEXT_EXECUTION" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="PAYLOAD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RULE_CONFIG_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_589059_RULE_SCHEDULE" fromColumn="RULE_CONFIG_ID" toTable="AO_589059_RULE_CONFIG" toColumn="ID"/>
+  </table>
+  <table name="AO_589059_RULE_STAT">
+    <column name="AUDIT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CATEGORY" primaryKey="false" autoIncrement="false" sqlType="12" precision="40"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="DURATION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="EVENT_HASH" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="QUEUED_ITEM_COUNT" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="RULE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_589059_RULE_STATE_LATEST">
+    <column name="CURRENT_AUDIT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CURRENT_CATEGORY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CURRENT_CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="EXEC_COUNT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="PREVIOUS_AUDIT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PREVIOUS_CATEGORY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PREVIOUS_CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="RULE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_589059_RULE_STAT_ROLLUP_DAY">
+    <column name="CATEGORY" primaryKey="false" autoIncrement="false" sqlType="12" precision="40"/>
+    <column name="CLIENT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="DURATION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="END_TO_END_DURATION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="EXECUTION_COUNT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="QUEUED_ITEM_COUNT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="RULE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_589059_RULE_STAT_ROLLUP_HR">
+    <column name="CATEGORY" primaryKey="false" autoIncrement="false" sqlType="12" precision="40"/>
+    <column name="CLIENT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="DURATION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="END_TO_END_DURATION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="EXECUTION_COUNT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="QUEUED_ITEM_COUNT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="RULE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_589059_RULE_STAT_ROLLUP_MIN">
+    <column name="CATEGORY" primaryKey="false" autoIncrement="false" sqlType="12" precision="40"/>
+    <column name="CLIENT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="DURATION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="END_TO_END_DURATION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="EXECUTION_COUNT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="QUEUED_ITEM_COUNT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="RULE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_589059_RULE_TAG">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="RULE_CONFIG_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TAG_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TAG_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_589059_RULE_TAG" fromColumn="RULE_CONFIG_ID" toTable="AO_589059_RULE_CONFIG" toColumn="ID"/>
+  </table>
+  <table name="AO_589059_RULE_TO_LABEL">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="LABEL_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="RULE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <foreignKey fromTable="AO_589059_RULE_TO_LABEL" fromColumn="RULE_ID" toTable="AO_589059_RULE_CONFIG" toColumn="ID"/>
+    <foreignKey fromTable="AO_589059_RULE_TO_LABEL" fromColumn="LABEL_ID" toTable="AO_589059_RULE_LABEL" toColumn="ID"/>
+  </table>
   <table name="AO_5FB9D7_AOHIP_CHAT_LINK">
     <column name="ADDON_TOKEN_EXPIRY" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
     <column name="API_URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
@@ -917,6 +1121,195 @@
     <column name="PROJECT_ID"/>
     <column name="ROOM_ID"/>
     <column name="VALUE"/>
+  </data>
+  <data tableName="AO_589059_AUDIT_ITEM">
+    <column name="AUTHOR_KEY"/>
+    <column name="CATEGORY"/>
+    <column name="CLIENT_KEY"/>
+    <column name="CREATED"/>
+    <column name="DESCRIPTION"/>
+    <column name="DURATION"/>
+    <column name="END_TIME"/>
+    <column name="END_TO_END_DURATION"/>
+    <column name="EVENT_SOURCE"/>
+    <column name="ID"/>
+    <column name="OBJECT_ITEM_ID"/>
+    <column name="OBJECT_ITEM_NAME"/>
+    <column name="OBJECT_ITEM_PARENT_ID"/>
+    <column name="OBJECT_ITEM_PARENT_NAME"/>
+    <column name="OBJECT_ITEM_TYPE"/>
+    <column name="START_TIME"/>
+    <column name="SUMMARY"/>
+  </data>
+  <data tableName="AO_589059_AUDIT_ITEM_ASC_ITEM">
+    <column name="ASSOC_ITEM_ID"/>
+    <column name="AUDIT_ITEM_COMPONENT_CHANGE_ID"/>
+    <column name="AUDIT_ITEM_ID"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="PARENT_ID"/>
+    <column name="PARENT_NAME"/>
+    <column name="TYPE_NAME"/>
+  </data>
+  <data tableName="AO_589059_AUDIT_ITEM_CGE_ITEM">
+    <column name="AUDIT_ITEM_COMPONENT_CHANGE_ID"/>
+    <column name="AUDIT_ITEM_ID"/>
+    <column name="CHANGE_FROM"/>
+    <column name="CHANGE_TO"/>
+    <column name="FIELD_NAME"/>
+    <column name="ID"/>
+    <column name="MESSAGE"/>
+  </data>
+  <data tableName="AO_589059_AUDIT_ITEM_COMP_CGE">
+    <column name="AUDIT_ITEM_ID"/>
+    <column name="COMPONENT"/>
+    <column name="COMPONENT_ID"/>
+    <column name="COMPONENT_NAME_KEY"/>
+    <column name="DURATION"/>
+    <column name="ID"/>
+    <column name="OPTIMISED_IDS"/>
+    <column name="START_TIME"/>
+  </data>
+  <data tableName="AO_589059_AUDIT_ITEM_PROJECT">
+    <column name="AUDIT_ITEM_ID"/>
+    <column name="ID"/>
+    <column name="PROJECT_ID"/>
+  </data>
+  <data tableName="AO_589059_AUTOMATION_QUEUE">
+    <column name="AUDIT_ITEM_ID"/>
+    <column name="CLAIMANT"/>
+    <column name="CLAIM_COUNT"/>
+    <column name="CLAIM_TIME"/>
+    <column name="CLIENT_KEY"/>
+    <column name="CREATED"/>
+    <column name="EXECUTION_UUID"/>
+    <column name="ID"/>
+    <column name="PAYLOAD"/>
+    <column name="PRIORITY"/>
+    <column name="RULE_ID"/>
+    <column name="ZIPPED_PAYLOAD"/>
+  </data>
+  <data tableName="AO_589059_COUNTERS">
+    <column name="CLIENT_KEY"/>
+    <column name="COUNT"/>
+    <column name="ID"/>
+    <column name="KEY"/>
+  </data>
+  <data tableName="AO_589059_LEGACY_RULE_LINK">
+    <column name="ID"/>
+    <column name="LEGACY_ID"/>
+    <column name="NEW_ID"/>
+  </data>
+  <data tableName="AO_589059_RULE_CFG_COMPONENT">
+    <column name="COMPONENT"/>
+    <column name="CONDITION_PARENT_ID"/>
+    <column name="ID"/>
+    <column name="PARENT_CFG_COMPONENT_ID"/>
+    <column name="RULE_CONFIG_ID"/>
+    <column name="SCHEMA_VERSION"/>
+    <column name="SEQUENCE"/>
+    <column name="TYPE"/>
+    <column name="VALUE"/>
+  </data>
+  <data tableName="AO_589059_RULE_CFG_PROJ_ASSOC">
+    <column name="ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="PROJECT_TYPE_KEY"/>
+    <column name="RULE_CONFIG_ID"/>
+  </data>
+  <data tableName="AO_589059_RULE_CONFIG">
+    <column name="ACTOR_KEY"/>
+    <column name="AUTHOR_KEY"/>
+    <column name="CAN_OTHER_RULE_TRIGGER"/>
+    <column name="CLIENT_KEY"/>
+    <column name="CREATED"/>
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="NOTIFY_ON_ERROR"/>
+    <column name="PROJECT_ID"/>
+    <column name="PROJECT_TYPE_KEY"/>
+    <column name="STATE"/>
+    <column name="UPDATED"/>
+  </data>
+  <data tableName="AO_589059_RULE_LABEL">
+    <column name="COLOR"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+  </data>
+  <data tableName="AO_589059_RULE_SCHEDULE">
+    <column name="CLIENT_KEY"/>
+    <column name="ERROR_COUNT"/>
+    <column name="ID"/>
+    <column name="NEXT_EXECUTION"/>
+    <column name="PAYLOAD"/>
+    <column name="RULE_CONFIG_ID"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_589059_RULE_STAT">
+    <column name="AUDIT_ID"/>
+    <column name="CATEGORY"/>
+    <column name="CREATED"/>
+    <column name="DURATION"/>
+    <column name="EVENT_HASH"/>
+    <column name="ID"/>
+    <column name="QUEUED_ITEM_COUNT"/>
+    <column name="RULE_ID"/>
+  </data>
+  <data tableName="AO_589059_RULE_STATE_LATEST">
+    <column name="CURRENT_AUDIT_ID"/>
+    <column name="CURRENT_CATEGORY"/>
+    <column name="CURRENT_CREATED"/>
+    <column name="EXEC_COUNT"/>
+    <column name="ID"/>
+    <column name="PREVIOUS_AUDIT_ID"/>
+    <column name="PREVIOUS_CATEGORY"/>
+    <column name="PREVIOUS_CREATED"/>
+    <column name="RULE_ID"/>
+  </data>
+  <data tableName="AO_589059_RULE_STAT_ROLLUP_DAY">
+    <column name="CATEGORY"/>
+    <column name="CLIENT_KEY"/>
+    <column name="CREATED"/>
+    <column name="DURATION"/>
+    <column name="END_TO_END_DURATION"/>
+    <column name="EXECUTION_COUNT"/>
+    <column name="ID"/>
+    <column name="QUEUED_ITEM_COUNT"/>
+    <column name="RULE_ID"/>
+  </data>
+  <data tableName="AO_589059_RULE_STAT_ROLLUP_HR">
+    <column name="CATEGORY"/>
+    <column name="CLIENT_KEY"/>
+    <column name="CREATED"/>
+    <column name="DURATION"/>
+    <column name="END_TO_END_DURATION"/>
+    <column name="EXECUTION_COUNT"/>
+    <column name="ID"/>
+    <column name="QUEUED_ITEM_COUNT"/>
+    <column name="RULE_ID"/>
+  </data>
+  <data tableName="AO_589059_RULE_STAT_ROLLUP_MIN">
+    <column name="CATEGORY"/>
+    <column name="CLIENT_KEY"/>
+    <column name="CREATED"/>
+    <column name="DURATION"/>
+    <column name="END_TO_END_DURATION"/>
+    <column name="EXECUTION_COUNT"/>
+    <column name="ID"/>
+    <column name="QUEUED_ITEM_COUNT"/>
+    <column name="RULE_ID"/>
+  </data>
+  <data tableName="AO_589059_RULE_TAG">
+    <column name="ID"/>
+    <column name="RULE_CONFIG_ID"/>
+    <column name="TAG_TYPE"/>
+    <column name="TAG_VALUE"/>
+  </data>
+  <data tableName="AO_589059_RULE_TO_LABEL">
+    <column name="ID"/>
+    <column name="LABEL_ID"/>
+    <column name="RULE_ID"/>
   </data>
   <data tableName="AO_5FB9D7_AOHIP_CHAT_LINK">
     <column name="ADDON_TOKEN_EXPIRY"/>
