@@ -68,6 +68,212 @@
     <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
     <column name="SENDER_EMAIL" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
   </table>
+  <table name="AO_3C6513_XPORTER_AUDIT">
+    <column name="AUTHOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="AUTHOR_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="AUTHOR_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CATEGORY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATION_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROPERTIES" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SUMMARY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_3C6513_XPORTER_DOCUMENT">
+    <column name="CREATION_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="DOCUMENT_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FILE_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FILE_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TEMPLATE_EXT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="USER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_3C6513_XPORTER_PRJ_SCHD">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SCHEDULED_REPORT_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_3C6513_XPORTER_PRJ_SETTING">
+    <column name="ENABLED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_3C6513_XPORTER_PRJ_TEMPLATE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEMPLATE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_3C6513_XPORTER_PROCESS">
+    <column name="CREATED_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATION_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="DETAILS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="FILE_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LAST_UPDATED_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LAST_UPDATE_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="OUTPUT_FORMAT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="OUTPUT_NAME" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="PROCESS_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROCESS_PROGRESS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="PROCESS_STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SOURCE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="STATUS_MESSAGE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEMPLATE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="USER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_3C6513_XPORTER_PROJECT">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SCHEME_CONTEXT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SCHEME_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_3C6513_XPORTER_SCHEDULED">
+    <column name="ACTIONS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="AUTOMATED_FLAG" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="CONDITION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CONDITION_FLAG" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="CREATED_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATED_BY_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CREATED_BY_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATION_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CREATION_DATE_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CRON_EXPRESSION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CRON_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="EMAIL_BCC" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="EMAIL_BODY" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="EMAIL_CC" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="EMAIL_SUBJECT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="EMAIL_TO" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ENABLED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="EXPORT_DATA" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="FILE_NAME" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="FILE_SERVER_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FILTER_FLAG" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="FILTER_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="JQL" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="JQL_FLAG" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="LAST_UPDATED_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LAST_UPDATED_BY_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="LAST_UPDATED_BY_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LAST_UPDATE_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="LAST_UPDATE_DATE_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="OUTPUT_FORMAT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RUN_AS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RUN_AS_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="RUN_AS_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SAVE_LOCALLY_FLAG" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="SAVE_LOCALLY_PATH" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="SEND_EMAIL_FLAG" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="TEMPLATE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="UPLOAD_FLAG" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+  </table>
+  <table name="AO_3C6513_XPORTER_SCHEME">
+    <column name="CONFIG" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="CREATION_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CREATOR_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LAST_UPDATED_BY_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LAST_UPDATE_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_3C6513_XPORTER_SECBKP">
+    <column name="ALGORITHM_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CHARSET_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CIPHERTRANS_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="KEYSIZE_VALUE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="PASSWORD_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PRIVATE_KEY_VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="PUBLIC_KEY_VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="USERNAME_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_3C6513_XPORTER_SECURITY">
+    <column name="ALGORITHM_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CHARSET_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CIPHERTRANS_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="KEYSIZE_VALUE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="PASSWORD_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PRIVATE_KEY_VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="PUBLIC_KEY_VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="USERNAME_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_3C6513_XPORTER_SERVER">
+    <column name="CONN_STR" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="CREATED_BY_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATE_BY" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CREATION_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CREATION_DATE_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LAST_UPDATED_BY_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LAST_UPDATE_BY" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="LAST_UPDATE_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="LAST_UPDATE_DATE_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_3C6513_XPORTER_SETTING">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="SETTING_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SETTING_VALUE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+  </table>
+  <table name="AO_3C6513_XPORTER_TEMPLATE">
+    <column name="ATTACH_ENABLE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="BREAK_PAGE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATION_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="CREATOR_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="CREATOR_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="CREATOR_USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DEFAULT_OUTPUT_FORMAT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DEFAULT_TEMPLATE_PROJECT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="FILENAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FILE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="GENERAL_TAG" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LAST_UPDATED_BY_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LAST_UPDATE_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="OUTPUT_FORMATS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="SCOPES" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USED_MAPPINGS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="WIKI_FLAG" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+  </table>
+  <table name="AO_3C6513_XP_ST_TEMP">
+    <column name="FILE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TYPE_TEMPLATE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_3C6513_XP_TEMPLATE_SCOPE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="SCOPE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="XPORTER_TEMPLATE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_3C6513_XP_TEMPLATE_SCOPE" fromColumn="XPORTER_TEMPLATE_ID" toTable="AO_3C6513_XPORTER_TEMPLATE" toColumn="ID"/>
+  </table>
+  <table name="AO_3C6513_XP_TEMPLATE_SHARE">
+    <column name="GROUP" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="GROUP_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="IS_GROUP" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="TEMPLATE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="USER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
   <table name="AO_4AEACD_WEBHOOK_DAO">
     <column name="ENABLED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
     <column name="ENCODED_EVENTS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
@@ -1523,6 +1729,512 @@
     <column name="EXPIRES_AT"/>
     <column name="ID"/>
     <column name="SENDER_EMAIL"/>
+  </data>
+  <data tableName="AO_3C6513_XPORTER_AUDIT">
+    <column name="AUTHOR"/>
+    <column name="AUTHOR_ID"/>
+    <column name="AUTHOR_KEY"/>
+    <column name="CATEGORY"/>
+    <column name="CREATION_DATE"/>
+    <column name="ID"/>
+    <column name="PROPERTIES"/>
+    <column name="STATUS"/>
+    <column name="SUMMARY"/>
+  </data>
+  <data tableName="AO_3C6513_XPORTER_DOCUMENT">
+    <column name="CREATION_DATE"/>
+    <column name="DOCUMENT_ID"/>
+    <column name="FILE_NAME"/>
+    <column name="FILE_TYPE"/>
+    <column name="ID"/>
+    <column name="TEMPLATE_EXT"/>
+    <column name="USERNAME"/>
+    <column name="USER_ID"/>
+    <column name="USER_KEY"/>
+  </data>
+  <data tableName="AO_3C6513_XPORTER_PRJ_SCHD">
+    <column name="ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="SCHEDULED_REPORT_ID"/>
+  </data>
+  <data tableName="AO_3C6513_XPORTER_PRJ_SETTING">
+    <column name="ENABLED"/>
+    <column name="ID"/>
+    <column name="PROJECT_ID"/>
+    <row>
+      <boolean>true</boolean>
+      <integer>1</integer>
+      <integer>10102</integer>
+    </row>
+    <row>
+      <boolean>true</boolean>
+      <integer>2</integer>
+      <integer>10200</integer>
+    </row>
+    <row>
+      <boolean>true</boolean>
+      <integer>3</integer>
+      <integer>10001</integer>
+    </row>
+    <row>
+      <boolean>true</boolean>
+      <integer>4</integer>
+      <integer>10100</integer>
+    </row>
+    <row>
+      <boolean>true</boolean>
+      <integer>5</integer>
+      <integer>10101</integer>
+    </row>
+    <row>
+      <boolean>true</boolean>
+      <integer>6</integer>
+      <integer>10000</integer>
+    </row>
+  </data>
+  <data tableName="AO_3C6513_XPORTER_PRJ_TEMPLATE">
+    <column name="ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="TEMPLATE_ID"/>
+  </data>
+  <data tableName="AO_3C6513_XPORTER_PROCESS">
+    <column name="CREATED_BY"/>
+    <column name="CREATION_DATE"/>
+    <column name="DETAILS"/>
+    <column name="FILE_TYPE"/>
+    <column name="ID"/>
+    <column name="LAST_UPDATED_BY"/>
+    <column name="LAST_UPDATE_DATE"/>
+    <column name="OUTPUT_FORMAT"/>
+    <column name="OUTPUT_NAME"/>
+    <column name="PROCESS_ID"/>
+    <column name="PROCESS_PROGRESS"/>
+    <column name="PROCESS_STATUS"/>
+    <column name="SOURCE_ID"/>
+    <column name="STATUS_MESSAGE"/>
+    <column name="TEMPLATE"/>
+    <column name="TYPE"/>
+    <column name="USERNAME"/>
+    <column name="USER_ID"/>
+    <column name="USER_KEY"/>
+  </data>
+  <data tableName="AO_3C6513_XPORTER_PROJECT">
+    <column name="ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="SCHEME_CONTEXT"/>
+    <column name="SCHEME_ID"/>
+  </data>
+  <data tableName="AO_3C6513_XPORTER_SCHEDULED">
+    <column name="ACTIONS"/>
+    <column name="AUTOMATED_FLAG"/>
+    <column name="CONDITION"/>
+    <column name="CONDITION_FLAG"/>
+    <column name="CREATED_BY"/>
+    <column name="CREATED_BY_ID"/>
+    <column name="CREATED_BY_KEY"/>
+    <column name="CREATION_DATE"/>
+    <column name="CREATION_DATE_BY"/>
+    <column name="CRON_EXPRESSION"/>
+    <column name="CRON_TYPE"/>
+    <column name="DESCRIPTION"/>
+    <column name="EMAIL_BCC"/>
+    <column name="EMAIL_BODY"/>
+    <column name="EMAIL_CC"/>
+    <column name="EMAIL_SUBJECT"/>
+    <column name="EMAIL_TO"/>
+    <column name="ENABLED"/>
+    <column name="EXPORT_DATA"/>
+    <column name="FILE_NAME"/>
+    <column name="FILE_SERVER_ID"/>
+    <column name="FILTER_FLAG"/>
+    <column name="FILTER_ID"/>
+    <column name="ID"/>
+    <column name="JQL"/>
+    <column name="JQL_FLAG"/>
+    <column name="LAST_UPDATED_BY"/>
+    <column name="LAST_UPDATED_BY_ID"/>
+    <column name="LAST_UPDATED_BY_KEY"/>
+    <column name="LAST_UPDATE_DATE"/>
+    <column name="LAST_UPDATE_DATE_BY"/>
+    <column name="NAME"/>
+    <column name="OUTPUT_FORMAT"/>
+    <column name="RUN_AS"/>
+    <column name="RUN_AS_ID"/>
+    <column name="RUN_AS_KEY"/>
+    <column name="SAVE_LOCALLY_FLAG"/>
+    <column name="SAVE_LOCALLY_PATH"/>
+    <column name="SEND_EMAIL_FLAG"/>
+    <column name="TEMPLATE_ID"/>
+    <column name="UPLOAD_FLAG"/>
+  </data>
+  <data tableName="AO_3C6513_XPORTER_SCHEME">
+    <column name="CONFIG"/>
+    <column name="CREATION_DATE"/>
+    <column name="CREATOR_KEY"/>
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="LAST_UPDATED_BY_KEY"/>
+    <column name="LAST_UPDATE_DATE"/>
+    <column name="NAME"/>
+    <column name="USERNAME"/>
+    <column name="USER_ID"/>
+  </data>
+  <data tableName="AO_3C6513_XPORTER_SECBKP">
+    <column name="ALGORITHM_KEY"/>
+    <column name="CHARSET_VALUE"/>
+    <column name="CIPHERTRANS_VALUE"/>
+    <column name="ID"/>
+    <column name="KEYSIZE_VALUE"/>
+    <column name="PASSWORD_VALUE"/>
+    <column name="PRIVATE_KEY_VALUE"/>
+    <column name="PUBLIC_KEY_VALUE"/>
+    <column name="USERNAME_VALUE"/>
+  </data>
+  <data tableName="AO_3C6513_XPORTER_SECURITY">
+    <column name="ALGORITHM_KEY"/>
+    <column name="CHARSET_VALUE"/>
+    <column name="CIPHERTRANS_VALUE"/>
+    <column name="ID"/>
+    <column name="KEYSIZE_VALUE"/>
+    <column name="PASSWORD_VALUE"/>
+    <column name="USERNAME_VALUE"/>
+    <column name="PUBLIC_KEY_VALUE"/>
+    <column name="PRIVATE_KEY_VALUE"/>
+  </data>
+  <data tableName="AO_3C6513_XPORTER_SERVER">
+    <column name="CONN_STR"/>
+    <column name="CREATED_BY_KEY"/>
+    <column name="CREATE_BY"/>
+    <column name="CREATION_DATE"/>
+    <column name="CREATION_DATE_BY"/>
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="LAST_UPDATED_BY_KEY"/>
+    <column name="LAST_UPDATE_BY"/>
+    <column name="LAST_UPDATE_DATE"/>
+    <column name="LAST_UPDATE_DATE_BY"/>
+    <column name="NAME"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_3C6513_XPORTER_SETTING">
+    <column name="ID"/>
+    <column name="SETTING_KEY"/>
+    <column name="SETTING_VALUE"/>
+    <row>
+      <integer>1</integer>
+      <string>XPORTER_PROVIDER</string>
+      <string>XPORTER_PROVIDER</string>
+    </row>
+    <row>
+      <integer>3</integer>
+      <string>OUTPUT_FORMAT_TYPES_SELECTED</string>
+      <string>["DOCX","ODT","PDF","PNG","RTF","SVG","XLSX","CSV","PDF_A","TXT","HTML","XML","JSON"]</string>
+    </row>
+    <row>
+      <integer>4</integer>
+      <string>BULK_EXPORT_BREAK_PAGES</string>
+      <string>NEVER</string>
+    </row>
+    <row>
+      <integer>5</integer>
+      <string>BULK_EXPORT_ISSUES_LIMIT</string>
+      <string>1000</string>
+    </row>
+    <row>
+      <integer>6</integer>
+      <string>ALLOW_ANONYMOUS_REQUESTS</string>
+      <string>false</string>
+    </row>
+    <row>
+      <integer>7</integer>
+      <string>BULK_EXPORT_SIMULTANEOUS_REQUESTS</string>
+      <string>10</string>
+    </row>
+    <row>
+      <integer>8</integer>
+      <string>DEFAULT_TEMPLATE</string>
+      <string>0</string>
+    </row>
+    <row>
+      <integer>9</integer>
+      <string>ENABLE_ALL_PROJECTS_AND_USERS</string>
+      <string>true</string>
+    </row>
+    <row>
+      <integer>10</integer>
+      <string>DATA_MODEL_VERSION</string>
+      <string>6</string>
+    </row>
+    <row>
+      <integer>11</integer>
+      <string>XP_ISSUE_NAVIGATOR_EXPORT</string>
+      <string>true</string>
+    </row>
+    <row>
+      <integer>12</integer>
+      <string>XP_ISSUE_NAVIGATOR_XLSX_EXPORT</string>
+      <string>true</string>
+    </row>
+    <row>
+      <integer>13</integer>
+      <string>XP_ISSUE_DETAIL_EXPORT</string>
+      <string>true</string>
+    </row>
+    <row>
+      <integer>14</integer>
+      <string>XPORTER_REPORTS_GROUPS</string>
+      <string>[]</string>
+    </row>
+    <row>
+      <integer>15</integer>
+      <string>XPORTER_ANALYTICS</string>
+      <string>true</string>
+    </row>
+    <row>
+      <integer>16</integer>
+      <string>ENABLE_AUDIT_LOG</string>
+      <string>true</string>
+    </row>
+    <row>
+      <integer>17</integer>
+      <string>AUDIT_LOG_RETENTION_PERIOD</string>
+      <string>ONE_MONTH</string>
+    </row>
+    <row>
+      <integer>18</integer>
+      <string>ENABLE_PROFILE_TEMPLATES</string>
+      <string>true</string>
+    </row>
+    <row>
+      <integer>19</integer>
+      <string>ENABLE_XPORTER_FOR_AGILE</string>
+      <string>true</string>
+    </row>
+    <row>
+      <integer>20</integer>
+      <string>ENABLE_XPORTER_FOR_SERVICE_DESK_REQUESTS</string>
+      <string>false</string>
+    </row>
+    <row>
+      <integer>21</integer>
+      <string>ENABLE_XPORTER_FOR_SERVICE_DESK_QUEUE</string>
+      <string>false</string>
+    </row>
+    <row>
+      <integer>22</integer>
+      <string>DEFAULT_PERMISSION_SCHEME</string>
+      <string></string>
+    </row>
+    <row>
+      <integer>23</integer>
+      <string>DEFAULT_CUSTOM_FILENAME</string>
+      <string>false</string>
+    </row>
+    <row>
+      <integer>24</integer>
+      <string>MS_ADDINS_API</string>
+      <string>false</string>
+    </row>
+    <row>
+      <integer>25</integer>
+      <string>DEFAULT_PROJECT_SETTING</string>
+      <string>true</string>
+    </row>
+    <row>
+      <integer>26</integer>
+      <string>ENABLE_MY_EXPORTS</string>
+      <string>true</string>
+    </row>
+  </data>
+  <data tableName="AO_3C6513_XPORTER_TEMPLATE">
+    <column name="ATTACH_ENABLE"/>
+    <column name="BREAK_PAGE"/>
+    <column name="CREATION_DATE"/>
+    <column name="CREATOR_ID"/>
+    <column name="CREATOR_KEY"/>
+    <column name="CREATOR_USERNAME"/>
+    <column name="DEFAULT_OUTPUT_FORMAT"/>
+    <column name="DEFAULT_TEMPLATE_PROJECT"/>
+    <column name="DESCRIPTION"/>
+    <column name="FILENAME"/>
+    <column name="FILE_ID"/>
+    <column name="GENERAL_TAG"/>
+    <column name="ID"/>
+    <column name="LAST_UPDATED_BY_KEY"/>
+    <column name="LAST_UPDATE_DATE"/>
+    <column name="NAME"/>
+    <column name="OUTPUT_FORMATS"/>
+    <column name="SCOPES"/>
+    <column name="USED_MAPPINGS"/>
+    <column name="USERNAME"/>
+    <column name="USER_ID"/>
+    <column name="WIKI_FLAG"/>
+    <row>
+      <string>false</string>
+      <string>Never</string>
+      <timestamp>2021-07-13T08:41:46.284Z</timestamp>
+      <integer>0</integer>
+      <string>admin</string>
+      <string>-</string>
+      <string>XLSX</string>
+      <string>false</string>
+      <string>Exports issue information to a excel sheet, including subtasks, linked issues and worklogs. This template only works with Xporter 4 and above.</string>
+      <string>IssueDetailsExcel.xlsx</string>
+      <string>Template-preinstalled-1</string>
+      <string>true</string>
+      <integer>1</integer>
+      <string>admin</string>
+      <timestamp>2021-07-13T08:41:49.007Z</timestamp>
+      <string>Issue Details Excel</string>
+      <string>["PDF","PDF_A","XLSX","CSV"]</string>
+      <string>{"1":false,"2":false,"3":false,"4":false,"5":false,"6":false,"7":false,"8":false}</string>
+      <string>["Key","Summary","ReporterId","IssueTypeName","AssigneeId","Priority","BaseURL","Description","Status","Resolution","Created","AffectedVersionsList","Updated","FixVersionsList","Components","OriginalEstimate","Labels","TimeSpent","SubtasksCount","Subtasks[n].Key","Subtasks[n].Summary","Subtasks[n].Status","Subtasks[n].AssigneeUserDisplayName","LinksCount","Links[n].LinkType","Links[n].IssueTypeName","Links[n].Key","Links[n].Summary","Links[n].Priority","Links[n].Status","CommentsCount","Comments[n].AuthorFullName","Comments[n].Created","Comments[n].Body","WorklogsCount","Worklogs[n].AuthorFullName","Worklogs[n].Date Started","Worklogs[n].TimeSpentFormatted","Worklogs[n].Comment","userTimeZone","userLocale"]</string>
+      <string>-</string>
+      <integer>0</integer>
+      <boolean>false</boolean>
+    </row>
+    <row>
+      <string>false</string>
+      <string>Never</string>
+      <timestamp>2021-07-13T08:41:46.359Z</timestamp>
+      <integer>0</integer>
+      <string>admin</string>
+      <string>-</string>
+      <string>XLSX</string>
+      <string>false</string>
+      <string>Template used to export a search filter result to a excel spreasheet with some formulas. Requires Xporter 4 and above.</string>
+      <string>IssueListExcel.xlsx</string>
+      <string>Template-preinstalled-2</string>
+      <string>true</string>
+      <integer>2</integer>
+      <string>admin</string>
+      <timestamp>2021-07-13T08:41:49.015Z</timestamp>
+      <string>Issue List Excel</string>
+      <string>["PDF","PDF_A","XLSX","CSV"]</string>
+      <string>{"1":false,"2":false,"3":false,"4":false,"5":false,"6":false,"7":false,"8":false}</string>
+      <string>["IssuesCount","Key","IssueTypeName","Priority","Summary","ReporterId","AssigneeId","Story Points","OriginalEstimate","SubtasksCount"]</string>
+      <string>-</string>
+      <integer>0</integer>
+      <boolean>false</boolean>
+    </row>
+    <row>
+      <string>false</string>
+      <string>Never</string>
+      <timestamp>2021-07-13T08:41:48.231Z</timestamp>
+      <integer>0</integer>
+      <string>admin</string>
+      <string>-</string>
+      <string>DOCX</string>
+      <string>false</string>
+      <string>A template that exports some issue fields and a QR code with a link to the URL of the issue. The QR Code is being generated with the QR Code Generator, it is possible to customize the QR Code size, quality and colors. This template has been designed to export single issues and multiple issues. </string>
+      <string>IssueQRCode.docx</string>
+      <string>Template-preinstalled-3</string>
+      <string>true</string>
+      <integer>3</integer>
+      <string>admin</string>
+      <timestamp>2021-07-13T08:41:49.031Z</timestamp>
+      <string>Issue QR Code</string>
+      <string>["DOCX","ODT","PDF","PDF_A","PNG","RTF","SVG"]</string>
+      <string>{"1":false,"2":false,"3":false,"4":false,"5":false,"6":false,"7":false,"8":false}</string>
+      <string>["Key","BaseURL","Summary","Description","ReporterUserDisplayName","AssigneeUserDisplayName","Status","Created","Updated","Components","FixVersionsList","AffectedVersionsList","Labels","userTimeZone","userLocale"]</string>
+      <string>-</string>
+      <integer>0</integer>
+      <boolean>true</boolean>
+    </row>
+    <row>
+      <string>false</string>
+      <string>Never</string>
+      <timestamp>2021-07-13T08:41:48.263Z</timestamp>
+      <integer>0</integer>
+      <string>admin</string>
+      <string>-</string>
+      <string>DOCX</string>
+      <string>false</string>
+      <string>A template that demonstrates how bulk issues can be exported with static content, i.e., with a custom cover and static content on the middle of the issues. This template generates a Table of Contents. </string>
+      <string>SampleBulkExportWithTOC.docx</string>
+      <string>Template-preinstalled-4</string>
+      <string>true</string>
+      <integer>4</integer>
+      <string>admin</string>
+      <timestamp>2021-07-13T08:41:49.045Z</timestamp>
+      <string>Sample Bulk Export With TOC</string>
+      <string>["DOCX","ODT","PDF","PDF_A","PNG","RTF","SVG"]</string>
+      <string>{"1":false,"2":false,"3":false,"4":false,"5":false,"6":false,"7":false,"8":false}</string>
+      <string>["Key","Username","BaseURL","Summary","Description","AssigneeUserDisplayName","ReporterUserDisplayName","Created","userTimeZone","userLocale"]</string>
+      <string>-</string>
+      <integer>0</integer>
+      <boolean>false</boolean>
+    </row>
+  </data>
+  <data tableName="AO_3C6513_XP_ST_TEMP">
+    <column name="FILE_ID"/>
+    <column name="ID"/>
+    <column name="TYPE_TEMPLATE"/>
+  </data>
+  <data tableName="AO_3C6513_XP_TEMPLATE_SCOPE">
+    <column name="ID"/>
+    <column name="SCOPE_ID"/>
+    <column name="XPORTER_TEMPLATE_ID"/>
+    <row>
+      <integer>1</integer>
+      <string>4</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>2</integer>
+      <string>2</string>
+      <integer>2</integer>
+    </row>
+    <row>
+      <integer>3</integer>
+      <string>3</string>
+      <integer>2</integer>
+    </row>
+    <row>
+      <integer>4</integer>
+      <string>4</string>
+      <integer>2</integer>
+    </row>
+    <row>
+      <integer>5</integer>
+      <string>5</string>
+      <integer>2</integer>
+    </row>
+    <row>
+      <integer>6</integer>
+      <string>4</string>
+      <integer>3</integer>
+    </row>
+    <row>
+      <integer>7</integer>
+      <string>2</string>
+      <integer>4</integer>
+    </row>
+    <row>
+      <integer>8</integer>
+      <string>3</string>
+      <integer>4</integer>
+    </row>
+    <row>
+      <integer>9</integer>
+      <string>4</string>
+      <integer>4</integer>
+    </row>
+    <row>
+      <integer>10</integer>
+      <string>5</string>
+      <integer>4</integer>
+    </row>
+  </data>
+  <data tableName="AO_3C6513_XP_TEMPLATE_SHARE">
+    <column name="GROUP"/>
+    <column name="GROUP_NAME"/>
+    <column name="ID"/>
+    <column name="IS_GROUP"/>
+    <column name="TEMPLATE_ID"/>
+    <column name="USERNAME"/>
+    <column name="USER_ID"/>
+    <column name="USER_KEY"/>
   </data>
   <data tableName="AO_4AEACD_WEBHOOK_DAO">
     <column name="ENABLED"/>
