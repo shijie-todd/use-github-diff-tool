@@ -4247,16 +4247,6 @@
     <row>
       <integer>0</integer>
       <integer>10000</integer>
-      <integer>8</integer>
-      <integer>9223372036854775807</integer>
-      <string xsi:nil="true"/>
-      <integer xsi:nil="true"/>
-      <string>0|zzzzzz:</string>
-      <integer>2</integer>
-    </row>
-    <row>
-      <integer>0</integer>
-      <integer>10000</integer>
       <integer>9</integer>
       <integer>10000</integer>
       <string xsi:nil="true"/>
@@ -4702,6 +4692,56 @@
       <string xsi:nil="true"/>
       <integer xsi:nil="true"/>
       <string>0|i0009b:</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>0</integer>
+      <integer>10000</integer>
+      <integer>96</integer>
+      <integer>10300</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|i0009j:</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>0</integer>
+      <integer>10000</integer>
+      <integer>97</integer>
+      <integer>10301</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|i0009r:</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>0</integer>
+      <integer>10000</integer>
+      <integer>99</integer>
+      <integer>10303</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|i000a7:</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>0</integer>
+      <integer>10000</integer>
+      <integer>8</integer>
+      <integer>9223372036854775807</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|zzzzzz:</string>
+      <integer>2</integer>
+    </row>
+    <row>
+      <integer>0</integer>
+      <integer>10000</integer>
+      <integer>98</integer>
+      <integer>10302</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|i0009z:</string>
       <integer>1</integer>
     </row>
   </data>
