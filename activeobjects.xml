@@ -29,6 +29,270 @@
     <column name="USER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
     <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
   </table>
+  <table name="AO_2DCEEF_ATTACHMENT">
+    <column name="ATTACHMENT_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ATTACHMENT_TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="CONTENT_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DISPLAY_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DISPLAY_NAME_LC" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FILE_SIZE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="UPLOADED_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="UPLOAD_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="UUID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_2DCEEF_BLACK_LIST_FIELD">
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FIELD_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="IS_CUSTOM" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+  </table>
+  <table name="AO_2DCEEF_CONFIGURATION">
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NAME_LC" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_2DCEEF_CONFIGURATION_ATTR">
+    <column name="ATTRIBUTE_VALUES" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="CONFIGURATION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NAME_LC" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_2DCEEF_COVERAGE_PERS_FILTER">
+    <column name="ADDED_FIELDS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="FILTER_JSON_OBJECT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="450"/>
+    <column name="NAME_LC" primaryKey="false" autoIncrement="false" sqlType="12" precision="450"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="USER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_2DCEEF_COVERAGE_PUB_FILTER">
+    <column name="ADDED_FIELDS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="FILTER_JSON_OBJECT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="450"/>
+    <column name="NAME_LC" primaryKey="false" autoIncrement="false" sqlType="12" precision="450"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_2DCEEF_EMAIL_TEMPLATE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TEMPLATE_TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEXT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+  </table>
+  <table name="AO_2DCEEF_PARAMETER">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PARAM_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_2DCEEF_PARAMETER_PLAN">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PARAMETER" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PARAM_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PLAN_TREE_ITEM" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_2DCEEF_PARAM_SET">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PARAM_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_ISSUE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_2DCEEF_PERMISSION_PROJECT">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_2DCEEF_PERMISSION_ROLE">
+    <column name="GROUP" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ROLE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_2DCEEF_PERMISSION_SETTINGS">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LIMIT_USER_ACCESS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="PROJECT_VISIBILITY" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+  </table>
+  <table name="AO_2DCEEF_PRJ_SETTINGS_PLAN">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LAST_NODE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NODE_STRUCTURE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_PLAN" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="USER_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_2DCEEF_PROJECT_REST_PER">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="IS_RESTRICTED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_2DCEEF_PROJECT_SETTINGS">
+    <column name="AUTO_NUMBERING" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LAST_NODE_FOR_DEF" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LAST_POSITION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NODE_STRUCTURE_FOR_DEF" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SHOW_ISSUE_PATH" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SHOW_TREE_TOOLTIPS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USER_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_2DCEEF_PROJECT_TREE_FILTER">
+    <column name="ACTIVE_FILTER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FILTER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="FILTER_JQL" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="FILTER_NAME" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SUBMITTED_FILTER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TREE_TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="USER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_2DCEEF_PROJECT_TREE_FOLDER">
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="450"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="IS_BLOCKED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="450"/>
+    <column name="PARENT" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="PLAN_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TREE_POSITION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TREE_TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_2DCEEF_PROJECT_TREE_ITEM">
+    <column name="FOLDER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ITEM" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PLAN_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TREE_POSITION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TREE_POSITION_TIME" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TREE_TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_2DCEEF_RSCONFIG">
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PLAN_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ROOT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_2DCEEF_RSCONFIG_ATTR">
+    <column name="ATTRIBUTE_VALUES" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="CONFIGURATION_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PLAN_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ROOT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_2DCEEF_RSFILTER">
+    <column name="ASSIGNEE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="EXECUTION_NAME" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="FROM_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="HIDE_PLANS" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="HIDE_SINGLES" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_SUMMARY" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="PLAN_NAME" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="STATE" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="TEST_COMPONENTS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="TEST_FIX_VERSIONS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="TEST_PROJECT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="TO_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="USER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_2DCEEF_RSPARAM">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="IDENTIFIER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PARAM_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PLAN_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ROOT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_2DCEEF_RSROOT">
+    <column name="ASSIGNEE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DCREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="DELETED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="DFINISED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="DSTARTED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PLAN_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_COMPONENTS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEST_FIX_VERSIONS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEST_PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_STATE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_2DCEEF_RSSTEP">
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="DRUN" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="EXECUTED_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="EXPECTED_RESULT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="FAILURE_MSG" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PLAN_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ROOT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="STEP_POSITION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_STATE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_2DCEEF_RSTEST">
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="DFINISED" primaryKey="false" autoIncrement="false" sqlType="93" precision="23" scale="10"/>
+    <column name="EXECUTED_BY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FAILURE_MSG" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="FOLDERS" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ISSUE_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PLAN_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ROOT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_POSITION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEST_STATE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_2DCEEF_TEST_PLAN">
+    <column name="CONFIGURATION" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="COPYING" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="CYFAILED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="DELETED" primaryKey="false" autoIncrement="false" sqlType="16" precision="1"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="450"/>
+    <column name="NAME_LC" primaryKey="false" autoIncrement="false" sqlType="12" precision="450"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_2DCEEF_TEST_PLAN_FILTER">
+    <column name="FILTER" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="USER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_2DCEEF_TEST_STEP">
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="EXPECTED_RESULT" primaryKey="false" autoIncrement="false" sqlType="2005" precision="2147483647"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NAME_LC" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STEP_POSITION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_2DCEEF_TEST_TYPE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TYPE_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TYPE_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
   <table name="AO_2F1435_HEALTH_CHECK_STATUS">
     <column name="APPLICATION_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
     <column name="COMPLETE_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
@@ -1829,6 +2093,367 @@
     <column name="USER"/>
     <column name="VALUE"/>
   </data>
+  <data tableName="AO_2DCEEF_ATTACHMENT">
+    <column name="ATTACHMENT_ID"/>
+    <column name="ATTACHMENT_TYPE"/>
+    <column name="CONTENT_TYPE"/>
+    <column name="DISPLAY_NAME"/>
+    <column name="DISPLAY_NAME_LC"/>
+    <column name="FILE_SIZE"/>
+    <column name="ID"/>
+    <column name="PROJECT_KEY"/>
+    <column name="UPLOADED_BY"/>
+    <column name="UPLOAD_DATE"/>
+    <column name="UUID"/>
+  </data>
+  <data tableName="AO_2DCEEF_BLACK_LIST_FIELD">
+    <column name="FIELD_ID"/>
+    <column name="FIELD_NAME"/>
+    <column name="ID"/>
+    <column name="IS_CUSTOM"/>
+  </data>
+  <data tableName="AO_2DCEEF_CONFIGURATION">
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="NAME_LC"/>
+    <column name="PROJECT"/>
+  </data>
+  <data tableName="AO_2DCEEF_CONFIGURATION_ATTR">
+    <column name="ATTRIBUTE_VALUES"/>
+    <column name="CONFIGURATION"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="NAME_LC"/>
+  </data>
+  <data tableName="AO_2DCEEF_COVERAGE_PERS_FILTER">
+    <column name="ADDED_FIELDS"/>
+    <column name="FILTER_JSON_OBJECT"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="NAME_LC"/>
+    <column name="PROJECT_ID"/>
+    <column name="USER_KEY"/>
+  </data>
+  <data tableName="AO_2DCEEF_COVERAGE_PUB_FILTER">
+    <column name="ADDED_FIELDS"/>
+    <column name="FILTER_JSON_OBJECT"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="NAME_LC"/>
+    <column name="PROJECT_ID"/>
+  </data>
+  <data tableName="AO_2DCEEF_EMAIL_TEMPLATE">
+    <column name="ID"/>
+    <column name="TEMPLATE_TYPE"/>
+    <column name="TEXT"/>
+    <row>
+      <integer>1</integer>
+      <integer>1</integer>
+      <string></string>
+    </row>
+    <row>
+      <integer>2</integer>
+      <integer>2</integer>
+      <string></string>
+    </row>
+  </data>
+  <data tableName="AO_2DCEEF_PARAMETER">
+    <column name="ID"/>
+    <column name="KEY"/>
+    <column name="PARAM_VALUE"/>
+  </data>
+  <data tableName="AO_2DCEEF_PARAMETER_PLAN">
+    <column name="ID"/>
+    <column name="PARAMETER"/>
+    <column name="PARAM_VALUE"/>
+    <column name="PLAN_TREE_ITEM"/>
+  </data>
+  <data tableName="AO_2DCEEF_PARAM_SET">
+    <column name="ID"/>
+    <column name="PARAM_ID"/>
+    <column name="TEST_ISSUE_ID"/>
+  </data>
+  <data tableName="AO_2DCEEF_PERMISSION_PROJECT">
+    <column name="ID"/>
+    <column name="PROJECT"/>
+    <row>
+      <integer>1</integer>
+      <integer>10200</integer>
+    </row>
+  </data>
+  <data tableName="AO_2DCEEF_PERMISSION_ROLE">
+    <column name="GROUP"/>
+    <column name="ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="ROLE"/>
+  </data>
+  <data tableName="AO_2DCEEF_PERMISSION_SETTINGS">
+    <column name="ID"/>
+    <column name="LIMIT_USER_ACCESS"/>
+    <column name="PROJECT_VISIBILITY"/>
+    <row>
+      <integer>1</integer>
+      <boolean>false</boolean>
+      <boolean>true</boolean>
+    </row>
+  </data>
+  <data tableName="AO_2DCEEF_PRJ_SETTINGS_PLAN">
+    <column name="ID"/>
+    <column name="LAST_NODE"/>
+    <column name="NODE_STRUCTURE"/>
+    <column name="PROJECT"/>
+    <column name="TEST_PLAN"/>
+    <column name="USER_ID"/>
+  </data>
+  <data tableName="AO_2DCEEF_PROJECT_REST_PER">
+    <column name="ID"/>
+    <column name="IS_RESTRICTED"/>
+    <column name="PROJECT_ID"/>
+  </data>
+  <data tableName="AO_2DCEEF_PROJECT_SETTINGS">
+    <column name="AUTO_NUMBERING"/>
+    <column name="ID"/>
+    <column name="LAST_NODE_FOR_DEF"/>
+    <column name="LAST_POSITION"/>
+    <column name="NODE_STRUCTURE_FOR_DEF"/>
+    <column name="PROJECT"/>
+    <column name="SHOW_ISSUE_PATH"/>
+    <column name="SHOW_TREE_TOOLTIPS"/>
+    <column name="USER_ID"/>
+    <row>
+      <string>yes</string>
+      <integer>1</integer>
+      <string>f--1</string>
+      <string xsi:nil="true"/>
+      <string>[]</string>
+      <integer>10200</integer>
+      <string xsi:nil="true"/>
+      <string>yes</string>
+      <string>admin</string>
+    </row>
+  </data>
+  <data tableName="AO_2DCEEF_PROJECT_TREE_FILTER">
+    <column name="ACTIVE_FILTER"/>
+    <column name="FILTER_ID"/>
+    <column name="FILTER_JQL"/>
+    <column name="FILTER_NAME"/>
+    <column name="ID"/>
+    <column name="PROJECT"/>
+    <column name="SUBMITTED_FILTER"/>
+    <column name="TREE_TYPE"/>
+    <column name="USER"/>
+    <row>
+      <string>BASIC</string>
+      <integer>0</integer>
+      <string></string>
+      <string></string>
+      <integer>1</integer>
+      <integer>10200</integer>
+      <string>BASIC</string>
+      <integer>1</integer>
+      <string>admin</string>
+    </row>
+  </data>
+  <data tableName="AO_2DCEEF_PROJECT_TREE_FOLDER">
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="IS_BLOCKED"/>
+    <column name="NAME"/>
+    <column name="PARENT"/>
+    <column name="PLAN_ID"/>
+    <column name="PROJECT"/>
+    <column name="TREE_POSITION"/>
+    <column name="TREE_TYPE"/>
+    <row>
+      <string>TestPlan root for 1</string>
+      <integer>1</integer>
+      <boolean xsi:nil="true"/>
+      <string>TestPlan root for 1</string>
+      <integer>-101</integer>
+      <integer>1</integer>
+      <integer>10200</integer>
+      <integer>0</integer>
+      <integer>2</integer>
+    </row>
+  </data>
+  <data tableName="AO_2DCEEF_PROJECT_TREE_ITEM">
+    <column name="FOLDER"/>
+    <column name="ID"/>
+    <column name="ITEM"/>
+    <column name="PLAN_ID"/>
+    <column name="PROJECT"/>
+    <column name="TREE_POSITION"/>
+    <column name="TREE_POSITION_TIME"/>
+    <column name="TREE_TYPE"/>
+  </data>
+  <data tableName="AO_2DCEEF_RSCONFIG">
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="PLAN_ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="ROOT_ID"/>
+  </data>
+  <data tableName="AO_2DCEEF_RSCONFIG_ATTR">
+    <column name="ATTRIBUTE_VALUES"/>
+    <column name="CONFIGURATION_ID"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="PLAN_ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="ROOT_ID"/>
+  </data>
+  <data tableName="AO_2DCEEF_RSFILTER">
+    <column name="ASSIGNEE"/>
+    <column name="EXECUTION_NAME"/>
+    <column name="FROM_DATE"/>
+    <column name="HIDE_PLANS"/>
+    <column name="HIDE_SINGLES"/>
+    <column name="ID"/>
+    <column name="ISSUE_SUMMARY"/>
+    <column name="PLAN_NAME"/>
+    <column name="PROJECT"/>
+    <column name="STATE"/>
+    <column name="TEST_COMPONENTS"/>
+    <column name="TEST_FIX_VERSIONS"/>
+    <column name="TEST_PROJECT"/>
+    <column name="TO_DATE"/>
+    <column name="USER"/>
+    <row>
+      <string></string>
+      <string></string>
+      <timestamp xsi:nil="true"/>
+      <boolean>false</boolean>
+      <boolean>false</boolean>
+      <integer>1</integer>
+      <string></string>
+      <string></string>
+      <integer>10200</integer>
+      <string></string>
+      <string></string>
+      <string></string>
+      <string></string>
+      <timestamp xsi:nil="true"/>
+      <string>admin</string>
+    </row>
+  </data>
+  <data tableName="AO_2DCEEF_RSPARAM">
+    <column name="ID"/>
+    <column name="IDENTIFIER"/>
+    <column name="KEY"/>
+    <column name="PARAM_VALUE"/>
+    <column name="PLAN_ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="ROOT_ID"/>
+    <column name="TEST_ID"/>
+  </data>
+  <data tableName="AO_2DCEEF_RSROOT">
+    <column name="ASSIGNEE"/>
+    <column name="DCREATED"/>
+    <column name="DELETED"/>
+    <column name="DESCRIPTION"/>
+    <column name="DFINISED"/>
+    <column name="DSTARTED"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="PLAN_ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="TEST_COMPONENTS"/>
+    <column name="TEST_FIX_VERSIONS"/>
+    <column name="TEST_PROJECT_ID"/>
+    <column name="TEST_STATE"/>
+  </data>
+  <data tableName="AO_2DCEEF_RSSTEP">
+    <column name="DESCRIPTION"/>
+    <column name="DRUN"/>
+    <column name="EXECUTED_BY"/>
+    <column name="EXPECTED_RESULT"/>
+    <column name="FAILURE_MSG"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="PLAN_ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="ROOT_ID"/>
+    <column name="STEP_POSITION"/>
+    <column name="TEST_ID"/>
+    <column name="TEST_STATE"/>
+  </data>
+  <data tableName="AO_2DCEEF_RSTEST">
+    <column name="DESCRIPTION"/>
+    <column name="DFINISED"/>
+    <column name="EXECUTED_BY"/>
+    <column name="FAILURE_MSG"/>
+    <column name="FOLDERS"/>
+    <column name="ID"/>
+    <column name="ISSUE_ID"/>
+    <column name="ISSUE_KEY"/>
+    <column name="NAME"/>
+    <column name="PLAN_ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="ROOT_ID"/>
+    <column name="TEST_POSITION"/>
+    <column name="TEST_STATE"/>
+  </data>
+  <data tableName="AO_2DCEEF_TEST_PLAN">
+    <column name="CONFIGURATION"/>
+    <column name="COPYING"/>
+    <column name="CYFAILED"/>
+    <column name="DELETED"/>
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="NAME_LC"/>
+    <column name="PROJECT"/>
+    <row>
+      <integer>0</integer>
+      <boolean>false</boolean>
+      <boolean>false</boolean>
+      <boolean xsi:nil="true"/>
+      <string>test plan plugin</string>
+      <integer>1</integer>
+      <string>plan one</string>
+      <string>plan one</string>
+      <integer>10200</integer>
+    </row>
+    <row>
+      <integer>0</integer>
+      <boolean xsi:nil="true"/>
+      <boolean xsi:nil="true"/>
+      <boolean xsi:nil="true"/>
+      <string></string>
+      <integer>2</integer>
+      <string></string>
+      <string></string>
+      <integer>10200</integer>
+    </row>
+  </data>
+  <data tableName="AO_2DCEEF_TEST_PLAN_FILTER">
+    <column name="FILTER"/>
+    <column name="ID"/>
+    <column name="PROJECT"/>
+    <column name="USER"/>
+    <row>
+      <string></string>
+      <integer>1</integer>
+      <integer>10200</integer>
+      <string>admin</string>
+    </row>
+  </data>
+  <data tableName="AO_2DCEEF_TEST_STEP">
+    <column name="DESCRIPTION"/>
+    <column name="EXPECTED_RESULT"/>
+    <column name="ID"/>
+    <column name="ISSUE_ID"/>
+    <column name="NAME"/>
+    <column name="NAME_LC"/>
+    <column name="STEP_POSITION"/>
+  </data>
+  <data tableName="AO_2DCEEF_TEST_TYPE">
+    <column name="ID"/>
+    <column name="TYPE_NAME"/>
+    <column name="TYPE_VALUE"/>
+  </data>
   <data tableName="AO_2F1435_HEALTH_CHECK_STATUS">
     <column name="APPLICATION_NAME"/>
     <column name="COMPLETE_KEY"/>
@@ -1862,7 +2487,7 @@
     <row>
       <integer>1</integer>
       <string>last-run</string>
-      <string>1626166522784</string>
+      <string>1626229717320</string>
     </row>
   </data>
   <data tableName="AO_2F1435_READ_NOTIFICATIONS">
@@ -4701,11 +5326,20 @@
   <data tableName="AO_AA8730_INOTIFICATION_STATUS">
     <column name="ID"/>
     <column name="IS_ENABLED"/>
+    <row>
+      <integer>1</integer>
+      <integer>1</integer>
+    </row>
   </data>
   <data tableName="AO_AA8730_IPRO_NOTIF_SCHEMA">
     <column name="ID"/>
     <column name="PROJECT_KEY"/>
     <column name="SCHEMA_ID"/>
+    <row>
+      <integer>1</integer>
+      <string>GZL</string>
+      <integer>10000</integer>
+    </row>
   </data>
   <data tableName="AO_AA8730_MOBILE_NOTIFICATION">
     <column name="AVATAR_URI"/>
